@@ -1,2 +1,2 @@
 # Fitnesswheelchair
-By Pak, Freek and Lorenzo
+By Pak Long, Freek and Lorenzo
