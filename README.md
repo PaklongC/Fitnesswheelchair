@@ -9,6 +9,7 @@ development and performances. The prototype serves to test the feasibility of on
 features of the concept.
 
 - HOW
+
 ![](Images/fitnessChair.png) 
 
 - WHAT
