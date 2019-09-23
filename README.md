@@ -2,8 +2,8 @@
 By Pak Long, Freek and Lorenzo
 Scope:
 
-- WHY//
-Create a wheelchair that functions as a fitness tracker for the disabled by measuring their 
+- WHY
+//Create a wheelchair that functions as a fitness tracker for the disabled by measuring their 
 development and performances. The prototype serves to test the feasibility of one of the core 
 features of the concept.
 
