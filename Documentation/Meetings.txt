@@ -11,5 +11,5 @@ LECTURE 23/9 To Do:
 *Verschil Gateway en Hub zit hem in transmitting (ene protocol naar ander) en controlling
 
 TO DO < 27/9
-Testopzet uitdenken --> Pak Long
-Diagram en Connectivity --> Lorenzo !!CHECK SLIDES VOOR CORRECTE JARGON ETC.  
+Testopzet uitdenken --> Pak Long C:\Users\Pak_l\Fitnesswheelchair\Documentation\Test #1
+Diagram en Connectivity --> Lorenzo !!CHECK SLIDES VOOR CORRECTE JARGON ETC.
