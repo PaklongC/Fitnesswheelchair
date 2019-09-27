@@ -14,11 +14,11 @@ Goal: testing the IMU
   - the speed of the wheelchair can be used to guide users through a 'trainings-mode'
     (i.e. by motivating the user to keep the speed constant for instance).
       - We foresee that the data collected will be rather 'noisy'. Through calibration
-        (or any other technique) however , we expect to make the collected data usable as intended. 
+        (or any other technique) however , we expect to make the collected data usable as intended.
   - the voice of the user and/or the voice of the computer provides a natural and pleasant
     way of interaction.
-      - Although this channel of interaction might not be the most forward or effective,
-        we expect this will be interpreted as most fun by the user; especially coming from
+      - This channel of interaction might be the most forward or effective since it allows
+        hands-free control. We expect this will be interpreted as most fun by the user; especially coming from
         the computer's side.
 )
 
