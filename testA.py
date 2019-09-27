@@ -3,7 +3,7 @@ import serial
 port = "/dev/ttyACM0"
 
 s1 = serial.Serial(port, 9600)
-s1.flushImput()
+s1.flushInput()
 
 while True:
     if s1.inWaitin()>0:
