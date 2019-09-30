@@ -1,5 +1,7 @@
 from flask import Flask, request, render_template
+
 app = Flask(__name__)
+
 sensors = ['sensor1', 'sensor2', 'sensor3']
 
 @app.route('/')
@@ -9,6 +11,7 @@ def hello_world():
 @app.route('/home')
 def home():
     return render_template('index.html')
+
 @app.route('/api/sensors', methods = ['GET'])
 def list():
     return str(sensors)
