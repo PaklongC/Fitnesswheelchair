@@ -1,4 +1,3 @@
-<![One of the training-modes: Constant speed](Images\speedTime.png)>
 <h1><b>Introduction</h1></b>
 <h4>Concept</h4>
 <p>
@@ -7,6 +6,9 @@ sensors into it. <br>
 Data collected will be used to help users achieve a chosen training.
 </p>
 
+<![One of the training-modes: Constant speed](Images\speedTime.png)>
+
+<img src="Images\speedTime.png" alt="One of the training-modes: Constant speed">
 
 <h4>Uncertainties</h4>
 <p><i><ol>
@@ -48,6 +50,3 @@ sensors and one actuator: <br>
 providing insight into the feasibility of the concept technology-wise. <br>
 The prototype will also be used to gage the (primary) way of interaction of
 this concept.</p>
-
-</html>
-</body>
