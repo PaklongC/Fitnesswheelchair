@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 import os
 # The thing ID and access token
 load_dotenv()
+
 THING_ID = os.environ['THING_ID']
 THING_TOKEN = os.environ['THING_TOKEN']
 
