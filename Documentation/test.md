@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-<body>
-
+<![One of the training-modes: Constant speed](Images\speedTime.png)>
 <h1><b>Introduction</h1></b>
-
 <h4>Concept</h4>
 <p>
 Using the wheelchair as a fitness-/health-tracker by embedding several different
 sensors into it. <br>
 Data collected will be used to help users achieve a chosen training.
-<![One of the training-modes: Constant speed](Images\speedTime.png)>
 </p>
 
 
