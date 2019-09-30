@@ -13,3 +13,7 @@ LECTURE 23/9 To Do:
 TO DO < 27/9
 Testopzet uitdenken --> Pak Long C:\Users\Pak_l\Fitnesswheelchair\Documentation\Test #1
 Diagram en Connectivity --> Lorenzo !!CHECK SLIDES VOOR CORRECTE JARGON ETC.
+
+MEETING 27/9
+library for text to sound (speaker).
+track input time to see if there is a response to the given motivation (!).
