@@ -17,6 +17,7 @@ from dcd.entities.property import PropertyType
 load_dotenv()
 THING_ID = os.environ['THING_ID']
 THING_TOKEN = os.environ['THING_TOKEN']
+SERIAL=/dev/ttyACM0
 
 # Instantiate a thing with its credential
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
