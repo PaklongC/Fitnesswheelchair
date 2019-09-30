@@ -1,3 +1,0 @@
-MEETING 20-9
-
-* Specify what we are going to test (and what sensors)

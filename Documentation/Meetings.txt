@@ -1,0 +1,19 @@
+MEETING 20-9
+- Specify what we are going to test (and what sensors)
+
+LECTURE 23/9 To Do:
+- Milestones / SCRUM? --> feature backlog en verdelen, later samenvoegen
+- Diagram of prototype
+- Recreate account for Things (adjustments made by organization)
+- Beantwoord de criteria vragen van Lecture 3 voor bepaling randvoorwaarden
+*MAGNETOMETER might be used to gage the working of a (nearby) power-source.
+ Since it will affect the magnetic field
+*Verschil Gateway en Hub zit hem in transmitting (ene protocol naar ander) en controlling
+
+TO DO < 27/9
+Testopzet uitdenken --> Pak Long C:\Users\Pak_l\Fitnesswheelchair\Documentation\Test #1
+Diagram en Connectivity --> Lorenzo !!CHECK SLIDES VOOR CORRECTE JARGON ETC.
+
+MEETING 27/9
+library for text to sound (speaker).
+track input time to see if there is a response to the given motivation (!).
