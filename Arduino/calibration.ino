@@ -16,7 +16,7 @@ void setup()
   Serial.println("Cijfers (in volgorde): versnelling in x, y en z-richting");
   Serial.println("Kalibratieconstantes: 0 = slecht, 3 = volledig gekalibreerd");
   Serial.println("Volgorde van constantes: acceleratie, gyroscope, magnetometer en het systeem");
-  // Gyro = stilhouden, Magneto = rondswingen en Accelerometer = in elke axis even stilhouden.
+  // Kalibratie: Gyro = stilhouden, Magneto = rondswingen en Accelerometer = in elke axis even stilhouden.
   delay(2000);
 
   int8_t temp=myIMU.getTemp();
