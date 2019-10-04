@@ -15,8 +15,12 @@ def baas():
     return render_template('gauge.html')
 
 @app.route('/freekissupercool2')
-def baas():
+def graphsfunc():
     return render_template('graphs.html')
+
+@app.route('/d3')
+def getD3tut1():
+    return render_template('D3tut1.html')
 
 @socketio.on('json')
 def handle_json(json):
