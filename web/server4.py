@@ -14,6 +14,10 @@ def home():
 def baas():
     return render_template('gauge.html')
 
+@app.route('/freekissupercool2')
+def baas():
+    return render_template('graphs.html')
+
 @socketio.on('json')
 def handle_json(json):
    print('received json: ' + str(json))
