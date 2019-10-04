@@ -23,3 +23,7 @@ TO DO < 4/10
 - F: Maken van things (Tutorial)
 - L: Berekening van snelheid d.m.v. acceleratie
 --> stand-up @ 4/10 in de ochtend om ontwikkelingen en leerproces te verhelderen
+
+MEETING 4/10
+- Besluit hoe de snelheid te meten (RPM? V?) --> netjes doen met pros en cons?
+- 
