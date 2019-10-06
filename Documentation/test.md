@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <h1><b>Introduction</h1></b>
 <h4>Concept</h4>
 <p>
@@ -50,3 +54,6 @@ sensors and one actuator: <br>
 providing insight into the feasibility of the concept technology-wise. <br>
 The prototype will also be used to gage the (primary) way of interaction of
 this concept.</p>
+
+</body>
+</html>

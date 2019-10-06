@@ -5,10 +5,8 @@
 #define BNO055_SAMPLERATE_DELAY_MS (10)
 
 Adafruit_BNO055 bno = Adafruit_BNO055(-1, 0x28);
-//unsigned long t;
 double a, t;
 double v, v0;
-int i;
 
 void setup(void)
 {
@@ -30,7 +28,7 @@ void setup(void)
 
 void loop(void)
 {
-  for(i;;i++)
+  for(int i = 0;;i++)
   {
     imu::Vector<3> accelerometer = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
     t = BNO055_SAMPLERATE_DELAY_MS/1000.00;
