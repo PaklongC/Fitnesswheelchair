@@ -27,7 +27,8 @@ features of the concept.
   </ul><br>
 </ol>
 </body>
-
+<img src="Images\IOT Architecture.png" width="" height="">
+<img src="Images\speedTime.png" width="" height="">
 <hr>
 <h3>Sensor analysis:</h3>
 
@@ -40,16 +41,22 @@ features of the concept.
     <th>Take-aways</th>
   </tr>
   <tr>
-    <td rowspan = 2>IMU<br><img src="Images/IMU.png" width="" height=""></td>
+    <td rowspan = 3>IMU<br><img src="Images/IMU.png" width="" height=""></td>
     <td>- Acceleration --> Velocity</td>
     <td>Integral approach by calculating the sum of velocities-values between certain time-points using the acceleration.</td>
     <td><b>+ </b>Velocity is constantly being calculated<br><b>- </b>This method is very dependant on the sensitivity of the accelerometer and its (correct) calibration. Because the sum of the measured and calculated values are used, little measurement-errors will lead to bigger and bigger deviations</td>
     <td><img src="" width="" height=""></td>
   </tr>
   <tr>
-    <td rowspan = 1>- Angle displacement --> Velocity</td>
+    <td rowspan = 1>- Rotation time --> Velocity</td>
     <td>'RPM-'approach by calculating the velocity using wheelchair-specific properties.</td>
-    <td><b>+ </b>This method is relatively more accurate because the angle can be measured more reliably<br><b>- </b>Because (1/f=T) is used, the speed can only be calculated when the one whole rotation of the wheel is made</td>
+    <td><b>+ </b>This method is relatively more accurate because the turn-rate can be measured more reliably<br><b>- </b>Because (1/f=T) is used, the speed can only be calculated when one whole rotation of the wheel is made</td>
+    <td><img src=""></td>
+  </tr>
+  <tr>
+    <td>- Radial displacement --> Velocity</td>
+    <td>Differential approach by making use of the tangents.</td>
+    <td><b>+ </b>Velocity is constantly being calculated<br><b>- </b>This method is very dependant on the sensitivity of the accelerometer and its (correct) calibration (<-- angle measurements have relatively less fluctuations in values than acceleration)</td>
     <td><img src=""></td>
   </tr>
   <tr>
