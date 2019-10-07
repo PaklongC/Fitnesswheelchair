@@ -9,9 +9,9 @@
 <br><br>
 
 <b>WHY</b><br>
-Create a wheelchair that functions as a fitness tracker for the disabled by measuring their
+<p>Create a wheelchair that functions as a fitness tracker for the disabled by measuring their
 development and performances. The prototype serves to test the feasibility of one of the core
-features of the concept.
+features of the concept.</p>
 
 <h8><b>HOW</b></h8><br>
 <ol>
@@ -42,26 +42,26 @@ features of the concept.
   </tr>
   <tr>
     <td rowspan = 3>IMU<br><img src="Images/IMU.png" width="" height=""></td>
-    <td>- Acceleration --> Velocity</td>
+    <td>- Acceleration > Velocity</td>
     <td>Integral approach by calculating the sum of velocities-values between certain time-points using the acceleration.</td>
     <td><b>+ </b>Velocity is constantly being calculated<br><b>- </b>This method is very dependant on the sensitivity of the accelerometer and its (correct) calibration. Because the sum of the measured and calculated values are used, little measurement-errors will lead to bigger and bigger deviations</td>
     <td><img src="" width="" height=""></td>
   </tr>
   <tr>
-    <td rowspan = 1>- Rotation time --> Velocity</td>
+    <td rowspan = 1>- Rotation time > Velocity</td>
     <td>'RPM-'approach by calculating the velocity using wheelchair-specific properties.</td>
     <td><b>+ </b>This method is relatively more accurate because the turn-rate can be measured more reliably<br><b>- </b>Because (1/f=T) is used, the speed can only be calculated when one whole rotation of the wheel is made</td>
     <td><img src=""></td>
   </tr>
   <tr>
-    <td>- Radial displacement --> Velocity</td>
+    <td>- Radial displacement > Velocity</td>
     <td>Differential approach by making use of the tangents.</td>
     <td><b>+ </b>Velocity is constantly being calculated<br><b>- </b>This method is very dependant on the sensitivity of the accelerometer and its (correct) calibration (<-- angle measurements have relatively less fluctuations in values than acceleration)</td>
     <td><img src=""></td>
   </tr>
   <tr>
     <td>Microphone<br><img src="Images/soundSensor.png" width="" height=""></td>
-    <td>- Voice --> recogition</td>
+    <td>- Voice > recogition</td>
     <td>Using the API provided by google</td>
     <td></td>
     <td><img src=""></td>
