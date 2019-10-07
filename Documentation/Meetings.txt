@@ -1,3 +1,17 @@
+HOUSE RULES
+- Maandagen (tot aan het eind van de pauze)
+  - Lecture
+  - Quick meeting --> dividing tasks over the week
+
+- Vrijdagen (vanaf 10:00)
+  - Stand up --> quick meeting about the work performed since monday
+  - Group-work
+
+- Repercussions:
+  - > 15 minuten te laat --> streepje*
+  - Afgesproken werk niet verricht/afgemaakt --> streepje*
+* Drie streepjes = DE koffie
+
 MEETING 20-9
 - Specify what we are going to test (and what sensors)
 
@@ -17,3 +31,13 @@ Diagram en Connectivity --> Lorenzo !!CHECK SLIDES VOOR CORRECTE JARGON ETC.
 MEETING 27/9
 library for text to sound (speaker).
 track input time to see if there is a response to the given motivation (!).
+
+TO DO < 4/10
+- P: Kalibreren IMU
+- F: Maken van things (Tutorial)
+- L: Berekening van snelheid d.m.v. acceleratie
+--> stand-up @ 4/10 in de ochtend om ontwikkelingen en leerproces te verhelderen
+
+MEETING 4/10
+- Besluit hoe de snelheid te meten (RPM? V?) --> netjes doen met pros en cons?
+-
