@@ -22,7 +22,6 @@
 
 Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_RST);
 
-
 #define BNO055_SAMPLERATE_DELAY_MS (20)
 
 const double r = 0.29;
@@ -82,18 +81,18 @@ void setup(void){
   ble.verbose(true);
 
   // Change the device name to fit its purpose
-  if (! ble.sendCommandCheckOK(F("AT+GAPDEVNAME=Noisy Left Wheel")) ) {
+  if (! ble.sendCommandCheckOK(F("AT+GAPDEVNAME=Speedy Left Wheel")) ) {
     error(F("Could not set device name."));
   }
 
-/* Add the IMU Service definition
+      //Add the IMU Service definition
   success = ble.sendCommandWithIntReply( F("AT+GATTADDSERVICE=UUID128=00-11-00-11-44-55-66-77-88-99-AA-BB-CC-DD-EE-FF"), &imuServiceId);
   if (! success) {
     error(F("Could not add Orientation service."));
   }
-*/
+
     // Add the Orientation characteristic
-  success = ble.sendCommandWithIntReply( F("AT+GATTADDCHAR=UUID128=02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FG,PROPERTIES=0x10,MIN_LEN=1,MAX_LEN=17,VALUE=\"\""), &orientationCharId);
+  success = ble.sendCommandWithIntReply( F("AT+GATTADDCHAR=UUID128=02118833-4455-6677-8899-AABBCCDDEEFG,PROPERTIES=0x10,MIN_LEN=1,MAX_LEN=17,VALUE=\"\""), &orientationCharId);
   if (! success) {
     error(F("Could not add Orientation characteristic."));
   }
@@ -128,12 +127,14 @@ void velocity(){
     ble.print( F("AT+GATTCHAR=") );
     ble.println( orientationCharId );
     ble.print( "calculated speed" );
-    ble.println(v);
+    ble.println(String(v));
   }
 }
 
 void loop(void) {
+
   velocity();
+
   // Check if command executed OK
   if ( !ble.waitForOK() ) {
     error(F("Failed to get response!"));
