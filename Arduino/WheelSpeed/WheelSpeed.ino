@@ -44,7 +44,7 @@ Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_
 #define BNO055_SAMPLERATE_DELAY_MS (200)
 
 const float r = 0.29;
-float t, v;
+float t,td, v;
 int a, a2;
 
 // Creating our sensor object to handle the sensor, with initialization 12345
@@ -149,9 +149,10 @@ void setup(void) {
 }
 
 void orientation() {
+  t = millis();
   // Get Euler angle data
   imu::Vector<3> euler_vector = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
-  t = BNO055_SAMPLERATE_DELAY_MS/1000.00;
+  td = BNO055_SAMPLERATE_DELAY_MS/1000.00;
   float angleX = euler_vector.x();
   float angleY = euler_vector.y();
   float angleZ = euler_vector.z();
@@ -162,7 +163,7 @@ void orientation() {
   float angleX2 = euler_vector2.x();
   float delta_a = angleX2-angleX;
   float arc = 2*3.14*r*(delta_a/360);
-  float v = arc/t;
+  float v = arc/td;
   // Command is sent when \n (\r) or println is called
   // AT+GATTCHAR=CharacteristicID,value
   ble.print( F("AT+GATTCHAR=") );

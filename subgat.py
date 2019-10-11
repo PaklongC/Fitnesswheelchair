@@ -5,6 +5,7 @@ import pygatt  # To access BLE GATT support
 import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
 import time
+import csv
 from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
@@ -72,7 +73,14 @@ def keyboard_interrupt_handler(signal_num, frame):
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
-
+def write_csv(csvData):
+    try:
+        with open('pidata.csv', 'a') as csvFile:
+        writer = csv.writer(csvFile)
+        writer.writerow(csvData)
+        csvFile.close()
+    except:
+        print("could not write cv")
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 #my_thing.read()
@@ -111,6 +119,7 @@ while b:
             b = 0
         time.sleep(1)
 print("p2")
+
 while True:
     time.sleep(1)
 
