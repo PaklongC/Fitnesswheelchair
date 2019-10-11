@@ -8,7 +8,7 @@ from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
 ##Keyboard functions
-from pynput.keyboard import Key, Controller
+#from pynput.keyboard import Key, Controller
 import time
 
 #keyboard=Controller()
