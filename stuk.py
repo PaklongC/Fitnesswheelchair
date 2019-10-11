@@ -193,7 +193,7 @@ while b:
     except:
         print("Trying to figure stuff out")
         d = d + 1
-        if(d>30)
+        if(d>=30):
             b = 1
         time.sleep(1 )
 
