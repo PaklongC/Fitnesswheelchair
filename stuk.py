@@ -99,6 +99,12 @@ def handle_orientation_data(handle, value_bytes):
     """
     print("Received data: %s (handle %d)" % (str(value_bytes), handle))
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
+    try:
+        print("value bytes:   ")
+        print(value_bytes)
+        print("hello")
+    except:
+        print("het leven is kut")
     #find_or_create("Left Wheel Orientation",
     #               PropertyType.THREE_DIMENSIONS).update_values(values)
     #except:
@@ -106,7 +112,7 @@ def handle_orientation_data(handle, value_bytes):
     try:
         print(values[0])
     except:
-        print(""Ik kan dingen"")
+        print("Ik kan dingen")
 
 
 
