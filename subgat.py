@@ -112,7 +112,7 @@ while b:
         time.sleep(1)
 print("p2")
 while True:
-    sleep(1)
+    time.sleep(1)
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
