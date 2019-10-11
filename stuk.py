@@ -189,7 +189,6 @@ while b:
                          callback=handle_orientation_data)
         b = 0
     except:
-        while
         print("Trying to figure stuff out")
 
 # Register our Keyboard handler to exit
