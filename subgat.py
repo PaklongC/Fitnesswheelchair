@@ -80,9 +80,9 @@ def keyboard_interrupt_handler(signal_num, frame):
 def write_csv(csvData):
     try:
         with open('pidata.csv', 'a') as csvFile:
-        writer = csv.writer(csvFile)
-        writer.writerow(csvData)
-        csvFile.close()
+            writer = csv.writer(csvFile)
+            writer.writerow(csvData)
+            csvFile.close()
     except:
         print("could not write cv")
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
