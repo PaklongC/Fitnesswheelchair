@@ -100,7 +100,7 @@ def handle_orientation_data(handle, value_bytes):
     #print("Received data: %s (handle %d)" % (str(value_bytes), handle))
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
     find_or_create("Left Wheel Orientation",
-                    PropertyType.ONE_DIMENSION).update_values(values)
+                    PropertyType.THREE_DIMENSIONS).update_values(values)
     #except:
     #    print("its just a test")
     #try:
@@ -172,7 +172,7 @@ while b:
         d = d + 1
         if(d>=30):
             b = 0
-        time.sleep(1 )
+        time.sleep(1)
 print("p2")
 
 # Register our Keyboard handler to exit
