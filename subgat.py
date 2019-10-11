@@ -16,10 +16,10 @@ from dotenv import \
 load_dotenv()
 #THING_ID = os.environ['THING_ID']
 #THING_TOKEN = os.environ['THING_TOKEN']
-BLUETOOTH_DEVICE_MAC = "F4:36:23:1E:9E:54"
+BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
 
 # UUID of the GATT characteristic to subscribe
-GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
+GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
 
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
@@ -38,6 +38,7 @@ def handle_orientation_data(handle, value_bytes):
     handle -- integer, characteristic read handle the data was received on
     value_bytes -- bytearray, the data returned in the notification
     """
+    print("we got data")
     try:
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
     except:
@@ -100,6 +101,7 @@ while b:
         print("try data")
         left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                          callback=handle_orientation_data)
+        print("try data success")
         b = 0
     except:
         print("Trying to figure stuff out" + str(d))
