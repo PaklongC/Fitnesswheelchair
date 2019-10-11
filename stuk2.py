@@ -147,6 +147,9 @@ try:
                      callback=handle_orientation_data)
 except:
     print("Trying to figure stuff out")
-
+try:
+    print("we hebben data ge get")
+except:
+    print("fuuuck2")
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
