@@ -174,6 +174,7 @@ bleAdapter.start()
 
 a = 1
 b = 1
+d = 30
 
 # Use the BLE adapter to connect to our device
 while a:
@@ -191,6 +192,9 @@ while b:
         b = 0
     except:
         print("Trying to figure stuff out")
+        d = d + 1
+        if(d>30)
+            b = 1
         time.sleep(1 )
 
 # Register our Keyboard handler to exit
