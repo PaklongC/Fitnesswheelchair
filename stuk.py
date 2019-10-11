@@ -93,7 +93,7 @@ def handle_orientation_data(handle, value_bytes):
 #        keyboard.release(Key.left)
 
 '''
-'''
+
 def handle_orientation_data(handle, value_bytes):
     """
     handle -- integer, characteristic read handle the data was received on
@@ -118,6 +118,7 @@ def handle_orientation_data(handle, value_bytes):
         print(values[0])
     except:
         print("Ik kan dingen")
+
 '''
 def handle_orientation_data(handle, value_bytes):
     """
@@ -141,7 +142,7 @@ def handle_orientation_data(handle, value_bytes):
 
 #    find_or_create("Left Wheel Orientation",
 #                   PropertyType.THREE_DIMENSIONS).update_values(values)
-
+'''
 
 def discover_characteristic(device):
     """List characteristics of a device"""
