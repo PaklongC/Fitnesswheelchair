@@ -108,7 +108,7 @@ def handle_orientation_data(handle, value_bytes):
     try:
         print(values[0])
     except:
-        print(""Ik kan dingen"")
+        print("Ik kan dingen")
     #find_or_create("Left Wheel Orientation",
     #               PropertyType.THREE_DIMENSIONS).update_values(values)
     #except:
