@@ -171,17 +171,26 @@ def keyboard_interrupt_handler(signal_num, frame):
 bleAdapter = pygatt.GATTToolBackend()
 bleAdapter.start()
 
+a = 1
+b = 1
+
 # Use the BLE adapter to connect to our device
-try:
-    left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
-    print("we are connected!")
-except:
-    print("whooopie daisy no connection")
+while a:
+    try:
+        left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+        print("we are connected!")
+        a = 0
+    except:
+        print("whooopie daisy no connection")
 # Subscribe to the GATT service
-try:
-    left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
-                     callback=handle_orientation_data)
-except:
-    print("Trying to figure stuff out")
+while b:
+    try:
+        left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+                         callback=handle_orientation_data)
+        b = 0
+    except:
+        while
+        print("Trying to figure stuff out")
+
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
