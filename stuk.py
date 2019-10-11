@@ -189,6 +189,7 @@ while b:
         left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                          callback=handle_orientation_data)
         c = c + 1
+        time.sleep(0.3)
         if(c>=300):
             b = 0
     except:
