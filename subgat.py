@@ -48,6 +48,10 @@ def handle_orientation_data(handle, value_bytes):
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
     except:
         print("Denk het niet2")
+    try:
+        write_csv(values)
+    except:
+        print("leer python")
 
     #find_or_create("Left Wheel Orientation",
                 #   PropertyType.THREE_DIMENSIONS).update_values(values)
