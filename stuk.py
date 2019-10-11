@@ -147,7 +147,7 @@ c = 0
 d = 0
 
 # Use the BLE adapter to connect to our device
-while a:
+while a = 1:
     try:
         left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
         print("we are connected!")
@@ -157,12 +157,13 @@ while a:
 
 # Subscribe to the GATT service
 print ("p1")
-while b:
+while b = 1:
     try:
         print("try data")
-        left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+        V = left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                          callback=handle_orientation_data)
-        c = c + 1
+        print(V)
+        c += 1
         time.sleep(0.3)
         if(c>=300):
             b = 0
