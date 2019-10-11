@@ -8,14 +8,14 @@ from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
 # DCD Hub
-from dcd.entities.thing import Thing
-from dcd.entities.property import PropertyType
+#from dcd.entities.thing import Thing
+#from dcd.entities.property import PropertyType
 
 # The thing ID and access token
 load_dotenv()
-THING_ID = os.environ['THING_ID']
-THING_TOKEN = os.environ['THING_TOKEN']
-BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_MAC']
+#THING_ID = os.environ['THING_ID']
+#THING_TOKEN = os.environ['THING_TOKEN']
+BLUETOOTH_DEVICE_MAC = "F4:36:23:1E:9E:54"
 
 # UUID of the GATT characteristic to subscribe
 GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
@@ -65,19 +65,37 @@ def keyboard_interrupt_handler(signal_num, frame):
 
 
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
-my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
-my_thing.read()
+#my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+#my_thing.read()
 
 # Start a BLE adapter
 bleAdapter = pygatt.GATTToolBackend()
 bleAdapter.start()
 
 # Use the BLE adapter to connect to our device
-left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+while a:
+    try:
+        left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+        print("we are connected!")
+        a = 0
+    except:
+        print("whooopie daisy no connection")
 
 # Subscribe to the GATT service
-left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
-                     callback=handle_orientation_data)
+print ("p1")
+while b:
+    try:
+        print("try data")
+        left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+                         callback=handle_orientation_data)
+        b = 0
+    except:
+        print("Trying to figure stuff out" + str(d))
+        d = d + 1
+        if(d>=30):
+            b = 0
+        time.sleep(1 )
+print("p2")
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
