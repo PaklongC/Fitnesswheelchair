@@ -97,8 +97,11 @@ def handle_orientation_data(handle, value_bytes):
     handle -- integer, characteristic read handle the data was received on
     value_bytes -- bytearray, the data returned in the notification
     """
-    print("Received data: %s (handle %d)" % (str(value_bytes), handle))
-    values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
+    try:
+        print("Received data: %s (handle %d)" % (str(value_bytes), handle))
+        values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
+    except:
+        print("poep")
     try:
         print("value bytes:   ")
         print(value_bytes)
