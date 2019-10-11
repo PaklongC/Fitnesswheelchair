@@ -113,10 +113,6 @@ def handle_orientation_data(handle, value_bytes):
     #               PropertyType.THREE_DIMENSIONS).update_values(values)
     #except:
     #    print("its just a test")
-    try:
-        print(values[0])
-    except:
-        print("Ik kan dingen")
 
 '''
 def handle_orientation_data(handle, value_bytes):
