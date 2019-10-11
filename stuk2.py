@@ -33,8 +33,8 @@ time.sleep(1)
 BLUETOOTH_DEVICE_MAC ="de:f7:c5:c8:80:4f"
 GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFG"
 #nathalie
-#BLUETOOTH_DEVICE_MAC = "de:f7:c5:c8:80:4f"
-#GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
+BLUETOOTH_DEVICE_MAC = "de:f7:c5:c8:80:4f"
+GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
 
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
@@ -47,7 +47,7 @@ def find_or_create(property_name, property_type):
                                  property_type=property_type)
     return my_thing.find_property_by_name(property_name)
 
-'''
+
 def handle_orientation_data(handle, value_bytes):
     """
     handle -- integer, characteristic read handle the data was received on
@@ -91,22 +91,8 @@ def handle_orientation_data(handle, value_bytes):
 #        keyboard.release(Key.right)
 #        keyboard.release(Key.left)
 
-'''
-def handle_orientation_data(handle, value_bytes):
-    """
-    handle -- integer, characteristic read handle the data was received on
-    value_bytes -- bytearray, the data returned in the notification
-    """
-    print("Received data: %s (handle %d)" % (str(value_bytes), handle))
-    values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-    #find_or_create("Left Wheel Orientation",
-    #               PropertyType.THREE_DIMENSIONS).update_values(values)
-    #except:
-    #    print("its just a test")
-    try:
-        print(values[0])
-    except:
-        print(""Ik kan dingen"")
+
+
 
 
 
