@@ -55,7 +55,7 @@ def handle_orientation_data(handle, value_bytes):
     #print("Received data: %s (handle %d)" % (str(value_bytes), handle))
     try:
         print("Converting data:")
-        values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
+        #values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
     except:
         print("Failed Converting")
     try:
@@ -119,7 +119,7 @@ while b:
                          callback=handle_orientation_data)
         b = 0
     except:
-        print("Trying to figure stuff out")
+        print("Trying to figure stuff out" + d)
         d = d + 1
         if(d>=30):
             b = 0
