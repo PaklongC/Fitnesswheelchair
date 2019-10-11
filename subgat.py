@@ -4,6 +4,7 @@
 import pygatt  # To access BLE GATT support
 import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
+import time
 from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
@@ -105,7 +106,7 @@ while b:
         d = d + 1
         if(d>=30):
             b = 0
-        time.sleep(1 )
+        time.sleep(1)
 print("p2")
 
 # Register our Keyboard handler to exit
