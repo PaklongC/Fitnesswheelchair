@@ -32,10 +32,8 @@ time.sleep(1)
 # UUID of the GATT characteristic to subscribe
 #ONS
 BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
-GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
-#nathalie
-#BLUETOOTH_DEVICE_MAC = "de:f7:c5:c8:80:4f"
-#GATT_CHARACTERISTIC_ORIENTATION = "00110011-4455-6677-8899-AABBCCDDEEFF"
+#GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
+GATT_CHARACTERISTIC_ORIENTATION = "00110011-4455-6677-8899-AABBCCDDEEFF"
 
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
@@ -102,7 +100,7 @@ def handle_orientation_data(handle, value_bytes):
     print("Received data: %s (handle %d)" % (str(value_bytes), handle))
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
     find_or_create("Left Wheel Orientation",
-                    PropertyType.THREE_DIMENSIONS).update_values(values)
+                    PropertyType.ONE_DIMENSION).update_values(values)
     #except:
     #    print("its just a test")
     #try:
