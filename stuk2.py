@@ -49,6 +49,7 @@ def find_or_create(property_name, property_type):
 
 
 def handle_orientation_data(handle, value_bytes):
+    print("test1123")
     """
     handle -- integer, characteristic read handle the data was received on
     value_bytes -- bytearray, the data returned in the notification
