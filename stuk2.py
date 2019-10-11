@@ -138,7 +138,10 @@ try:
 except:
     print("whooopie daisy no connection")
 # Subscribe to the GATT service
+try:
     print("nu gaan we data getten")
+except:
+    print("fuuuck")
 try:
     left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                      callback=handle_orientation_data)
