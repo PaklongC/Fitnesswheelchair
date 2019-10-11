@@ -174,7 +174,7 @@ bleAdapter.start()
 
 a = 1
 b = 1
-d = 30
+d = 0
 
 # Use the BLE adapter to connect to our device
 while a:
