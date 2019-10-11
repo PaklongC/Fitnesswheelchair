@@ -162,6 +162,7 @@ while b:
         print("try data")
         left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                          callback=handle_orientation_data)
+        values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         print(values)
         c += 1
         time.sleep(0.3)
