@@ -73,6 +73,10 @@ bleAdapter = pygatt.GATTToolBackend()
 bleAdapter.start()
 
 # Use the BLE adapter to connect to our device
+a = 1
+b = 1
+c = 0
+d = 0
 while a:
     try:
         left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
