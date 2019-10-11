@@ -25,11 +25,17 @@ time.sleep(1)
 #load_dotenv()
 #THING_ID = os.environ['THING_ID']
 #THING_TOKEN = os.environ['THING_TOKEN']
-BLUETOOTH_DEVICE_MAC = "de:f7:c5:c8:80:4f"
+
+#BLUETOOTH_DEVICE_MAC = "f4:36:23:1e:9e:54"
+BLUETOOTH_DEVICE_MAC ="de:f7:c5:c8:80:4f"
+# UUID of the GATT characteristic to subscribe
+#GATT_CHARACTERISTIC_ORIENTATION = "02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FG"
+GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
+#BLUETOOTH_DEVICE_MAC = "de:f7:c5:c8:80:4f"
 #os.environ['BLUETOOTH_DEVICE_MAC']
 
 # UUID of the GATT characteristic to subscribe
-GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
+#GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
 
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
