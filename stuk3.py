@@ -119,7 +119,7 @@ while b:
                          callback=handle_orientation_data)
         b = 0
     except:
-        print("Trying to figure stuff out" + d)
+        print("Trying to figure stuff out" + str(d))
         d = d + 1
         if(d>=30):
             b = 0
