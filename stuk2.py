@@ -138,10 +138,12 @@ try:
 except:
     print("whooopie daisy no connection")
 # Subscribe to the GATT service
+    print("nu gaan we data getten")
 try:
     left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                      callback=handle_orientation_data)
 except:
     print("Trying to figure stuff out")
+
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
