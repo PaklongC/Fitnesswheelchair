@@ -8,13 +8,13 @@ from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
 # DCD Hub
-from dcd.entities.thing import Thing
-from dcd.entities.property import PropertyType
+#from dcd.entities.thing import Thing
+#from dcd.entities.property import PropertyType
 
 # The thing ID and access token
 load_dotenv()
-THING_ID = os.environ['THING_ID']
-THING_TOKEN = os.environ['THING_TOKEN']
+#THING_ID = os.environ['THING_ID']
+#THING_TOKEN = os.environ['THING_TOKEN']
 BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_MAC']
 
 # UUID of the GATT characteristic to subscribe
@@ -24,12 +24,12 @@ GATT_CHARACTERISTIC_ORIENTATION = "02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 
-def find_or_create(property_name, property_type):
-    """Search a property by name, create it if not found, then return it."""
-    if my_thing.find_property_by_name(property_name) is None:
-        my_thing.create_property(name=property_name,
-                                 property_type=property_type)
-    return my_thing.find_property_by_name(property_name)
+#def find_or_create(property_name, property_type):
+#    """Search a property by name, create it if not found, then return it."""
+#    if my_thing.find_property_by_name(property_name) is None:
+#        my_thing.create_property(name=property_name,
+#                                 property_type=property_type)
+#    return my_thing.find_property_by_name(property_name)
 
 
 def handle_orientation_data(handle, value_bytes):
@@ -65,8 +65,8 @@ def keyboard_interrupt_handler(signal_num, frame):
 
 
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
-my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
-my_thing.read()
+#my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+#my_thing.read()
 
 # Start a BLE adapter
 bleAdapter = pygatt.GATTToolBackend()
