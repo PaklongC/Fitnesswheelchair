@@ -30,7 +30,6 @@ int a, a2;
 
 // GATT service information
 int32_t imuServiceId;
-int32_t rotationCharId;
 int32_t orientationCharId;
 
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
@@ -92,7 +91,7 @@ void setup(void){
   }
 
     // Add the Orientation characteristic
-  success = ble.sendCommandWithIntReply( F("AT+GATTADDCHAR=UUID128=02118833-4455-6677-8899-AABBCCDDEEFG,PROPERTIES=0x10,MIN_LEN=1,MAX_LEN=17,VALUE=\"\""), &orientationCharId);
+  success = ble.sendCommandWithIntReply( F("AT+GATTADDCHAR=UUID128=02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FF,PROPERTIES=0x10,MIN_LEN=1,MAX_LEN=17,VALUE=\"\""), &orientationCharId);
   if (! success) {
     error(F("Could not add Orientation characteristic."));
   }
@@ -111,7 +110,7 @@ void velocity(){
   bno.getEvent(&event);
 
 
-  for (int i = 0;i<5;i++)
+  for (int i = 0;;i++)
   {
     imu::Vector<3> orientation = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
     t = BNO055_SAMPLERATE_DELAY_MS/1000.00;
@@ -125,8 +124,9 @@ void velocity(){
     float v = arc/t;
 
     ble.print( F("AT+GATTCHAR=") );
-    ble.println( orientationCharId );
-    ble.print( "calculated speed" );
+    ble.print( orientationCharId );
+    ble.print( F(",") );
+    ble.print( "V" );
     ble.println(String(v));
   }
 }
