@@ -171,6 +171,7 @@ bleAdapter.start()
 a = 1
 b = 1
 d = 0
+c = 0
 
 # Use the BLE adapter to connect to our device
 while a:
@@ -187,12 +188,14 @@ while b:
         print("try data")
         left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                          callback=handle_orientation_data)
-        b = 0
+        c = c + 1
+        if(c>=300):
+            b = 0
     except:
         print("Trying to figure stuff out")
         d = d + 1
         if(d>=30):
-            b = 1
+            b = 0
         time.sleep(1 )
 print("p2")
 # Register our Keyboard handler to exit
