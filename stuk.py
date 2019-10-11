@@ -114,31 +114,6 @@ def handle_orientation_data(handle, value_bytes):
     #except:
     #    print("its just a test")
 
-'''
-def handle_orientation_data(handle, value_bytes):
-    """
-    handle -- integer, characteristic read handle the data was received on
-    value_bytes -- bytearray, the data returned in the notification
-    """
-    try:
-        print("data")
-    except:
-        print("poep")
-    try:
-        print("value bytes:   ")
-        print(value_bytes)
-        print("hello")
-    except:
-        print("het leven is kut")
-    #find_or_create("Left Wheel Orientation",
-    #               PropertyType.THREE_DIMENSIONS).update_values(values)
-    #except:
-    #    print("its just a test")
-
-#    find_or_create("Left Wheel Orientation",
-#                   PropertyType.THREE_DIMENSIONS).update_values(values)
-'''
-
 def discover_characteristic(device):
     """List characteristics of a device"""
     for uuid in device.discover_characteristics().keys():
@@ -170,8 +145,8 @@ bleAdapter.start()
 
 a = 1
 b = 1
-d = 0
 c = 0
+d = 0
 
 # Use the BLE adapter to connect to our device
 while a:
@@ -181,6 +156,7 @@ while a:
         a = 0
     except:
         print("whooopie daisy no connection")
+
 # Subscribe to the GATT service
 print ("p1")
 while b:
@@ -199,5 +175,6 @@ while b:
             b = 0
         time.sleep(1 )
 print("p2")
+
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
