@@ -57,6 +57,7 @@ def handle_orientation_data(handle, value_bytes):
     #print("Recieved data: " + (str(value_bytes)))
 
     try:
+        print("test11")
         start = time.time()
         print("value bytes:   ")
         print(value_bytes)
