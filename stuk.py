@@ -99,8 +99,8 @@ def handle_orientation_data(handle, value_bytes):
     """
     print("Received data: %s (handle %d)" % (str(value_bytes), handle))
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-    find_or_create("Left Wheel Orientation",
-                    PropertyType.ONE_DIMENSION).update_values(values)
+    #find_or_create("Left Wheel Orientation",
+                    #PropertyType.ONE_DIMENSION).update_values(values)
     #except:
     #    print("its just a test")
     #try:
@@ -147,7 +147,7 @@ c = 0
 d = 0
 
 # Use the BLE adapter to connect to our device
-while a > 0:
+while a:
     try:
         left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
         print("we are connected!")
@@ -157,12 +157,12 @@ while a > 0:
 
 # Subscribe to the GATT service
 print ("p1")
-while b > 0:
+while b:
     try:
         print("try data")
-        V = left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+        left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                          callback=handle_orientation_data)
-        print(V)
+        print(values)
         c += 1
         time.sleep(0.3)
         if(c>=300):
