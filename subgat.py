@@ -49,6 +49,7 @@ def handle_orientation_data(handle, value_bytes):
     except:
         print("Denk het niet2")
     try:
+        print("write csv data")
         write_csv(values)
     except:
         print("leer python")
