@@ -185,8 +185,10 @@ while a:
     except:
         print("whooopie daisy no connection")
 # Subscribe to the GATT service
+print ("p1")
 while b:
     try:
+        print("try data")
         left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                          callback=handle_orientation_data)
         b = 0
@@ -196,6 +198,6 @@ while b:
         if(d>=30):
             b = 1
         time.sleep(1 )
-
+print("p2")
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
