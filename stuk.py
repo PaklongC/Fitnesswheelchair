@@ -4,6 +4,7 @@
 import pygatt  # To access BLE GATT support
 import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
+import time
 from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
@@ -190,6 +191,7 @@ while b:
         b = 0
     except:
         print("Trying to figure stuff out")
+        time.sleep(1 )
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
