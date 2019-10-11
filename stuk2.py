@@ -92,13 +92,6 @@ def handle_orientation_data(handle, value_bytes):
         print("Do nothing")
 #        keyboard.release(Key.right)
 #        keyboard.release(Key.left)
-
-
-
-
-
-
-
 #    find_or_create("Left Wheel Orientation",
 #                   PropertyType.THREE_DIMENSIONS).update_values(values)
 
