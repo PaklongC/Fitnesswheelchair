@@ -84,8 +84,9 @@ bleAdapter.start()
 # Use the BLE adapter to connect to our device
 a = 1
 b = 1
-c = 0
+c = 1
 d = 0
+e =
 while a:
     try:
         left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
@@ -110,6 +111,8 @@ while b:
             b = 0
         time.sleep(1)
 print("p2")
-
+while True:
+    sleep(1)
+    
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
