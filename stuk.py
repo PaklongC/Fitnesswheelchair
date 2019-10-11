@@ -4,6 +4,7 @@
 import pygatt  # To access BLE GATT support
 import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
+import time
 from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
@@ -31,7 +32,7 @@ time.sleep(1)
 # UUID of the GATT characteristic to subscribe
 #ONS
 BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
-GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFG"
+GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
 #nathalie
 #BLUETOOTH_DEVICE_MAC = "de:f7:c5:c8:80:4f"
 #GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
@@ -92,7 +93,7 @@ def handle_orientation_data(handle, value_bytes):
 #        keyboard.release(Key.left)
 
 '''
-'''
+
 def handle_orientation_data(handle, value_bytes):
     """
     handle -- integer, characteristic read handle the data was received on
@@ -117,6 +118,7 @@ def handle_orientation_data(handle, value_bytes):
         print(values[0])
     except:
         print("Ik kan dingen")
+
 '''
 def handle_orientation_data(handle, value_bytes):
     """
@@ -140,7 +142,7 @@ def handle_orientation_data(handle, value_bytes):
 
 #    find_or_create("Left Wheel Orientation",
 #                   PropertyType.THREE_DIMENSIONS).update_values(values)
-
+'''
 
 def discover_characteristic(device):
     """List characteristics of a device"""
@@ -171,17 +173,32 @@ def keyboard_interrupt_handler(signal_num, frame):
 bleAdapter = pygatt.GATTToolBackend()
 bleAdapter.start()
 
+a = 1
+b = 1
+d = 0
+
 # Use the BLE adapter to connect to our device
-try:
-    left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
-    print("we are connected!")
-except:
-    print("whooopie daisy no connection")
+while a:
+    try:
+        left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+        print("we are connected!")
+        a = 0
+    except:
+        print("whooopie daisy no connection")
 # Subscribe to the GATT service
-try:
-    left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
-                     callback=handle_orientation_data)
-except:
-    print("Trying to figure stuff out")
+print ("p1")
+while b:
+    try:
+        print("try data")
+        left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+                         callback=handle_orientation_data)
+        b = 0
+    except:
+        print("Trying to figure stuff out")
+        d = d + 1
+        if(d>=30):
+            b = 1
+        time.sleep(1 )
+print("p2")
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
