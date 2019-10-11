@@ -7,11 +7,11 @@ import os  # To access environment variables
 from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
-#Keyboard functions
+##Keyboard functions
 from pynput.keyboard import Key, Controller
 import time
 
-keyboard=Controller()
+#keyboard=Controller()
 
 time.sleep(1)
 
@@ -69,22 +69,22 @@ def handle_orientation_data(handle, value_bytes):
     if (values[0] > 500 and values[2] < 400):
         print("Going right")
         #time.sleep(1)
-        keyboard.press(Key.right)
+#        keyboard.press(Key.right)
         #time.sleep(0.01)
         #keyboard.release(Key.right)
     elif (values[2] > 500 and values[0] < 400):
         print("Going left")
         #time.sleep(1)
-        keyboard.press(Key.left)
+#        keyboard.press(Key.left)
         #time.sleep(0.01)
         #keyboard.release(Key.left)
     elif values[1] > 70:
         print("JUMP")
-        keyboard.press(Key.space)
+#        keyboard.press(Key.space)
     else:
         print("Do nothing")
-        keyboard.release(Key.right)
-        keyboard.release(Key.left)
+#        keyboard.release(Key.right)
+#        keyboard.release(Key.left)
 
 
 
