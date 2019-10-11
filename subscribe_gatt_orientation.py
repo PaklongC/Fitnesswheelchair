@@ -18,8 +18,8 @@ load_dotenv()
 BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_MAC']
 
 # UUID of the GATT characteristic to subscribe
-GATT_CHARACTERISTIC_ORIENTATION = "02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FG"
-
+#GATT_CHARACTERISTIC_ORIENTATION = "02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FG"
+GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFG"
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
