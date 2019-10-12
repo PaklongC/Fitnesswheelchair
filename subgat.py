@@ -117,8 +117,8 @@ while b: #try this for 30 times
             b = 0
         time.sleep(1)
 
-#while True:
-time.sleep(10)
+while True:
+    time.sleep(1)
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
