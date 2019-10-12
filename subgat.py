@@ -4,6 +4,8 @@
 import pygatt  # To access BLE GATT support
 import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
+import time
+import csv
 from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
@@ -15,21 +17,21 @@ from dotenv import \
 load_dotenv()
 #THING_ID = os.environ['THING_ID']
 #THING_TOKEN = os.environ['THING_TOKEN']
-#BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_MAC']
-BLUETOOTH_DEVICE_MAC = "f4:36:23:1e:9e:54"
+BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
+
 # UUID of the GATT characteristic to subscribe
-#GATT_CHARACTERISTIC_ORIENTATION = "02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FG"
-GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFG"
+GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
+
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 
-#def find_or_create(property_name, property_type):
-#    """Search a property by name, create it if not found, then return it."""
-#    if my_thing.find_property_by_name(property_name) is None:
-#        my_thing.create_property(name=property_name,
-#                                 property_type=property_type)
-#    return my_thing.find_property_by_name(property_name)
+def find_or_create(property_name, property_type):
+    """Search a property by name, create it if not found, then return it."""
+    if my_thing.find_property_by_name(property_name) is None:
+        my_thing.create_property(name=property_name,
+                                 property_type=property_type)
+    return my_thing.find_property_by_name(property_name)
 
 
 def handle_orientation_data(handle, value_bytes):
@@ -37,10 +39,18 @@ def handle_orientation_data(handle, value_bytes):
     handle -- integer, characteristic read handle the data was received on
     value_bytes -- bytearray, the data returned in the notification
     """
-    print("Received data: %s (handle %d)" % (str(value_bytes), handle))
-    values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-    find_or_create("Left Wheel Orientation",
-                   PropertyType.THREE_DIMENSIONS).update_values(values)
+    try:
+        print("Received data: %s (handle %d)" % (str(value_bytes), handle))
+        values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
+    except:
+        print("Could not convert data")
+    try:
+        write_csv(values)
+    except:
+        print("Could not write csv")
+
+    #find_or_create("Left Wheel Orientation",
+                #   PropertyType.THREE_DIMENSIONS).update_values(values)
 
 
 def discover_characteristic(device):
@@ -63,7 +73,14 @@ def keyboard_interrupt_handler(signal_num, frame):
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
-
+def write_csv(csvData):
+    try:
+        with open('pidata.csv', 'a') as csvFile:
+            writer = csv.writer(csvFile)
+            writer.writerow(csvData)
+            csvFile.close()
+    except:
+        print("could not write to csv")
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 #my_thing.read()
@@ -73,11 +90,35 @@ bleAdapter = pygatt.GATTToolBackend()
 bleAdapter.start()
 
 # Use the BLE adapter to connect to our device
-left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+a = 1
+b = 1
+c = 1
+d = 0
+
+while a:
+    try:
+        left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+        print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
+        a = 0
+    except:
+        print("whooopie daisy no connection")
 
 # Subscribe to the GATT service
-left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
-                     callback=handle_orientation_data)
+while b: #try this for 30 times
+    try:
+        print("try data subscribe")
+        left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+                         callback=handle_orientation_data)
+        b = 0
+    except:
+        print("Trying to figure stuff out" + str(d))
+        d = d + 1
+        if(d>=30):
+            b = 0
+        time.sleep(1)
+
+#while True:
+time.sleep(10)
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)

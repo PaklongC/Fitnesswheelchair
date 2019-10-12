@@ -22,7 +22,6 @@
 
 Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_RST);
 
-
 #define BNO055_SAMPLERATE_DELAY_MS (20)
 
 const double r = 0.29;
@@ -31,7 +30,6 @@ int a, a2;
 
 // GATT service information
 int32_t imuServiceId;
-int32_t rotationCharId;
 int32_t orientationCharId;
 
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
@@ -82,18 +80,18 @@ void setup(void){
   ble.verbose(true);
 
   // Change the device name to fit its purpose
-  if (! ble.sendCommandCheckOK(F("AT+GAPDEVNAME=Noisy Left Wheel")) ) {
+  if (! ble.sendCommandCheckOK(F("AT+GAPDEVNAME=Speedy Left Wheel")) ) {
     error(F("Could not set device name."));
   }
 
-/* Add the IMU Service definition
+      //Add the IMU Service definition
   success = ble.sendCommandWithIntReply( F("AT+GATTADDSERVICE=UUID128=00-11-00-11-44-55-66-77-88-99-AA-BB-CC-DD-EE-FF"), &imuServiceId);
   if (! success) {
     error(F("Could not add Orientation service."));
   }
-*/
+
     // Add the Orientation characteristic
-  success = ble.sendCommandWithIntReply( F("AT+GATTADDCHAR=UUID128=02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FG,PROPERTIES=0x10,MIN_LEN=1,MAX_LEN=17,VALUE=\"\""), &orientationCharId);
+  success = ble.sendCommandWithIntReply( F("AT+GATTADDCHAR=UUID128=02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FF,PROPERTIES=0x10,MIN_LEN=1,MAX_LEN=17,VALUE=\"\""), &orientationCharId);
   if (! success) {
     error(F("Could not add Orientation characteristic."));
   }
@@ -112,7 +110,7 @@ void velocity(){
   bno.getEvent(&event);
 
 
-  for (int i = 0;i<5;i++)
+  for (int i = 0;;i++)
   {
     imu::Vector<3> orientation = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
     t = BNO055_SAMPLERATE_DELAY_MS/1000.00;
@@ -126,14 +124,17 @@ void velocity(){
     float v = arc/t;
 
     ble.print( F("AT+GATTCHAR=") );
-    ble.println( orientationCharId );
-    ble.print( "calculated speed" );
-    ble.println(v);
+    ble.print( orientationCharId );
+    ble.print( F(",") );
+    ble.print( "V" );
+    ble.println(String(v));
   }
 }
 
 void loop(void) {
+
   velocity();
+
   // Check if command executed OK
   if ( !ble.waitForOK() ) {
     error(F("Failed to get response!"));
