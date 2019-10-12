@@ -39,20 +39,15 @@ def handle_orientation_data(handle, value_bytes):
     handle -- integer, characteristic read handle the data was received on
     value_bytes -- bytearray, the data returned in the notification
     """
-    print("we got data")
     try:
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
-    except:
-        print("Denk het niet")
-    try:
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
     except:
-        print("Denk het niet2")
+        print("Could not convert data")
     try:
-        print("write csv data")
         write_csv(values)
     except:
-        print("leer python")
+        print("Could not write csv")
 
     #find_or_create("Left Wheel Orientation",
                 #   PropertyType.THREE_DIMENSIONS).update_values(values)
@@ -85,7 +80,7 @@ def write_csv(csvData):
             writer.writerow(csvData)
             csvFile.close()
     except:
-        print("could not write cv")
+        print("could not write to csv")
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 #my_thing.read()
@@ -103,19 +98,17 @@ d = 0
 while a:
     try:
         left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
-        print("we are connected!")
+        print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
         a = 0
     except:
         print("whooopie daisy no connection")
 
 # Subscribe to the GATT service
-print ("p1")
-while b:
+while b: #try this for 30 times
     try:
-        print("try data")
+        print("try data subscribe")
         left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                          callback=handle_orientation_data)
-        print("try data success")
         b = 0
     except:
         print("Trying to figure stuff out" + str(d))
@@ -123,10 +116,9 @@ while b:
         if(d>=30):
             b = 0
         time.sleep(1)
-print("p2")
 
-while True:
-    time.sleep(1)
+#while True:
+time.sleep(10)
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
