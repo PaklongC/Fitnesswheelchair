@@ -45,7 +45,7 @@ Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_
 
 const float r = 0.29;
 float t,td, v;
-int a, a2;
+int a, a2, rot;
 
 // Creating our sensor object to handle the sensor, with initialization 12345
 Adafruit_BNO055 bno = Adafruit_BNO055(55);
@@ -135,7 +135,7 @@ void setup(void) {
   }
 
   // Add the Orientation characteristic
-  success = ble.sendCommandWithIntReply( F("AT+GATTADDCHAR=UUID128=02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FF,PROPERTIES=0x10,MIN_LEN=1,MAX_LEN=17,VALUE=\"\""), &orientationCharId);
+  success = ble.sendCommandWithIntReply( F("AT+GATTADDCHAR=UUID128=02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FF,PROPERTIES=0x10,MIN_LEN=1,MAX_LEN=36,VALUE=\"\""), &orientationCharId);
   if (! success) {
     error(F("Could not add Orientation characteristic."));
   }
@@ -157,11 +157,18 @@ void orientation() {
   float angleY = euler_vector.y();
   float angleZ = euler_vector.z();
   delay(BNO055_SAMPLERATE_DELAY_MS);
-  
+
 
   imu::Vector<3> euler_vector2 = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
   float angleX2 = euler_vector2.x();
-  float delta_a = angleX2-angleX;
+  if(angleX>300&&angleX2<100&& delta_a>=0){ //we did a whole rotation
+    rot++;
+    delta_a = angleX2 + (360-angleX)
+  }
+  else{
+    float delta_a = angleX2-angleX;
+  }
+
   float arc = 2*3.14*r*(delta_a/360);
   float v = arc/td;
   // Command is sent when \n (\r) or println is called
@@ -174,6 +181,8 @@ void orientation() {
   ble.print(String(v));
   ble.print( F(",") );
   ble.println(String(t));
+  ble.print( F(",") );
+  ble.println(String(rot));
   /*
   ble.print( F("AT+GATTCHAR=") );
   ble.print( orientationCharId );
@@ -216,8 +225,8 @@ void rotation() {
   sensors_event_t event;
   bno.getEvent(&event);
 
-  // if this is the first loop iteration, ignore position data (always zero)  
-  //if its second loop iteration set the starting position for your axis 
+  // if this is the first loop iteration, ignore position data (always zero)
+  //if its second loop iteration set the starting position for your axis
   // if its another iteration, just continue computing the rotation data 
 
   float axis_value = event.orientation.x;   // replace this with whatever axis you're tracking
