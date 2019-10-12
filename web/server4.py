@@ -22,6 +22,10 @@ def graphsfunc():
 def getD3tut1():
     return render_template('D3tut1.html')
 
+@app.route('/pakswek')
+def graphs2():
+    return render_template('graph2.html')
+
 @socketio.on('json')
 def handle_json(json):
    print('received json: ' + str(json))
