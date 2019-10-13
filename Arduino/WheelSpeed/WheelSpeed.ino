@@ -44,8 +44,9 @@ Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_
 #define BNO055_SAMPLERATE_DELAY_MS (200)
 
 const float r = 0.29;
-float t,td, v;
-int a, a2, rot;
+float t,td, v, delta_a;
+int a, a2;
+int rot =0;
 
 // Creating our sensor object to handle the sensor, with initialization 12345
 Adafruit_BNO055 bno = Adafruit_BNO055(55);
@@ -135,7 +136,7 @@ void setup(void) {
   }
 
   // Add the Orientation characteristic
-  success = ble.sendCommandWithIntReply( F("AT+GATTADDCHAR=UUID128=02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FF,PROPERTIES=0x10,MIN_LEN=1,MAX_LEN=36,VALUE=\"\""), &orientationCharId);
+  success = ble.sendCommandWithIntReply( F("AT+GATTADDCHAR=UUID128=02-11-88-33-44-55-66-77-88-99-AA-BB-CC-DD-EE-FF,PROPERTIES=0x10,MIN_LEN=1,MAX_LEN=17,VALUE=\"\""), &orientationCharId);
   if (! success) {
     error(F("Could not add Orientation characteristic."));
   }
@@ -150,6 +151,7 @@ void setup(void) {
 
 void orientation() {
   t = millis();
+  
   // Get Euler angle data
   imu::Vector<3> euler_vector = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
   td = BNO055_SAMPLERATE_DELAY_MS/1000.00;
@@ -161,13 +163,16 @@ void orientation() {
 
   imu::Vector<3> euler_vector2 = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
   float angleX2 = euler_vector2.x();
-  if(angleX>300&&angleX2<100&& delta_a>=0){ //we did a whole rotation
+  if(angleX+delta_a > 360&&angleX2<180){ //we did a whole rotation
     rot++;
-    delta_a = angleX2 + (360-angleX)
+    delta_a = angleX2 + (360-angleX);
+  }else if(angleX+delta_a <0&&angleX2>180){
+    delta_a = -(angleX + (360-angleX2));
   }
   else{
-    float delta_a = angleX2-angleX;
+     delta_a = angleX2-angleX;
   }
+  
 
   float arc = 2*3.14*r*(delta_a/360);
   float v = arc/td;
@@ -181,8 +186,8 @@ void orientation() {
   ble.print(String(v));
   ble.print( F(",") );
   ble.println(String(t));
-  ble.print( F(",") );
-  ble.println(String(rot));
+  //ble.print( F(",") );
+  //ble.println(String(rot));
   /*
   ble.print( F("AT+GATTCHAR=") );
   ble.print( orientationCharId );

@@ -18,6 +18,11 @@ def baas():
 def graphsfunc():
     return render_template('graphs.html')
 
+@app.route('/freekissupercool3')
+def graphsfuncv():
+    return render_template('Wheelgraph.html')
+
+
 @app.route('/d3')
 def getD3tut1():
     return render_template('D3tut1.html')
