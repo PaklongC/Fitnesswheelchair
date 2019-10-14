@@ -1,3 +1,4 @@
+#Dit is een test document voor python code
 import time
 import csv
 t = 'test.csv'
