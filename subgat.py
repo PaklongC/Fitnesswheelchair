@@ -10,7 +10,7 @@ from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
 csvName ='defaultdata.csv'
-
+csvName = str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv'
 
 # DCD Hub
 #from dcd.entities.thing import Thing
@@ -78,9 +78,9 @@ def keyboard_interrupt_handler(signal_num, frame):
 
 def create_csv():
     try:
-        csvName = str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv'
         with open (csvName,'a') as csvFile:
             writer = csv.writer(csvFile)
+            writer.writerow(['theta', 'v','t'])
             csvFile.close
             print('Created csv file: '+ csvName)
     except:
@@ -91,7 +91,6 @@ def write_csv(csvData):
     try:
         with open(csvName, 'a') as csvFile:
             writer = csv.writer(csvFile)
-            writer.writerow(['theta', 'v','t'])
             writer.writerow(csvData)
             csvFile.close()
     except:
