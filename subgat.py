@@ -10,8 +10,10 @@ from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
 csvName ='defaultdata.csv'
-csvName = str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv'
-
+print("Please give csv name (defaultdata): ")
+csvName = input() + '.csv'
+if csvName =='.csv':
+    csvName = 'defaultdata.csv'
 # DCD Hub
 #from dcd.entities.thing import Thing
 #from dcd.entities.property import PropertyType
@@ -79,10 +81,6 @@ def keyboard_interrupt_handler(signal_num, frame):
 
 #=============================== CSV CLASSES=============================
 def create_csv():
-    print("Please give csv name (defaultdata): ")
-    csvName = input() + '.csv'
-    if csvName =='.csv':
-        csvName = 'defaultdata.csv'
     try:
         with open (csvName,'a') as csvFile:
             writer = csv.writer(csvFile)
