@@ -1,0 +1,14 @@
+{
+  "name": "actiontut",
+  "version": "1.0.0",
+  "description": "its a tut",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^3.0.0"
+  }
+}
