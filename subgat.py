@@ -76,7 +76,7 @@ def keyboard_interrupt_handler(signal_num, frame):
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
-def create_csv(csvData):
+def create_csv():
     try:
         csvName = str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv')
         with open (csvName,'a') as csvFile:
