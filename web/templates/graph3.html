@@ -2,8 +2,6 @@
 <html>
 <head lang="en">
     <meta charset="utf-8">
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="{{ url_for('static', filename='js/graph3.js') }}" language="JavaScript"></script>
     <style> /* set the CSS */
     body { font: 12px Arial;}
     path {
@@ -19,6 +17,11 @@
     shape-rendering: crispEdges;
     }
     </style>
+</head>
+
+<body>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="{{ url_for('static', filename='js/graph3.js') }}" language="JavaScript"></script>
 <script>
 // Set the dimensions of the canvas / graph
   var margin = {top: 30, right: 20, bottom: 30, left: 50},
@@ -69,4 +72,4 @@
           .attr("class", "y axis")
           .call(yAxis);
 </script>
-</head>
+</body>
