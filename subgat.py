@@ -79,9 +79,9 @@ def create_csv(csvData):
     try:
         csvName = str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv'
         with open (csvName,'a') as csvFile
-        writer = csv.writer(csvFile)
-        csvFile.close
-        print('Created csv file: '+ csvName)
+            writer = csv.writer(csvFile)
+            csvFile.close
+            print('Created csv file: '+ csvName)
     except:
         print('failed to create:')
         print(csvName)
