@@ -78,7 +78,7 @@ def keyboard_interrupt_handler(signal_num, frame):
 
 def create_csv():
     try:
-        csvName = str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv')
+        csvName = str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv'
         with open (csvName,'a') as csvFile:
             writer = csv.writer(csvFile)
             csvFile.close
