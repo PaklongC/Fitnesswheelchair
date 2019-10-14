@@ -28,6 +28,7 @@ GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
+#=============================== Bluetooth CLASSES=============================
 
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
@@ -76,7 +77,12 @@ def keyboard_interrupt_handler(signal_num, frame):
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
+#=============================== CSV CLASSES=============================
 def create_csv():
+    print("Please give csv name (defaultdata): ")
+    csvName = input() + '.csv'
+    if csvName ='.csv':
+        csvName = 'defaultdata.csv'
     try:
         with open (csvName,'a') as csvFile:
             writer = csv.writer(csvFile)
