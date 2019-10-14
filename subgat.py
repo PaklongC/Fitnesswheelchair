@@ -9,6 +9,9 @@ import csv
 from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
+csvName ='defaultdata.csv'
+
+
 # DCD Hub
 #from dcd.entities.thing import Thing
 #from dcd.entities.property import PropertyType
@@ -72,10 +75,19 @@ def keyboard_interrupt_handler(signal_num, frame):
     print("Exiting...".format(signal_num))
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
-
+def create_csv(csvData):
+    try:
+        csvName = "%d-%m_%H%M%S", time.gmtime()))+'.csv'
+        with open (csvName,'a') as csvFile
+        writer = csv.writer(csvFile)
+        csvFile.close
+        print('Created csv file: '+ csvName)
+    except:
+        print('failed to create:')
+        print(csvName)
 def write_csv(csvData):
     try:
-        with open(str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv', 'a') as csvFile:
+        with open(str(time.strftime(csvName, 'a') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(['theta', 'v','t'])
             writer.writerow(csvData)
@@ -96,6 +108,7 @@ b = 1
 c = 1
 d = 0
 
+#Connect bluetooth device
 while a:
     try:
         left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
@@ -103,6 +116,9 @@ while a:
         a = 0
     except:
         print("whooopie daisy no connection")
+
+#create our csv
+create_csv()
 
 # Subscribe to the GATT service
 while b: #try this for 30 times
