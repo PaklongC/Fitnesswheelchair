@@ -64,7 +64,7 @@ d3.csv("{{ url_for('static', filename='text/datadata.csv') }}", function(error, 
 
   // Add the X Axis
   svg.append("g")
-    .attr("transform", "translate(0,"/* + height */+ ")")
+    .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x));
 
   // Add the Y Axis
