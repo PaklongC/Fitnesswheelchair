@@ -175,7 +175,7 @@ void orientation() {
   
 
   float arc = 2*3.14*r*(delta_a/360);
-  float v = arc/td;
+  float v = -arc/td;
   // Command is sent when \n (\r) or println is called
   // AT+GATTCHAR=CharacteristicID,value
   ble.print( F("AT+GATTCHAR=") );
