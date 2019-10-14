@@ -70,7 +70,7 @@ features of the concept.</p>
 
 <h2> To do:</h2>
 <ul>
-  <li>DCD Hub, (als deze het doet)</li>
+  <li>DCD Hub, (hoogste prio want dan hoeven we zelf geen grafieken te maken maar dan moet deze het wel doen)</li>
   <li>Grafieken, (kan met d3.js maar zoek ff een tutorial want is best lastig)</li>
   <li>Data analyse, ok we hebben data wat doen we er mee? Bedenk wat we willen doen (visueel diagram) Als we dat weten kunnen bij subgat.py functies schrijven maak wel ff een backup van subgat.py </li>
 </ul>
