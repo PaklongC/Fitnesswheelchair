@@ -75,8 +75,9 @@ def keyboard_interrupt_handler(signal_num, frame):
 
 def write_csv(csvData):
     try:
-        with open(strftime("%m-%d_%H:%M:%S", gmtime()), 'a') as csvFile:
+        with open(str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv', 'a') as csvFile:
             writer = csv.writer(csvFile)
+            writer.writerow(['theta', 'v','t'])
             writer.writerow(csvData)
             csvFile.close()
     except:
