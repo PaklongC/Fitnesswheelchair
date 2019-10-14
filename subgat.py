@@ -81,7 +81,7 @@ def keyboard_interrupt_handler(signal_num, frame):
 def create_csv():
     print("Please give csv name (defaultdata): ")
     csvName = input() + '.csv'
-    if csvName ='.csv':
+    if csvName =='.csv':
         csvName = 'defaultdata.csv'
     try:
         with open (csvName,'a') as csvFile:
