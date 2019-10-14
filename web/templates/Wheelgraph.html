@@ -53,10 +53,7 @@ d3.csv("{{ url_for('static', filename='text/datadata.csv') }}", function(error, 
   });
 
   // Scale the range of the data
-//  x.domain(d3.extent(data, function(d) { return d.t; }));
-//  y.domain([0, d3.max(data, function(d) { return d.v; })]);
-
-  x.domain(0, d3.max(data, function(d) { return d.t; }));
+  x.domain(d3.extent(data, function(d) { return d.t; }));
   y.domain([0, d3.max(data, function(d) { return d.v; })]);
 
   // Add the valueline path.
@@ -67,7 +64,7 @@ d3.csv("{{ url_for('static', filename='text/datadata.csv') }}", function(error, 
 
   // Add the X Axis
   svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", "translate(0,"/* + height */+ ")")
     .call(d3.axisBottom(x));
 
   // Add the Y Axis
