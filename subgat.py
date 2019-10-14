@@ -87,7 +87,7 @@ def create_csv(csvData):
         print(csvName)
 def write_csv(csvData):
     try:
-        with open(str(time.strftime(csvName, 'a') as csvFile:
+        with open(csvName, 'a') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(['theta', 'v','t'])
             writer.writerow(csvData)
