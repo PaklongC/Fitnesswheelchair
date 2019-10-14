@@ -22,11 +22,10 @@ path {
 <body>
 
 <!-- load the d3.js library -->
-<script src="{{ url_for('static', filename='js/graph3.js') }}" language="JavaScript"></script>
-<script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<!--<script src="{{ url_for('static', filename='js/graph3.js') }}" language="JavaScript"></script>-->
 
 <script>
-
 // Set the dimensions of the canvas / graph
 var margin = {top: 30, right: 20, bottom: 30, left: 50},
     width = 600 - margin.left - margin.right,
@@ -61,7 +60,7 @@ var svg = d3.select("body")
               "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
-d3.csv("data.csv", function(error, data) {
+d3.csv(("{{ url_for('static', filename='text/data.csv') }}", function(error, data) {
     data.forEach(function(d) {
         d.date = parseDate(d.date);
         d.close = +d.close;
