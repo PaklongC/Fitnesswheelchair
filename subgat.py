@@ -75,9 +75,10 @@ def keyboard_interrupt_handler(signal_num, frame):
     print("Exiting...".format(signal_num))
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
+
 def create_csv(csvData):
     try:
-        csvName = str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv'
+        csvName = str(time.strftime("%d-%m_%H%M%S", time.gmtime()))+'.csv')
         with open (csvName,'a') as csvFile:
             writer = csv.writer(csvFile)
             csvFile.close
@@ -85,6 +86,7 @@ def create_csv(csvData):
     except:
         print('failed to create:')
         print(csvName)
+
 def write_csv(csvData):
     try:
         with open(csvName, 'a') as csvFile:
