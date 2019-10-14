@@ -150,7 +150,7 @@ void setup(void) {
 }
 
 void orientation() {
-  t = millis()/1000;
+  t = millis()/1000.00;
   
   // Get Euler angle data
   imu::Vector<3> euler_vector = bno.getVector(Adafruit_BNO055::VECTOR_EULER);

@@ -75,7 +75,7 @@ def keyboard_interrupt_handler(signal_num, frame):
 
 def write_csv(csvData):
     try:
-        with open('pidata2.csv', 'a') as csvFile:
+        with open(strftime("%m-%d_%H:%M:%S", gmtime()), 'a') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(csvData)
             csvFile.close()
