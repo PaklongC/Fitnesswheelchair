@@ -123,6 +123,7 @@ while a:
         a = 0
     except:
         print("whooopie daisy no connection")
+        time.sleep(5)
 
 #create our csv
 create_csv()
