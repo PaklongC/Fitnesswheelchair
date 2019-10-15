@@ -15,9 +15,6 @@ THING_TOKEN = os.environ['THING_TOKEN']
 # Instantiate a thing with its credential
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 
-
-
-
 # We can fetch the details of our thing
 my_thing.read()
 
