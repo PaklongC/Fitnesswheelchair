@@ -15,9 +15,6 @@ THING_TOKEN = os.environ['THING_TOKEN']
 # Instantiate a thing with its credential
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 
-
-
-
 # We can fetch the details of our thing
 my_thing.read()
 
@@ -40,6 +37,6 @@ while True:
     generate_dum_property_values(my_property)
     # Have a 2-second break
     time.sleep(2)
-    
+
 # contains the name, a unique id and the dimensions
 print(my_property.to_json())
