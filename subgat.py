@@ -9,6 +9,11 @@ import csv
 from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
+csvName ='defaultdata.csv'
+print("Please give csv name (defaultdata): ")
+csvName = input() + '.csv'
+if csvName =='.csv':
+    csvName = 'defaultdata.csv'
 # DCD Hub
 #from dcd.entities.thing import Thing
 #from dcd.entities.property import PropertyType
@@ -25,6 +30,7 @@ GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
+#=============================== Bluetooth CLASSES=============================
 
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
@@ -73,9 +79,21 @@ def keyboard_interrupt_handler(signal_num, frame):
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
+#=============================== CSV CLASSES=============================
+def create_csv():
+    try:
+        with open (csvName,'a') as csvFile:
+            writer = csv.writer(csvFile)
+            writer.writerow(['theta', 'v','t'])
+            csvFile.close
+            print('Created csv file: '+ csvName)
+    except:
+        print('failed to create:')
+        print(csvName)
+
 def write_csv(csvData):
     try:
-        with open('pidata.csv', 'a') as csvFile:
+        with open(csvName, 'a') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(csvData)
             csvFile.close()
@@ -95,6 +113,7 @@ b = 1
 c = 1
 d = 0
 
+#Connect bluetooth device
 while a:
     try:
         left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
@@ -102,6 +121,10 @@ while a:
         a = 0
     except:
         print("whooopie daisy no connection")
+        time.sleep(5)
+
+#create our csv
+create_csv()
 
 # Subscribe to the GATT service
 while b: #try this for 30 times
