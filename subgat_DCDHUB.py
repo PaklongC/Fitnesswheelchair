@@ -32,6 +32,9 @@ my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 my_thing.read()
 print(my_thing.to_json())
 
+my_property = my_thing.find_or_create_property("Wheelchair Speed",
+                                               PropertyType.TWO_DIMENSIONS)
+
 # UUID of the GATT characteristic to subscribe
 GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
 
@@ -87,6 +90,7 @@ def keyboard_interrupt_handler(signal_num, frame):
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
+print(my_property.to_json())
 #=============================== CSV CLASSES=============================
 def create_csv():
     try:
