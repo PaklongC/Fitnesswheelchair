@@ -40,6 +40,6 @@ while True:
     generate_dum_property_values(my_property)
     # Have a 2-second break
     time.sleep(2)
-    
+
 # contains the name, a unique id and the dimensions
 print(my_property.to_json())
