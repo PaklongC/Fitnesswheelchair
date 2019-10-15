@@ -6,8 +6,7 @@ import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
 import time
 import csv
-from dotenv import \
-    load_dotenv  # To load the environment variables from the .env file
+from dotenv import load_dotenv  # To load the environment variables from the .env file
 
 csvName ='defaultdata.csv'
 print("Please give csv name (defaultdata): ")

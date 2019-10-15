@@ -23,7 +23,7 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
 // parse the date / time
 //var parseTime = d3.timeParse("%d-%b-%y");
 
-// set the ranges
+////// set the ranges
 var x = d3.scaleTime().range([width, 0]);
 var y = d3.scaleLinear().range([height, 0]);
 
@@ -43,7 +43,7 @@ var svg = d3.select("body").append("svg")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
-d3.csv("{{ url_for('static', filename='text/test.csv') }}", function(error, data) {
+d3.csv("{{ url_for('static', filename='text/datadata.csv') }}", function(error, data) {
   if (error) throw error;
 
   // format the data
