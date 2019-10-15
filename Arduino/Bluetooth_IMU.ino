@@ -126,8 +126,7 @@ void velocity(){
     ble.print( F("AT+GATTCHAR=") );
     ble.print( orientationCharId );
     ble.print( F(",") );
-    ble.print( "V" );
-    ble.println(String(v));
+    ble.println(float(v));
   }
 }
 
