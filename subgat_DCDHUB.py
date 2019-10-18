@@ -45,9 +45,9 @@ def handle_orientation_data(handle, value_bytes):
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         try:
-            speed2 = values[1]
-            print(speed2)
-            my_property = my_thing.find_or_create_property("Speedy wheelcair",PropertyType.ONE_DIMENSION).update_values(speed2)
+            speed = values[1]
+            print(speed)
+            my_property = my_thing.find_or_create_property("Speedy wheelcair",PropertyType.ONE_DIMENSION)#.update_values(speed2)
         except:
             print("something wong")
     except:
@@ -110,10 +110,11 @@ while b: #try this for 30 times
         time.sleep(1)
 
 while True:
+    my_property.update_values(speed)
     #wheelchair_values(my_property)
     time.sleep(1)
 
-print(my_property.to_json())
+print(speed.to_json())
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
