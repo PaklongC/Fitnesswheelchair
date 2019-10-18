@@ -114,7 +114,7 @@ while True:
     #wheelchair_values(my_property)
     time.sleep(1)
 
-print(speed.to_json())
+print(my_property.to_json())
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
