@@ -7,7 +7,7 @@ const{ withHermes} = require ('hermes-javascript')
       console.log(msg)
       flow.end()
       const request = require('request');
-      request.post('http://service.com/upload')
+      request.post('145.94.227.95:5000/wheelie')
       return "ok lets start running,      oops, start rolling data collection"
     })
 
