@@ -143,6 +143,7 @@ d = 0
 #Connect bluetooth device
 def connect_adafruit():
     while a:
+        print('start connecting')
         try:
             left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
             print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
