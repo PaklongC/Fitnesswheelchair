@@ -6,7 +6,7 @@
 <h3>Scope:</h3>
 <H8><b>WHAT</b></H8>
 <img src="Images/fitnessChair.png" width="" height="">
-<br><br>
+<br>
 
 <b>WHY</b><br>
 <p>Create a wheelchair that functions as a fitness tracker for the disabled by measuring their
