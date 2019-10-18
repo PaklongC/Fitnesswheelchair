@@ -1,7 +1,8 @@
 const axios = require('axios');
 
-axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+axios.get('145.94.227.95:5000/wheelie')
   .then(response => {
+    console.log(response);
     console.log(response.data.url);
     console.log(response.data.explanation);
   })
