@@ -74,9 +74,9 @@ features of the concept.</p>
   </tr>
   <tr>
     <td rowspan = 2>D3.js<br><img src="Images/d3js.png" width="200" height=""><br><br>Data-centric Design Hub<br><img src="Images/dcd.png" width="200" height=""></td>
-    <td>- Voice > recogition</td>
-    <td>Using the API provided by google</td>
-    <td></td>
+    <td>- Accumulated data stored in a CSV-file</td>
+    <td>Drawing a graph of the 'total workout' using the aforementioned CSV</td>
+    <td>- As the code is now, the graph serves as a total overview rather than something that is regularly updated live</td>
     <td><img src=""></td>
   </tr>
   <tr>
