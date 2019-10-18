@@ -6,6 +6,17 @@ const{ withHermes} = require ('hermes-javascript')
     dialog.flow('froekoe:data_start',(msg,flow)=>{
       console.log(msg)
       flow.end()
+      const axios = require('axios');
+
+      axios.post('http://145.94.227.95:5000/wheelie')
+        .then(response => {
+          console.log(response);
+          console.log(response.data.url);
+          console.log(response.data.explanation);
+        })
+        .catch(error => {
+          console.log(error);
+        });
       return "ok lets start running,      oops, start rolling data collection"
     })
 
