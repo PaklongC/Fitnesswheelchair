@@ -45,7 +45,9 @@ def handle_orientation_data(handle, value_bytes):
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         try:
-            my_property = my_thing.find_or_create_property("Speedy wheelcair",PropertyType.ONE_DIMENSION).update_values(values[1])
+            speed2 = values[1]
+            print(speed2)
+            my_property = my_thing.find_or_create_property("Speedy wheelcair",PropertyType.ONE_DIMENSION).update_values(speed2)
         except:
             print("something wong")
     except:
