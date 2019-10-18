@@ -34,7 +34,7 @@ features of the concept.</p>
 
 <table style="width:100%">
   <tr>
-    <th>Sensor Used</th>
+    <th>Sensor/Actuator Used</th>
     <th>Data collected/needed</th>
     <th>Method</th>
     <th>Pros & Cons</th>
@@ -60,11 +60,30 @@ features of the concept.</p>
     <td><img src=""></td>
   </tr>
   <tr>
-    <td>Microphone<br><img src="Images/soundSensor.png" width="" height=""></td>
+    <td rowspan = 2>Speaker<br><img src="Images/speaker.png" width="" height=""><br><br>Microphone<br><img src="Images/soundSensor.png" width="" height=""></td>
     <td>- Voice > recogition</td>
     <td>Using the API provided by google</td>
     <td></td>
     <td><img src=""></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>- Voice > recogition</td>
+    <td>Using the API provided by google</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan = 2>D3.js<br><img src="Images/d3js.png" width="" height=""><br><br>Data-centric Design Hub</td>
+    <td>- Voice > recogition</td>
+    <td>Using the API provided by google</td>
+    <td></td>
+    <td><img src=""></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>- Voice > recogition</td>
+    <td>Using the API provided by google</td>
+    <td></td>
   </tr>
 </table>
 
@@ -74,10 +93,10 @@ features of the concept.</p>
   <li>Grafieken, (kan met d3.js maar zoek ff een tutorial want is best lastig)</li>
   <li>Data analyse, ok we hebben data wat doen we er mee? Bedenk wat we willen doen (visueel diagram) Als we dat weten kunnen bij subgat.py functies schrijven maak wel ff een backup van subgat.py </li>
 </ul>
-<p>--- vanaf hier kan ik dit makkelijk fixen maar als je graag wilt proberen ga je gang. </p> 
+<p>--- vanaf hier kan ik dit makkelijk fixen maar als je graag wilt proberen ga je gang. </p>
 <ul>  
-  <li>Communicatie javascript naar python. (Nu een flask server op rpi/piserver.py deze accepteerd httprequest zoals http://<IPADRESS:500>/wheelie "post" en print dan "supper hacker pro". (dit lukte binnen 1x dus was idd best wel super hacker pro). 
+  <li>Communicatie javascript naar python. (Nu een flask server op rpi/piserver.py deze accepteerd httprequest zoals http://<IPADRESS:500>/wheelie "post" en print dan "supper hacker pro". (dit lukte binnen 1x dus was idd best wel super hacker pro).
     Nu moet javascript nog een httpresquest posten naar de python server. (javascript runnen door in terminal: node scriptnaam.js) server runnen met python3: rpi/piserver.py (dit kan je allemaal op je laptop doen maar dan moet je wel node.js en flask instaleren, kan ook op pi daar staat het al</li>
   <li>Http request sturen van voice control (snips) naar piserver.py vanuit index.js (die ontvangt de intents van snips) (run: sam watch, andere terminal run: rpi/voice/wheelie/index.js en dan heel hard hopen dat het t doet.</il>
- 
+
 </ul>
