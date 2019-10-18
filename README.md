@@ -60,7 +60,7 @@ features of the concept.</p>
     <td><img src=""></td>
   </tr>
   <tr>
-    <td rowspan = 2>Speaker<br><img src="Images/speaker.png" width="" height=""><br><br>Microphone<br><img src="Images/soundSensor.png" width="" height=""></td>
+    <td rowspan = 2>Speaker<br><img src="Images/speaker.png" width="200" height=""><br><br>Microphone<br><img src="Images/soundSensor.png" width="200" height=""></td>
     <td>- Voice > recogition</td>
     <td>Using the API provided by google</td>
     <td></td>
@@ -73,7 +73,7 @@ features of the concept.</p>
     <td></td>
   </tr>
   <tr>
-    <td rowspan = 2>D3.js<br><img src="Images/d3js.png" width="" height=""><br><br>Data-centric Design Hub</td>
+    <td rowspan = 2>D3.js<br><img src="Images/d3js.png" width="200" height=""><br><br>Data-centric Design Hub<br><img src="Images/dcd.png" width="200" height=""></td>
     <td>- Voice > recogition</td>
     <td>Using the API provided by google</td>
     <td></td>
