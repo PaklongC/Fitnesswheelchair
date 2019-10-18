@@ -10,7 +10,7 @@ from dotenv import load_dotenv  # To load the environment variables from the .en
 
 csvName ='defaultdata.csv'
 print("Please give csv name (defaultdata): ")
-#csvName = input() + '.csv'
+csvName = input() + '.csv'
 if csvName =='.csv':
     csvName = 'defaultdata.csv'
 # DCD Hub
@@ -27,22 +27,7 @@ BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
 GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
 
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
-
-#============================= Pi server =====================================
 ADDRESS_TYPE = pygatt.BLEAddressType.random
-from flask import Flask, render_template, request
-
-
-app = Flask(__name__)
-
-@app.route('/wheelie', methods = ['POST'])
-def create():
-    print('super hacker starting data collection')
-    try:
-        connect_adafruit()
-    except:
-        print('could not start data collection')
-    return 'Added sensor!'
 
 #=============================== Bluetooth CLASSES=============================
 
@@ -119,7 +104,7 @@ def write_csv(csvData):
         print("could not write to csv")
 def writeto_dcd(dcdData):
     try:
-        ix =0
+
 
     except:
         print('could not write to dcd')
@@ -139,42 +124,34 @@ c = 1
 d = 0
 
 #Connect bluetooth device
-def connect_adafruit()
-    while a:
-        try:
-            left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
-            print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
-            create_csv()
-            a = 0
-            subscribe_adafruit()
-        except:
-            print("whooopie daisy no connection")
-            time.sleep(5)
-def subscribe_adafruit()
-    while b: #try this for 30 times
-        try:
-            print("try data subscribe")
-            left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
-                             callback=handle_orientation_data)
-            b = 0
-        except:
-            print("Trying to figure stuff out" + str(d))
-            d = d + 1
-            if(d>=30):
-                b = 0
-            time.sleep(1)
+while a:
+    try:
+        left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+        print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
+        a = 0
+    except:
+        print("whooopie daisy no connection")
+        time.sleep(5)
 
 #create our csv
-
+create_csv()
 
 # Subscribe to the GATT service
-
+while b: #try this for 30 times
+    try:
+        print("try data subscribe")
+        left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+                         callback=handle_orientation_data)
+        b = 0
+    except:
+        print("Trying to figure stuff out" + str(d))
+        d = d + 1
+        if(d>=30):
+            b = 0
+        time.sleep(1)
 
 while True:
     time.sleep(1)
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
