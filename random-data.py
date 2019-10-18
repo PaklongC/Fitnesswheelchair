@@ -21,15 +21,15 @@ my_thing.read()
 print(my_thing.to_json())
 
 # If we have no properties, let's create a random one
-my_property = my_thing.find_or_create_property("My Random Property2",
-                                               PropertyType.TWO_DIMENSIONS)
+my_property = my_thing.find_or_create_property("RANDOM SHIT",
+                                               PropertyType.THREE_DIMENSIONS)
 
                                                # Let's have a look at the property, it should
 
 # Let's create a function that generate random values
 def generate_dum_property_values(the_property):
     # Define a tuple with the current time, and 3 random values
-    values = (random(), random())
+    values = (random(), random(), random())
     # Update the values of the property
     the_property.update_values(values)
 # Finally, we call our function to start generating dum values
