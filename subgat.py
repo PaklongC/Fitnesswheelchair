@@ -9,10 +9,10 @@ import csv
 from dotenv import load_dotenv  # To load the environment variables from the .env file
 
 csvName ='defaultdata.csv'
-print("Please give csv name (defaultdata): ")
+#print("Please give csv name (defaultdata): ")
 #csvName = input() + '.csv'
-if csvName =='.csv':
-    csvName = 'defaultdata.csv'
+#if csvName =='.csv':
+#    csvName = 'defaultdata.csv'
 # DCD Hub
 #from dcd.entities.thing import Thing
 #from dcd.entities.property import PropertyType
