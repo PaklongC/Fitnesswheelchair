@@ -7,6 +7,7 @@ const{ withHermes} = require ('hermes-javascript')
       console.log(msg)
       flow.end()
       sendHttp();
+
       return "ok lets start running,      oops, start rolling data collection"
     })
 
@@ -17,7 +18,7 @@ const{ withHermes} = require ('hermes-javascript')
     })
   })
 
-  fucntion sendHttp(){
+  function sendHttp(){
     const axios = require('axios');
 
     axios.post('http://145.94.227.95:5000/wheelie')
