@@ -44,8 +44,9 @@ def handle_orientation_data(handle, value_bytes):
     try:
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-        my_property = my_thing.find_or_create_property("Wheelchair Speed",
-                                                       PropertyType.TWO_DIMENSIONS)
+        my_property = my_thing.find_or_create_property("Speedy wheelcair",
+                                                       PropertyType.ONE_DIMENSION).update_values(values)
+
     except:
         print("Could not convert data")
 
@@ -69,8 +70,7 @@ def keyboard_interrupt_handler(signal_num, frame):
 
 def wheelchair_values(the_property):
     speed = values[1]
-    time = values[2]
-    the_property.update_values(speed,time)
+    the_property.update_values(speed)
 
 # Start a BLE adapter
 bleAdapter = pygatt.GATTToolBackend()
