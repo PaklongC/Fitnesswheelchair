@@ -6,6 +6,8 @@ const{ withHermes} = require ('hermes-javascript')
     dialog.flow('froekoe:data_start',(msg,flow)=>{
       console.log(msg)
       flow.end()
+      const request = require('request');
+      request.post('http://service.com/upload')
       return "ok lets start running,      oops, start rolling data collection"
     })
 
@@ -15,7 +17,3 @@ const{ withHermes} = require ('hermes-javascript')
       return "Stopped data collecting,      start analysis,   you would be faster if you ran"
     })
   })
-
-const request = require('request');
-
-request.post('http://service.com/upload')
