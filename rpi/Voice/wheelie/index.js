@@ -6,8 +6,6 @@ const{ withHermes} = require ('hermes-javascript')
     dialog.flow('froekoe:data_start',(msg,flow)=>{
       console.log(msg)
       flow.end()
-      const request = require('request');
-      request.post('145.94.227.95:5000/wheelie')
       return "ok lets start running,      oops, start rolling data collection"
     })
 
