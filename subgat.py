@@ -44,6 +44,8 @@ def create():
         print('could not start data collection')
     return 'Added sensor!'
 
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
 #=============================== Bluetooth CLASSES=============================
 
 def find_or_create(property_name, property_type):
@@ -175,6 +177,3 @@ while True:
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
