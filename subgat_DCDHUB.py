@@ -28,20 +28,15 @@ print(my_thing.to_json())
 my_property = my_thing.find_or_create_property("Wheelchair Speed",
                                                PropertyType.TWO_DIMENSIONS)
 
+print(my_property.to_json())
+
 # UUID of the GATT characteristic to subscribe
 GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
 
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
-#=============================== Bluetooth CLASSES=============================
 
-def find_or_create(property_name, property_type):
-    """Search a property by name, create it if not found, then return it."""
-    if my_thing.find_property_by_name(property_name) is None:
-        my_thing.create_property(name=property_name,
-                                 property_type=property_type)
-    return my_thing.find_property_by_name(property_name)
 
 
 def handle_orientation_data(handle, value_bytes):
@@ -83,27 +78,6 @@ def keyboard_interrupt_handler(signal_num, frame):
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
-print(my_property.to_json())
-#=============================== CSV CLASSES=============================
-def create_csv():
-    try:
-        with open (csvName,'a') as csvFile:
-            writer = csv.writer(csvFile)
-            writer.writerow(['theta', 'v','t'])
-            csvFile.close
-            print('Created csv file: '+ csvName)
-    except:
-        print('failed to create:')
-        print(csvName)
-
-def write_csv(csvData):
-    try:
-        with open(csvName, 'a') as csvFile:
-            writer = csv.writer(csvFile)
-            writer.writerow(csvData)
-            csvFile.close()
-    except:
-        print("could not write to csv")
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 #my_thing.read()
@@ -127,9 +101,6 @@ while a:
     except:
         print("whooopie daisy no connection")
         time.sleep(5)
-
-#create our csv
-create_csv()
 
 # Subscribe to the GATT service
 while b: #try this for 30 times
