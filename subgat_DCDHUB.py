@@ -6,25 +6,24 @@ import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
 import time
 import csv
-from dotenv import load_dotenv
+from dotenv import load_dotenv  # To load the environment variables from the .env file
 
 csvName ='defaultdata.csv'
 print("Please give csv name (defaultdata): ")
 csvName = input() + '.csv'
 if csvName =='.csv':
     csvName = 'defaultdata.csv'
-
 # DCD Hub
-from dcd.entities.thing import Thing
-from dcd.entities.property import PropertyType
+#from dcd.entities.thing import Thing
+#from dcd.entities.property import PropertyType
 
 # The thing ID and access token
 load_dotenv()
-
-THING_ID = os.environ['THING_ID']
-THING_TOKEN = os.environ['THING_TOKEN']
+#THING_ID = os.environ['THING_ID']
+#THING_TOKEN = os.environ['THING_TOKEN']
 BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
 
+<<<<<<< HEAD
 # Instantiate a thing with its credential
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 
@@ -35,6 +34,8 @@ print(my_thing.to_json())
 my_property = my_thing.find_or_create_property("Wheelchair Speed",
                                                PropertyType.TWO_DIMENSIONS)
 
+=======
+>>>>>>> 53de76325e7029606af02f78d7b70d5dcd626ddb
 # UUID of the GATT characteristic to subscribe
 GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
 
