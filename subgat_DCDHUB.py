@@ -47,7 +47,7 @@ def handle_orientation_data(handle, value_bytes):
         try:
             speed = values[1]
             print(speed)
-            my_property = my_thing.find_or_create_property("Speedy wheelcair",PropertyType.ONE_DIMENSION)#.update_values(speed2)
+            my_property = my_thing.find_or_create_property("Speedy wheelcair",PropertyType.ONE_DIMENSION).update_values(values)
         except:
             print("something wong")
     except:
