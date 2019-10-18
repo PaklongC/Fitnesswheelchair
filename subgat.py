@@ -139,7 +139,7 @@ c = 1
 d = 0
 
 #Connect bluetooth device
-def connect_adafruit()
+def connect_adafruit():
     while a:
         try:
             left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
@@ -150,7 +150,7 @@ def connect_adafruit()
         except:
             print("whooopie daisy no connection")
             time.sleep(5)
-def subscribe_adafruit()
+def subscribe_adafruit():
     while b: #try this for 30 times
         try:
             print("try data subscribe")
