@@ -53,6 +53,10 @@ def handle_orientation_data(handle, value_bytes):
         write_csv(values)
     except:
         print("Could not write csv")
+    try:
+        writeto_dcd(values)
+    except:
+        print('dcd write function is not working')
 
     #find_or_create("Left Wheel Orientation",
                 #   PropertyType.THREE_DIMENSIONS).update_values(values)
@@ -98,6 +102,13 @@ def write_csv(csvData):
             csvFile.close()
     except:
         print("could not write to csv")
+def writeto_dcd(dcdData):
+    try:
+        
+
+    except:
+        print('could not write to dcd')
+
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 #my_thing.read()
