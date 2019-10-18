@@ -7,6 +7,10 @@ app = Flask(__name__)
 def create():
     print('super hacker')
     return 'Added sensor!'
+@app.route('/wheelie', methods = ['GET'])
+def getstuff():
+    print('super hacker maar net niet')
+    return 'learn js'
 @app.route('/home')
 def home():
     return render_template('index.html')
