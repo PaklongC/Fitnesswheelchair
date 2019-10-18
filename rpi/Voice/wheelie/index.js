@@ -8,7 +8,8 @@ const{ withHermes} = require ('hermes-javascript')
       flow.end()
       sendHttp();
 
-      return "ok lets start running,      oops, start rolling data collection"
+      return "ok, lets go"
+      //return "ok lets start running,      oops, start rolling data collection"
     })
 
     dialog.flow('froekoe:data_stop',(msg,flow)=>{
