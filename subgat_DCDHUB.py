@@ -45,10 +45,14 @@ def handle_orientation_data(handle, value_bytes):
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         my_property = my_thing.find_or_create_property("Speedy wheelcair",
-                                                       PropertyType.ONE_DIMENSION).update_values(values)
+                                                       PropertyType.ONE_DIMENSION).update_values(values[1])
 
     except:
         print("Could not convert data")
+
+def wheelchair_values(the_property):
+    speed = values[1]
+    the_property.update_values(speed)
 
 def discover_characteristic(device):
     """List characteristics of a device"""
@@ -67,10 +71,6 @@ def keyboard_interrupt_handler(signal_num, frame):
     print("Exiting...".format(signal_num))
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
-
-def wheelchair_values(the_property):
-    speed = values[1]
-    the_property.update_values(speed)
 
 # Start a BLE adapter
 bleAdapter = pygatt.GATTToolBackend()
@@ -107,9 +107,10 @@ while b: #try this for 30 times
         time.sleep(1)
 
 while True:
-    wheelchair_values(my_property)
+    #wheelchair_values(my_property)
     time.sleep(1)
 
 print(my_property.to_json())
+
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
