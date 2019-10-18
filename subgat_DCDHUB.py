@@ -28,7 +28,7 @@ print(my_thing.to_json())
 my_property = my_thing.find_or_create_property("Wheelchair Speed",
                                                PropertyType.TWO_DIMENSIONS)
 
-print(my_property.to_json())
+#print(my_property.to_json())
 
 # UUID of the GATT characteristic to subscribe
 GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
@@ -37,6 +37,7 @@ GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 
+                        #===BLUETOOTH===#
 
 
 def handle_orientation_data(handle, value_bytes):
@@ -49,14 +50,6 @@ def handle_orientation_data(handle, value_bytes):
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
     except:
         print("Could not convert data")
-    try:
-        write_csv(values)
-    except:
-        print("Could not write csv")
-
-    #find_or_create("Left Wheel Orientation",
-                #   PropertyType.THREE_DIMENSIONS).update_values(values)
-
 
 def discover_characteristic(device):
     """List characteristics of a device"""
@@ -66,11 +59,9 @@ def discover_characteristic(device):
         except:
             print("Something wrong with " + str(uuid))
 
-
 def read_characteristic(device, characteristic_id):
     """Read a characteristic"""
     return device.char_read(characteristic_id)
-
 
 def keyboard_interrupt_handler(signal_num, frame):
     """Make sure we close our program properly"""
@@ -78,6 +69,12 @@ def keyboard_interrupt_handler(signal_num, frame):
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
+def wheelchair_values(the_property):
+    the_property.update_values(values)
+
+while True:
+    wheelchair_values(my_property)
+    time.sleep(0.2)
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 #my_thing.read()
