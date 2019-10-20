@@ -61,16 +61,28 @@ features of the concept.</p>
   </tr>
   <tr>
     <td rowspan = 2>Speaker<br><img src="Images/speaker.png" width="200" height=""><br><br>Microphone<br><img src="Images/soundSensor.png" width="200" height=""></td>
-    <td>- Voice > recogition</td>
-    <td>Using the API provided by google</td>
     <td></td>
-    <td><img src=""></td>
+    <td>USB-speaker to give feedback to the user </td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td></td>
-    <td>- Voice > recogition</td>
-    <td>Using the API provided by google</td>
+    <td> Webcam microphone to get voice input from the user</td>
     <td></td>
+    <td></td>
+  </tr>
+   <tr>
+    <td><img src="https://miro.medium.com/max/400/1*lfbfrWS3PUaO3BX3ob1ZYQ.png" width="200" height=""></td>
+    <td>- Voice ></td>
+    <td>Easy to use web platform with great custom voice recognition</td>
+    <td>
+      <ul>
+        <li>Sam to setup local services </li>
+        <li>Hermes to communicate over MQTT with snips</li>
+        <li>local flask server with http requests to communicate with python script and hermes javascript<li>
+      </ul>
+     </td>
   </tr>
   <tr>
     <td rowspan = 2>D3.js<br><img src="Images/d3js.png" width="200" height=""><br><br>Data-centric Design Hub<br><img src="Images/dcd.png" width="200" height=""></td>
@@ -80,9 +92,9 @@ features of the concept.</p>
     <td><img src=""></td>
   </tr>
   <tr>
-    <td>- Speed of rotation measured by IMU</td>
-    <td>- Plotting the speed in a live updated graph</td>
-    <td><b>+ </b>Seeing live data <br><b>- </b>not being able to store the data and analyse it</td>
+    <td></td>
+    <td>- Voice > recogition</td>
+    <td>Using the API provided by google</td>
     <td></td>
   </tr>
 </table>
