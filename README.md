@@ -80,9 +80,9 @@ features of the concept.</p>
     <td><img src=""></td>
   </tr>
   <tr>
-    <td></td>
-    <td>- Voice > recogition</td>
-    <td>Using the API provided by google</td>
+    <td>- Speed of rotation measured by IMU</td>
+    <td>- Plotting the speed in a live updated graph</td>
+    <td><b>+ </b>Seeing live data <br><b>- </b>not being able to store the data and analyse it</td>
     <td></td>
   </tr>
 </table>
