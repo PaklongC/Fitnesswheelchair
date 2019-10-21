@@ -4,55 +4,47 @@
 <hr>
 <body>
 
-<div>
-	  <ul>
-		<li>List one</li>
-		<li>List one</li>
-		<li>List one</li>
-		<li>List one</li>
-		<li>List one</li>
-		<li>List one</li>
-	  </ul>
-	</div>
+<style type="text/css">
+
+.list {
+ float:left;
+ width:49.9%;
+}
+</style>
+</head>
+<body>
+<div id="container">
+  <div class="list">
+	<ul>
+	  <li>List one</li>
+	  <li>List one</li>
+	  <li>List one</li>
+	  <li>List one</li>
+	  <li>List one</li>
+	  <li>List one</li>
+	</ul>
+	<ul>
+	  <li>List three</li>
+	  <li>List three</li>
+	</ul>
   </div>
   <div class="list">
-	<div>
-	  <ul>
-		<li>List two</li>
-		<li>List two</li>
-		<li>List two</li>
-		<li>List two</li>
-		<li>List two</li>
-		<li>List two</li>
-	  </ul>
-	</div>
+	<ul>
+	  <li>List two</li>
+	  <li>List two</li>
+	</ul>
+	<ul>
+	  <li>List four</li>
+	  <li>List four</li>
+	  <li>List four</li>
+	  <li>List four</li>
+	  <li>List four</li>
+	  <li>List four</li>
+	</ul>
   </div>
-  <div class="list">
-	<div>
-	  <ul>
-		<li>List three</li>
-		<li>List three</li>
-		<li>List three</li>
-		<li>List three</li>
-		<li>List three</li>
-		<li>List three</li>
-	  </ul>
-	</div>
-  </div>
-  <div class="list">
-	<div>
-	  <ul>
-		<li>List four</li>
-		<li>List four</li>
-		<li>List four</li>
-		<li>List four</li>
-		<li>List four</li>
-		<li>List four</li>
-	  </ul>
-	</div>
-  </div>
-<br style="clear:both" />
+  <br style="clear:both" />
 </div>
+</body>
 
 
 <h3>Scope:</h3>
