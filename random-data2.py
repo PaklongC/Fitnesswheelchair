@@ -6,6 +6,22 @@ from dotenv import load_dotenv
 
 import os
 import time
+
+# DCD Hub
+from dcd.entities.thing import Thing
+from dcd.entities.property import PropertyType
+
+from datetime import datetime
+# What dates?
+START_DATE = "2019-10-08 21:17:00"
+END_DATE = "2019-11-08 21:25:00"
+
+DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
+from_ts = datetime.timestamp(datetime.strptime(START_DATE, DATE_FORMAT)) * 1000
+to_ts = datetime.timestamp(datetime.strptime(END_DATE, DATE_FORMAT)) * 1000
+
+PROPERTY_NAME = "My Random Property 18"
+
 # The thing ID and access token
 load_dotenv()
 
@@ -22,7 +38,16 @@ my_thing.read()
 print(my_thing.to_json())
 
 # If we have no properties, let's create a random one
+<<<<<<< HEAD
+my_property = my_thing.find_or_create_property("My Random Property",PropertyType.THREE_DIMENSIONS)
+my_property.read(from_ts, to_ts)
+
+print(len(my_property.values))
+
+my_property.values
+=======
 my_property = my_thing.find_or_create_property("My Random prop",PropertyType.THREE_DIMENSIONS)
+>>>>>>> 60290f2142fe7ab35fc21411ecd28eabcb95b5f8
 
                                                # Let's have a look at the property, it should
 
