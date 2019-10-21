@@ -126,30 +126,30 @@ c = 1
 d = 0
 
 #Connect bluetooth device
-
-while a:
-    print('start connecting')
-    try:
-        left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
-        print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
-        create_csv()
-        a = 0
-        subscribe_adafruit()
-    except:
-        print("whooopie daisy no connection")
-        time.sleep(5)
-while b: #try this for 30 times
-    try:
-        print("try data subscribe")
-        left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
-                         callback=handle_orientation_data)
-        b = 0
-    except:
-        print("Trying to figure stuff out" + str(d))
-        d = d + 1
-        if(d>=5):
+def start_connection():
+    while a:
+        print('start connecting')
+        try:
+            left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+            print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
+            create_csv()
+            a = 0
+            subscribe_adafruit()
+        except:
+            print("whooopie daisy no connection")
+            time.sleep(5)
+    while b: #try this for 30 times
+        try:
+            print("try data subscribe")
+            left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+                             callback=handle_orientation_data)
             b = 0
-        time.sleep(5)
+        except:
+            print("Trying to figure stuff out" + str(d))
+            d = d + 1
+            if(d>=5):
+                b = 0
+            time.sleep(5)
 
 #create our csv
 

@@ -26,6 +26,8 @@ def start_dataanalysis():
     #thread = Thread(target=testsub)
     thread = Thread(target=piserver)
     thread.start()
+    time.sleep(5)
+    thread.start_connection()
     print("t1")
     # app.run(debug=True, use_reloader=False)
     print("t2")
