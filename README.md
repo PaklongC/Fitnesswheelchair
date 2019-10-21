@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fitnesswheelchair</title>
+</head>
 <h1>Fitnesswheelchair</h1>
 <h6>By Pak Long, Freek and Lorenzo</h6>
 <img src="Images/banner.png" width="" height="">
@@ -122,3 +127,4 @@
     Nu moet javascript nog een httpresquest posten naar de python server. (javascript runnen door in terminal: node scriptnaam.js) server runnen met python3: rpi/piserver.py (dit kan je allemaal op je laptop doen maar dan moet je wel node.js en flask instaleren, kan ook op pi daar staat het al</li>
   <li>Http request sturen van voice control (snips) naar piserver.py vanuit index.js (die ontvangt de intents van snips) (run: sam watch, andere terminal run: rpi/voice/wheelie/index.js en dan heel hard hopen dat het t doet.</il>
 </ul>
+</html>
