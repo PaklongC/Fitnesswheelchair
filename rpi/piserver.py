@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from multiprocessing import Process, Value
 from threading import Thread
 import time
-#import subgat
+import subgat
 import testsub
 import threading
 
@@ -23,7 +23,8 @@ def start_dataanalysis():
     recording_on = Value('b', True)
     #p = Process(target=record_loop, args=(recording_on,))
     global thread
-    thread = Thread(target=testsub)
+    #thread = Thread(target=testsub)
+    thread = Thread(target=piserver)
     thread.start()
     print("t1")
     # app.run(debug=True, use_reloader=False)
