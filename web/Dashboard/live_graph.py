@@ -102,7 +102,8 @@ app.layout = html.Div(
 @app.callback(Output('live-graph', 'figure'),
               [Input('graph-update', 'interval')])
 def update_graph_scatter():
-    X.append(times)
+    time = datetime.datetime.now().strftime('%D, %H:%M:%S')
+    X.append(time)
     Y.append(speed)
 
     data = plotly.graph_objs.Scatter(
