@@ -1,32 +1,46 @@
 <h1>Fitnesswheelchair</h1>
 <h6>By Pak Long, Freek and Lorenzo</h6>
+<img src="Images/banner.png" width="" height="">
 <hr>
-
 <body>
+
 <h3>Scope:</h3>
 <H8><b>WHAT</b></H8>
 <img src="Images/fitnessChair.png" width="" height="">
 
+<head>
+<style type="text/css">
+.list {
+ float:left;
+ width:49.9%;
+}
+</style></head>
 
-<b>WHY</b><br>
-<p>Create a wheelchair that functions as a fitness tracker for the disabled by measuring their
-development and performances. The prototype serves to test the feasibility of one of the core
-features of the concept.</p>
-
-<h8><b>HOW</b></h8><br>
-<ol>
-  <li>
-  Testing the accelerometer and force sensor to collect meaningful data to send to the HUB.
-  </li><br>
-  <ul>
-    <li>Getting insight into sensor-sensitivities and accurate measurements.
-  </ul></li><br>
-  <li>Using the data during exercise with voice control.</li><br>
-  <ul>
-    <li>Getting insight into the user-interaction, guided by sound.</li>
-  </ul><br>
-</ol>
+<div id="container">
+  <div class="list">
+	<ul>
+	  <ul><H8><b>WHY</b></H8></ul><br>
+	  <li>Create a wheelchair that functions as a fitness tracker for the disabled by measuring their development and performances. The prototype serves to test the feasibility of one of the core features of the concept.</li>
+	</ul>
+  </div>
+  <div class="list">
+	<ul>
+	  <ul><H8><b>HOW</b></H8></ul><br>
+	  <li> Testing the accelerometer and force sensor to collect meaningful data to send to the HUB.
+      </li>
+      <ul>
+        <li>Getting insight into sensor-sensitivities and accurate measurements.<br>
+      </ul></li></li>
+	  <li>Using the data during exercise with voice control.</li>
+    <ul>
+      <li>Getting insight into the user-interaction, guided by sound.</li>
+    </ul><br></li>
+	</ol>
+  </div>
+  <br style="clear:both" />
+</div>
 </body>
+
 <img src="Images\IOT Architecture.png" width="" height="">
 <img src="Images\speedTime.png" width="" height="">
 <hr>
