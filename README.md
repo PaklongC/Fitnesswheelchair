@@ -16,31 +16,23 @@
 <div id="container">
   <div class="list">
 	<ul>
-	  <li>List one</li>
-	  <li>List one</li>
-	  <li>List one</li>
-	  <li>List one</li>
-	  <li>List one</li>
-	  <li>List one</li>
-	</ul>
-	<ul>
-	  <li>List three</li>
-	  <li>List three</li>
+	  <ul><H8><b>WHY</b></H8></ul><br>
+	  <li>Create a wheelchair that functions as a fitness tracker for the disabled by measuring their development and performances. The prototype serves to test the feasibility of one of the core features of the concept.</li>
 	</ul>
   </div>
   <div class="list">
 	<ul>
-	  <li>List two</li>
-	  <li>List two</li>
-	</ul>
-	<ul>
-	  <li>List four</li>
-	  <li>List four</li>
-	  <li>List four</li>
-	  <li>List four</li>
-	  <li>List four</li>
-	  <li>List four</li>
-	</ul>
+	  <ul><H8><b>HOW</b></H8></ul><br>
+	  <li> Testing the accelerometer and force sensor to collect meaningful data to send to the HUB.
+      </li>
+      <ul>
+        <li>Getting insight into sensor-sensitivities and accurate measurements.<br>
+      </ul></li></li>
+	  <li>Using the data during exercise with voice control.</li>
+    <ul>
+      <li>Getting insight into the user-interaction, guided by sound.</li>
+    </ul><br></li>
+	</ol>
   </div>
   <br style="clear:both" />
 </div>
@@ -51,26 +43,6 @@
 <H8><b>WHAT</b></H8>
 <img src="Images/fitnessChair.png" width="" height="">
 
-
-<b>WHY</b><br>
-<p>Create a wheelchair that functions as a fitness tracker for the disabled by measuring their
-development and performances. The prototype serves to test the feasibility of one of the core
-features of the concept.</p>
-
-<h8><b>HOW</b></h8><br>
-<ol>
-  <li>
-  Testing the accelerometer and force sensor to collect meaningful data to send to the HUB.
-  </li><br>
-  <ul>
-    <li>Getting insight into sensor-sensitivities and accurate measurements.
-  </ul></li><br>
-  <li>Using the data during exercise with voice control.</li><br>
-  <ul>
-    <li>Getting insight into the user-interaction, guided by sound.</li>
-  </ul><br>
-</ol>
-</body>
 <img src="Images\IOT Architecture.png" width="" height="">
 <img src="Images\speedTime.png" width="" height="">
 <hr>
