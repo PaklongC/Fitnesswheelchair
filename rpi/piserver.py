@@ -18,7 +18,7 @@ def start_dataanalysis():
     #p = Process(target=record_loop, args=(recording_on,))
     global thread
     #thread = Thread(target=testsub)
-    thread = Thread(target=piserver)
+    thread = Thread(target=subgat)
     thread.start()
     time.sleep(5)
     thread.start_connection()
