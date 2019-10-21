@@ -3,18 +3,12 @@ from multiprocessing import Process, Value
 from threading import Thread
 import time
 import subgat
-import testsub
+#import testsub
 import threading
 
 thread = None
 
 app = Flask(__name__)
-
-def record_loop(loop_on):
-   while True:
-      if loop_on.value == True:
-         print("loop running")
-      time.sleep(1)
 
 @app.route('/wheelie', methods = ['POST'])
 def start_dataanalysis():
@@ -24,10 +18,11 @@ def start_dataanalysis():
     #p = Process(target=record_loop, args=(recording_on,))
     global thread
     #thread = Thread(target=testsub)
-    thread = Thread(target=piserver)
+    thread = Thread(target=subgat.start_connection)
     thread.start()
-    time.sleep(5)
-    thread.start_connection()
+    print('started thread')
+    #time.sleep(5)
+    #thread.start_connection()
     print("t1")
     # app.run(debug=True, use_reloader=False)
     print("t2")

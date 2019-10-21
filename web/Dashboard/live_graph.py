@@ -74,9 +74,9 @@ while b: #try this for 30 times
             b = 0
         time.sleep(1)
 
-while True:
-    print(speed)
-    time.sleep(1)
+# while True:
+#     print(speed)
+#     time.sleep(1)
 
 
 

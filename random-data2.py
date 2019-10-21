@@ -25,8 +25,9 @@ PROPERTY_NAME = "My Random Property 18"
 # The thing ID and access token
 load_dotenv()
 
-THING_ID = 'my-test-thing-e1fc'
-THING_TOKEN = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzA0MzU2MDcsImV4cCI6MTg4NjAxNTIwNywiYXVkIjoiaHR0cHM6Ly9kd2QudHVkZWxmdC5ubDo0NDMvYXBpIn0.RjcUPyZ-lGm_2lixiHNcZDjD_fyvAqXXTK_ahXQ37szduH6l99ShCN2UZ6mvxb6_JskjmShM9-tO4Iq3p5gW3RYe6IKV9iIcWxU34waex9_bqd7j1Yiw0IUE7sRp2C-30p1zQYhemmJ5yvRf1IQNh9qjkUPI8_EEBxNHiKSCFZnMq4M5Kiaq1V7XlrFJbraXgI4iB2Pg1N9UyFvqncaiuP-YX50TSWSgnZSUX-CLYCs8gU_MwYv2Jr_BYQmQgcwRj78RJ-0s45DK446dQXjmA-RF5GMeHjRlkvOfJ4FH0fWgyzhduqTnSGRli273c9ouButWGDIAeUy9zpfMcLNaNKfMwAzm-6NtYXHy0fxcu6gaO4JZjY5ItzJQfYRXb9tEUKTFCY3LcctoDoVXSBhNCrOQbuMY-k459iy_UoLmQRWNZr8zVUMb4ORsl3kYB_JIb8VSUbhw-BvUHU7NL2D3kLyCz0IuWOmq5bllWHOgSkXYcqyhyzJWmtt1-xeedF3rH-vD9aWP9AHSmC1WvL6p2k8KjMQiVeL-fYz6hmJC_S-ZA3-Q31KDzMDti9vsYRE4hyh-U-9LbK_gqh-XlMYJVuzqOH__XTxLd-V5MEus6PCCruOw7KJ_t8pVOPoqiHxZlpwalv7oN_N-ioB3X3E_brsTw51_WLMey2_xBjnidfU'
+THING_ID = 'dcd:things:wheelchair_speed-e706'
+THING_TOKEN = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzEzODg4NzksImV4cCI6MTg4Njk2ODQ3OSwiYXVkIjoiaHR0cHM6Ly9kd2QudHVkZWxmdC5ubDo0NDMvYXBpIn0.VweBCop25V8boYHcU6OMKf710K3yIUO1c2HgxLRcy8ziahW9tU9CCi9D5AZhJwRcnLS4Fy2WDGJsFrv29GrEAQx0RTVd1rc8ZAXXbokKtPnXAsVNVicdaYmi2nN2Q-1X7VtLMA5LVq1FA76KvlGo1nGe2lGIpAqgZxVtgL596GhfsWf4dcNk8qABVYZdkiPp5mNAX4iE42LUG59anUYY951cD5Wt31BhFKNU99CmuPFCUrXKkCzH1SoVHYkwfWuUBYD6j5FJdQZt7jdFEKfAUbl5vVn4eNkJITo8OY325YGuLcza6_uFl9Ve8XcLPuA3csipYV1oTz4ZIPcqk1C66I8NI_KEh0lIVqgPaV_3ZkPJR-3_Qc9UAbcXu1r0-J5AJDXXF6gA_IFSZkvdPtn73OgqnZEQauVdc9FOp6SCy2xdzddIXo02MnV1YkVdyWXgjygXdNjsPKVJQmurjHrikjZHfMFa7hCcJl-UFbBmeHoJ7syhQnoZ91dF7oG93U8Q9NsLgDdMjgnWmMmHBOytCwulO0C76RER2IjBS2aNfgRdWzGvMWO_QqWVZBqbuKzYc3qcqcH8rPaIN3IST6rg3zVWc7I5Nbq9a7_yomc7r6B_UfOzWjMI1x8NTPz7HyAYc5m3dfBpXOxK2Z-6O5xnOuUQQrEM9147N6E8OvQpyDk'
+
 # Instantiate a thing with its credential
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 
@@ -36,12 +37,16 @@ my_thing.read()
 print(my_thing.to_json())
 
 # If we have no properties, let's create a random one
+<<<<<<< HEAD
 my_property = my_thing.find_or_create_property("My Random Property",PropertyType.THREE_DIMENSIONS)
 my_property.read(from_ts, to_ts)
 
 print(len(my_property.values))
 
 my_property.values
+=======
+my_property = my_thing.find_or_create_property("My Random prop",PropertyType.THREE_DIMENSIONS)
+>>>>>>> 60290f2142fe7ab35fc21411ecd28eabcb95b5f8
 
                                                # Let's have a look at the property, it should
 
