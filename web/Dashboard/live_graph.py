@@ -18,7 +18,7 @@ import time
 BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
 
 ATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
-DDRESS_TYPE = pygatt.BLEAddressType.random
+ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 def handle_orientation_data(handle, value_bytes):
     print("Received data: %s (handle %d)" % (str(value_bytes), handle))
