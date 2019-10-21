@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from multiprocessing import Process, Value
 from threading import Thread
 import time
+import subgat
 import testsub
 import threading
 
@@ -22,8 +23,11 @@ def start_dataanalysis():
     recording_on = Value('b', True)
     #p = Process(target=record_loop, args=(recording_on,))
     global thread
-    thread = Thread(target=testsub.counter, args=(recording_on,))
+    #thread = Thread(target=testsub)
+    thread = Thread(target=piserver)
     thread.start()
+    time.sleep(5)
+    thread.start_connection()
     print("t1")
     # app.run(debug=True, use_reloader=False)
     print("t2")
@@ -46,3 +50,4 @@ def home():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',use_reloader=False)
+print('we are doing stuff')

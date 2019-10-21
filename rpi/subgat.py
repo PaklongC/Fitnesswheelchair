@@ -126,7 +126,7 @@ c = 1
 d = 0
 
 #Connect bluetooth device
-def connect_adafruit():
+def start_connection():
     while a:
         print('start connecting')
         try:
@@ -138,7 +138,6 @@ def connect_adafruit():
         except:
             print("whooopie daisy no connection")
             time.sleep(5)
-def subscribe_adafruit():
     while b: #try this for 30 times
         try:
             print("try data subscribe")
@@ -160,6 +159,5 @@ def subscribe_adafruit():
 
 while True:
     time.sleep(1)
-    print('still active')
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
