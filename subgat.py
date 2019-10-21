@@ -6,6 +6,7 @@ import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
 import time
 import csv
+import threading
 from dotenv import load_dotenv  # To load the environment variables from the .env file
 
 csvName ='defaultdata.csv'
@@ -36,7 +37,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route('/wheelie', methods = ['POST'])
-def create():
+def connect_data():
     print('super hacker starting data collection')
     try:
         connect_adafruit()
@@ -143,6 +144,7 @@ d = 0
 #Connect bluetooth device
 def connect_adafruit():
     while a:
+        print('start connecting')
         try:
             left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
             print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
@@ -174,6 +176,6 @@ def subscribe_adafruit():
 
 while True:
     time.sleep(1)
-
+    print('still active')
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
