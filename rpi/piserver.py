@@ -10,12 +10,6 @@ thread = None
 
 app = Flask(__name__)
 
-def record_loop(loop_on):
-   while True:
-      if loop_on.value == True:
-         print("loop running")
-      time.sleep(1)
-
 @app.route('/wheelie', methods = ['POST'])
 def start_dataanalysis():
     print('super hacker')
@@ -50,4 +44,3 @@ def home():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',use_reloader=False)
-print('we are doing stuff')
