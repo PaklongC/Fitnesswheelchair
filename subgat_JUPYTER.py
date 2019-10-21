@@ -13,6 +13,11 @@ from datetime import datetime
 from dcd.entities.thing import Thing
 from dcd.entities.property import PropertyType
 
+from datetime import datetime
+# What dates?
+START_DATE = "2019-10-08 21:17:00"
+END_DATE = "2019-11-08 21:25:00"
+
 DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
 from_ts = datetime.timestamp(datetime.strptime(START_DATE, DATE_FORMAT)) * 1000
 to_ts = datetime.timestamp(datetime.strptime(END_DATE, DATE_FORMAT)) * 1000
