@@ -104,7 +104,7 @@ def write_csv(csvData):
         print("could not write to csv")
 def writeto_dcd(dcdData):
     try:
-
+        print("Writing to dcd")
 
     except:
         print('could not write to dcd')
