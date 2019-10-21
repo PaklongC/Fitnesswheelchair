@@ -3,7 +3,7 @@ from multiprocessing import Process, Value
 from threading import Thread
 import time
 import subgat
-import testsub
+#import testsub
 import threading
 
 thread = None
@@ -20,6 +20,7 @@ def start_dataanalysis():
     #thread = Thread(target=testsub)
     thread = Thread(target=subgat)
     thread.start()
+    print('started thread')
     time.sleep(5)
     thread.start_connection()
     print("t1")

@@ -116,14 +116,15 @@ def writeto_dcd(dcdData):
 #my_thing.read()
 
 # Start a BLE adapter
-bleAdapter = pygatt.GATTToolBackend()
-bleAdapter.start()
+
 
 # Use the BLE adapter to connect to our device
 
 
 #Connect bluetooth device
 def start_connection():
+    bleAdapter = pygatt.GATTToolBackend()
+    bleAdapter.start()
     a = 1
     b = 1
     c = 1
