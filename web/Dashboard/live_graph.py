@@ -73,7 +73,7 @@ while b: #try this for 30 times
         time.sleep(1)
 
 while True:
-    print(speed)
+    print(values[1])
     time.sleep(1)
 
 
