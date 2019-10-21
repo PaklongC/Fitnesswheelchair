@@ -1,8 +1,60 @@
 <h1>Fitnesswheelchair</h1>
 <h6>By Pak Long, Freek and Lorenzo</h6>
+<img src="Images/banner.png" width="" height="">
 <hr>
-
 <body>
+
+<div>
+	  <ul>
+		<li>List one</li>
+		<li>List one</li>
+		<li>List one</li>
+		<li>List one</li>
+		<li>List one</li>
+		<li>List one</li>
+	  </ul>
+	</div>
+  </div>
+  <div class="list">
+	<div>
+	  <ul>
+		<li>List two</li>
+		<li>List two</li>
+		<li>List two</li>
+		<li>List two</li>
+		<li>List two</li>
+		<li>List two</li>
+	  </ul>
+	</div>
+  </div>
+  <div class="list">
+	<div>
+	  <ul>
+		<li>List three</li>
+		<li>List three</li>
+		<li>List three</li>
+		<li>List three</li>
+		<li>List three</li>
+		<li>List three</li>
+	  </ul>
+	</div>
+  </div>
+  <div class="list">
+	<div>
+	  <ul>
+		<li>List four</li>
+		<li>List four</li>
+		<li>List four</li>
+		<li>List four</li>
+		<li>List four</li>
+		<li>List four</li>
+	  </ul>
+	</div>
+  </div>
+<br style="clear:both" />
+</div>
+
+
 <h3>Scope:</h3>
 <H8><b>WHAT</b></H8>
 <img src="Images/fitnessChair.png" width="" height="">
