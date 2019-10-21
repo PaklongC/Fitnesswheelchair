@@ -8,14 +8,14 @@
 <H8><b>WHAT</b></H8>
 <img src="Images/fitnessChair.png" width="" height="">
 
+<head>
 <style type="text/css">
 .list {
  float:left;
  width:49.9%;
 }
-</style>
-</head>
-<body>
+</style></head>
+
 <div id="container">
   <div class="list">
 	<ul>
