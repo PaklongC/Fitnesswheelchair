@@ -21,8 +21,8 @@ logging.getLogger('pygatt').setLevel(logging.DEBUG)
 load_dotenv()
 #THING_ID = os.environ['THING_ID']
 #THING_TOKEN = os.environ['THING_TOKEN']
-BLUETOOTH_DEVICE_MAC = "de:f7:c5:c8:80:4f"
-
+#BLUETOOTH_DEVICE_MAC = "de:f7:c5:c8:80:4f"
+BLUETOOTH_DEVICE_MAC = "c1:fc:0a:88:7c:b6"
 # UUID of the GATT characteristic to subscribe
 GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
 
