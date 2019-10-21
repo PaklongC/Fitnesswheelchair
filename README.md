@@ -4,8 +4,11 @@
 <hr>
 <body>
 
-<style type="text/css">
+<h3>Scope:</h3>
+<H8><b>WHAT</b></H8>
+<img src="Images/fitnessChair.png" width="" height="">
 
+<style type="text/css">
 .list {
  float:left;
  width:49.9%;
@@ -37,11 +40,6 @@
   <br style="clear:both" />
 </div>
 </body>
-
-
-<h3>Scope:</h3>
-<H8><b>WHAT</b></H8>
-<img src="Images/fitnessChair.png" width="" height="">
 
 <img src="Images\IOT Architecture.png" width="" height="">
 <img src="Images\speedTime.png" width="" height="">
