@@ -116,17 +116,19 @@ def writeto_dcd(dcdData):
 #my_thing.read()
 
 # Start a BLE adapter
-bleAdapter = pygatt.GATTToolBackend()
-bleAdapter.start()
+
 
 # Use the BLE adapter to connect to our device
-a = 1
-b = 1
-c = 1
-d = 0
+
 
 #Connect bluetooth device
-def connect_adafruit():
+def start_connection():
+    bleAdapter = pygatt.GATTToolBackend()
+    bleAdapter.start()
+    a = 1
+    b = 1
+    c = 1
+    d = 0
     while a:
         print('start connecting')
         try:
@@ -138,7 +140,6 @@ def connect_adafruit():
         except:
             print("whooopie daisy no connection")
             time.sleep(5)
-def subscribe_adafruit():
     while b: #try this for 30 times
         try:
             print("try data subscribe")
@@ -151,6 +152,9 @@ def subscribe_adafruit():
             if(d>=5):
                 b = 0
             time.sleep(5)
+    while True:
+        time.sleep(1)
+        print('sleeping')
 
 #create our csv
 
@@ -158,8 +162,6 @@ def subscribe_adafruit():
 # Subscribe to the GATT service
 
 
-while True:
-    time.sleep(1)
-    print('still active')
+
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
