@@ -17,13 +17,13 @@ import time
 
 BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
 
-ATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
-DDRESS_TYPE = pygatt.BLEAddressType.random
+GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
+ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 def handle_orientation_data(handle, value_bytes):
     print("Received data: %s (handle %d)" % (str(value_bytes), handle))
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-    speed = values[1]
+    #speed = values[1]
 
 def discover_characteristic(device):
     for uuid in device.discover_characteristics().keys():
@@ -73,7 +73,7 @@ while b: #try this for 30 times
         time.sleep(1)
 
 while True:
-    print(speed)
+    print(values[1])
     time.sleep(1)
 
 
@@ -104,7 +104,7 @@ app.layout = html.Div(
 def update_graph_scatter():
     time = datetime.datetime.now().strftime('%D, %H:%M:%S')
     X.append(time)
-    Y.append(speed)
+    Y.append(values[1])
 
     data = plotly.graph_objs.Scatter(
             x=list(X),
