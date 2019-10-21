@@ -159,5 +159,6 @@ def start_connection():
 
 while True:
     time.sleep(1)
+    print('sleeping')
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
