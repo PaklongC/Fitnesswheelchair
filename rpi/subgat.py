@@ -159,6 +159,5 @@ while b: #try this for 30 times
 
 while True:
     time.sleep(1)
-    print('still active')
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
