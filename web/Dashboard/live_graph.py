@@ -12,6 +12,7 @@ import pygatt
 import signal
 import os
 import time
+speed = 0
 
 #================BLUETOOTH MODULE====================
 
@@ -23,7 +24,8 @@ ADDRESS_TYPE = pygatt.BLEAddressType.random
 def handle_orientation_data(handle, value_bytes):
     print("Received data: %s (handle %d)" % (str(value_bytes), handle))
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-    #speed = values[1]
+    global speed
+    speed = values[1]
 
 def discover_characteristic(device):
     for uuid in device.discover_characteristics().keys():
@@ -73,7 +75,7 @@ while b: #try this for 30 times
         time.sleep(1)
 
 while True:
-    print(values[1])
+    print(speed)
     time.sleep(1)
 
 
@@ -104,7 +106,8 @@ app.layout = html.Div(
 def update_graph_scatter():
     time = datetime.datetime.now().strftime('%D, %H:%M:%S')
     X.append(time)
-    Y.append(values[1])
+    global speed
+    Y.append(speed)
 
     data = plotly.graph_objs.Scatter(
             x=list(X),
