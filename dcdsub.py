@@ -26,7 +26,7 @@ from random import random
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 def setup():
     load_dotenv()
-    global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,csvName,GATT_CHARACTERISTIC_ORIENTATION,my_thing
+    global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,csvName,GATT_CHARACTERISTIC_ORIENTATION,my_thing,my_property
 
     THING_ID = os.environ['THING_ID']
     THING_TOKEN = os.environ['THING_TOKEN']
@@ -40,6 +40,9 @@ def setup():
     my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
     my_thing.read()
     print(my_thing.to_json())
+    my_property = my_thing.find_or_create_property("RANDOM SHIT",
+                                                   PropertyType.THREE_DIMENSIONS)
+
 #=============================== Bluetooth CLASSES=============================
 
 def find_or_create(property_name, property_type):
@@ -115,12 +118,12 @@ def write_csv(csvData):
         print("could not write to csv")
 def writeto_dcd(dcdData):
     print("Writing to dcd")
-
+    my_property.update_values(dcdData)
 
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 #my_thing.read()
-
+setup()
 # Start a BLE adapter
 bleAdapter = pygatt.GATTToolBackend()
 bleAdapter.start()
