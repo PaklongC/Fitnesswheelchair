@@ -132,10 +132,11 @@ def connect_bluetooth():
         except:
             print("whooopie daisy no connection")
             time.sleep(5)
-#subscribe to bluetooth service with UUID
-def subscribe_service():
+
+    #subscribe to bluetooth service with UUID
     b = 1
     d = 0
+    time.sleep(2)
     for i in range(6): #try this a few times
         try:
             print("try data subscribe")
@@ -149,8 +150,6 @@ def subscribe_service():
 def start_connection():
     setup()
     connect_bluetooth()
-    time.sleep(2)
-    subscribe_service()
 
     #keep thread open
     while True:
