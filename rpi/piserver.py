@@ -18,10 +18,10 @@ def start_dataanalysis():
     #p = Process(target=record_loop, args=(recording_on,))
     global thread
     #thread = Thread(target=testsub)
-    thread = Thread(target=subgat.start_connection)
-    thread.start()
+    #thread = Thread(target=subgat.start_connection)
+    #thread.start()
 
-    #subgat.start_data_collection()
+    subgat.start_data_collection()
     return 'Started sub process data collection'
 
 @app.route('/stop', methods = ['GET'])
