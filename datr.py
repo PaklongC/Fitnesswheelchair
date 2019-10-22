@@ -21,7 +21,7 @@ print(my_thing.to_json())
 my_property = my_thing.find_or_create_property("My Random prop", PropertyType.THREE_DIMENSIONS)
 # Let's have a look at the property, it should
 # contains the name, a unique id and the dimensions
-print(my_property.to_json())
+#print(my_property.to_json())
 
 # Let's create a function that generate random values
 def generate_dum_property_values(the_property):
@@ -34,3 +34,5 @@ while True:
     generate_dum_property_values(my_property)
     # Have a 2-second break
     time.sleep(2)
+
+print(my_property.to_json())
