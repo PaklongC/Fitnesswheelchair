@@ -31,6 +31,6 @@ def generate_dum_property_values(the_property):
     the_property.update_values(values)
 # Finally, we call our function to start generating dum values
 while True:
-    generate_dum_property_values(the_property)
+    generate_dum_property_values(my_property)
     # Have a 2-second break
     time.sleep(2)

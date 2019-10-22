@@ -10,7 +10,7 @@ from dotenv import load_dotenv  # To load the environment variables from the .en
 
 csvName ='defaultdata.csv'
 print("Please give csv name (defaultdata): ")
-csvName = input() + '.csv'
+#csvName = input() + '.csv'
 if csvName =='.csv':
     csvName = 'defaultdata.csv'
 # DCD Hub
@@ -54,7 +54,8 @@ def handle_orientation_data(handle, value_bytes):
     except:
         print("Could not write csv")
     try:
-        writeto_dcd(values)
+        #writeto_dcd(values)
+        print("test")
     except:
         print('dcd write function is not working')
 
@@ -105,7 +106,6 @@ def write_csv(csvData):
 def writeto_dcd(dcdData):
     try:
         print("Writing to dcd")
-
     except:
         print('could not write to dcd')
 
