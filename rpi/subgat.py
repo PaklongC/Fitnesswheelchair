@@ -125,6 +125,7 @@ def connect_bluetooth():
     while a:
         print('start connecting')
         try:
+            global left_wheel
             left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
             print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
             create_csv()

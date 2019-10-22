@@ -22,7 +22,7 @@ def start_dataanalysis():
     thread = Thread(target=subgat.start_connection)
     thread.start()
     '''
-    subgat.start_connection()
+    subgat.start_data_collection()
     return 'Started sub process data collection'
 
 @app.route('/stop', methods = ['GET'])
