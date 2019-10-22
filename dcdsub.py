@@ -40,7 +40,7 @@ def setup():
     my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
     my_thing.read()
     print(my_thing.to_json())
-    my_property = my_thing.find_or_create_property("RANDOM SHIT",
+    my_property = my_thing.find_or_create_property("Wheelchair Speed",
                                                    PropertyType.THREE_DIMENSIONS)
 
 #=============================== Bluetooth CLASSES=============================
@@ -68,7 +68,7 @@ def handle_orientation_data(handle, value_bytes):
     except:
         print("Could not write csv")
     try:
-        writeto_dcd(values)
+        writeto_dcd((values[0],values[1]))
     except:
         print('dcd write function is not working')
 
