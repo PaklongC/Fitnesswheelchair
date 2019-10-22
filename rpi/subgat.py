@@ -91,6 +91,7 @@ def read_characteristic(device, characteristic_id):
 def keyboard_interrupt_handler(signal_num, frame):
     """Make sure we close our program properly"""
     print("Exiting...".format(signal_num))
+    global left_wheel
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
