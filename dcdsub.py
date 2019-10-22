@@ -61,6 +61,7 @@ def handle_orientation_data(handle, value_bytes):
     try:
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
+        values[1]= 3.6*values[1]
     except:
         print("Could not convert data")
     try:
