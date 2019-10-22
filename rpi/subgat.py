@@ -148,8 +148,6 @@ def connect_bluetooth():
         except:
             print("Trying to figure stuff out" + str(d))
             time.sleep(5)
-    while True:
-        time.sleep(1)
 #Connect bluetooth device
 def start_connection():
     setup()
