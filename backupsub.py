@@ -53,15 +53,16 @@ def handle_orientation_data(handle, value_bytes):
         write_csv(values)
     except:
         print("Could not write csv")
+'''
     try:
-        #writeto_dcd(values)
+        writeto_dcd(values)
         print("test")
     except:
         print('dcd write function is not working')
 
     #find_or_create("Left Wheel Orientation",
                 #   PropertyType.THREE_DIMENSIONS).update_values(values)
-
+'''
 
 def discover_characteristic(device):
     """List characteristics of a device"""
