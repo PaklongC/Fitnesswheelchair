@@ -119,7 +119,7 @@ def write_csv(csvData):
 def writeto_dcd(dcdData):
     print("Writing to dcd")
     my_thing.find_or_create_property("Wheelchair Speed",PropertyType.TWO_DIMENSIONS).update_values((dcdData[0],dcdData[1]))
-    my_thing.find_or_create_property("Speedy wheelchair",PropertyType.ONE_DIMENSIONS).update_values((dcdData[1]))
+    my_thing.find_or_create_property("Speedy wheelcair",PropertyType.ONE_DIMENSIONS).update_values((dcdData[1]))
 
     #my_property.update_values(dcdData)
 
