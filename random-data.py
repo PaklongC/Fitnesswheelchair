@@ -33,7 +33,7 @@ def generate_dum_property_values(the_property):
     the_property.update_values(values)
     my_thing.find_or_create_property("three",PropertyType.THREE_DIMENSIONS).update_values(values)
     my_thing.find_or_create_property("two",PropertyType.TWO_DIMENSIONS).update_values((values[0],values[1]))
-    my_thing.find_or_create_property("one",PropertyType.ONE_DIMENSION).update_values((values[0]))
+    my_thing.find_or_create_property("one",PropertyType.ONE_DIMENSION).update_values((values[0],))
 # Finally, we call our function to start generating dum values
 while True:
     generate_dum_property_values(my_property)
