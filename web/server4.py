@@ -21,7 +21,7 @@ def graphsfunc():
 
 @app.route('/freekissupercool3')
 def graphsfuncv():
-    return render_template('Wheelgraph.html')
+    return render_template('WheelgraphTEST.html')
 
 
 @app.route('/d3')
