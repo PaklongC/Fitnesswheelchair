@@ -6,21 +6,28 @@ import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
 import time
 import csv
-
-from threading import Thread
 from dotenv import load_dotenv  # To load the environment variables from the .env file
+# DCD Hub
 from dcd.entities.thing import Thing
 from dcd.entities.property import PropertyType
 from random import random
-from dotenv import load_dotenv
 
 
-#============================= Setup =====================================
-#Run this first & declare all global variables
+#print("Please give csv name (defaultdata): ")
+#csvName = input() + '.csv'
+
+
+# The thing ID and access token
+
+# UUID of the GATT characteristic to subscribe
+
+
+# Many devices, e.g. Fitbit, use random addressing, this is required to connect.
+ADDRESS_TYPE = pygatt.BLEAddressType.random
 def setup():
     load_dotenv()
-    global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,ADDRESS_TYPE,GATT_CHARACTERISTIC_ORIENTATION,bleAdapter,my_thing,my_property,csvName
-    ADDRESS_TYPE = pygatt.BLEAddressType.random
+    global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,csvName,GATT_CHARACTERISTIC_ORIENTATION,my_thing,my_property
+
     THING_ID = os.environ['THING_ID']
     THING_TOKEN = os.environ['THING_TOKEN']
 
@@ -30,12 +37,9 @@ def setup():
     BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
     GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
 
-    bleAdapter = pygatt.GATTToolBackend()
-    bleAdapter.start()
-
     my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
     my_thing.read()
-    #print(my_thing.to_json())
+    print(my_thing.to_json())
     my_property = my_thing.find_or_create_property("Wheelchair Speed",
                                                    PropertyType.THREE_DIMENSIONS)
 
@@ -57,7 +61,6 @@ def handle_orientation_data(handle, value_bytes):
     try:
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-        #speed m/s to km/h
         values[1]= 3.6*values[1]
     except:
         print("Could not convert data")
@@ -68,7 +71,7 @@ def handle_orientation_data(handle, value_bytes):
     try:
         writeto_dcd(values)
     except:
-        print('Could not send data to dcdhub')
+        print('dcd write function is not working')
 
     #find_or_create("Left Wheel Orientation",
                 #   PropertyType.THREE_DIMENSIONS).update_values(values)
@@ -91,7 +94,6 @@ def read_characteristic(device, characteristic_id):
 def keyboard_interrupt_handler(signal_num, frame):
     """Make sure we close our program properly"""
     print("Exiting...".format(signal_num))
-    global left_wheel
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
@@ -116,56 +118,55 @@ def write_csv(csvData):
     except:
         print("could not write to csv")
 def writeto_dcd(dcdData):
-    #print ("sending data to dcd")
+    print("Writing to dcd")
     my_thing.find_or_create_property("Rotation",PropertyType.TWO_DIMENSIONS).update_values((dcdData[0],dcdData[1]))
     my_thing.find_or_create_property("Speed",PropertyType.ONE_DIMENSION).update_values((dcdData[1],))
-#try connecting to BLUETOOTH_DEVICE_MAC
-def connect_bluetooth():
-    a=1
-    while a:
-        print('start connecting')
-        try:
-            global left_wheel
-            left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
-            print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
-            create_csv()
-            a = 0
 
-        except:
-            print("whooopie daisy no connection")
-            time.sleep(5)
+    #my_property.update_values(dcdData)
 
-    #subscribe to bluetooth service with UUID
-    b = 1
-    d = 0
-    time.sleep(2)
-    for i in range(6): #try this a few times
-        try:
-            print("try data subscribe")
-            left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
-                             callback=handle_orientation_data)
-            break
-        except:
-            print("Trying to figure stuff out" + str(d))
-            time.sleep(5)
+# Instantiate a thing with its credential, then read its properties from the DCD Hub
+#my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+#my_thing.read()
+setup()
+# Start a BLE adapter
+bleAdapter = pygatt.GATTToolBackend()
+bleAdapter.start()
+
+# Use the BLE adapter to connect to our device
+a = 1
+b = 1
+c = 1
+d = 0
+
 #Connect bluetooth device
-def start_connection():
-    setup()
-    connect_bluetooth()
-
-    #keep thread open
-    while True:
-        time.sleep(1)
-        #print('sleeping')
-
-def start_data_collection():
+while a:
     try:
-        print('started connection & data collection thread')
-        thread = Thread(target=start_connection)
-        thread.start()
+        left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+        print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
+        a = 0
     except:
-        print('could not start thread')
+        print("whooopie daisy no connection")
+        time.sleep(5)
 
+#create our csv
+create_csv()
+
+# Subscribe to the GATT service
+while b: #try this for 30 times
+    try:
+        print("try data subscribe")
+        left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+                         callback=handle_orientation_data)
+        b = 0
+    except:
+        print("Trying to figure stuff out" + str(d))
+        d = d + 1
+        if(d>=30):
+            b = 0
+        time.sleep(1)
+
+while True:
+    time.sleep(1)
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
