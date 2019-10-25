@@ -19,7 +19,7 @@ username & pw: g4
 
 SSH:
 thuis:  ssh pi@192.168.178.40
-TU:     ssh pi@145.94.228.80
+TU:     ssh pi@145.94.230.216
 
 THINGS:
 THING_ID=dcd:things:wheelchair_speed-e706
