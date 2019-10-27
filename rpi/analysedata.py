@@ -13,7 +13,7 @@ def check(val):
         return True
     return False
 def checkd(val,timeout):
-    global last_time, timeout
+    global last_time
     if last_time + timeout > time():
         last_time = time()
         if check(val):
