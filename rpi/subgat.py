@@ -66,7 +66,7 @@ def handle_orientation_data(handle, value_bytes):
         #speed m/s to km/h
         values[1]= 3.6*values[1]
         distance += values[3]
-        values.append(distance)
+        #values.append(distance)
         if ad.checkd(values[0],5)=="slow": snips_say("Go faster")
     except:
         print("Could not convert data")
@@ -109,7 +109,7 @@ def create_csv():
     try:
         with open (csvName,'a') as csvFile:
             writer = csv.writer(csvFile)
-            writer.writerow(['theta', 'v','dx','distance'])
+            writer.writerow(['theta', 'v','darc','distance'])
             csvFile.close
             print('Created csv file: '+ csvName)
     except:
