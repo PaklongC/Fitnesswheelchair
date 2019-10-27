@@ -17,7 +17,7 @@ def start_dataanalysis():
     #testsub.main()
     recording_on = Value('b', True)
     #p = Process(target=record_loop, args=(recording_on,))
-    global thread
+    #global thread
     #thread = Thread(target=testsub)
     #thread = Thread(target=subgat.start_connection)
     #thread.start()

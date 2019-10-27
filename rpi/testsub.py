@@ -1,5 +1,8 @@
 import time
 i =10
+last_time = time.time()
+print(last_time)
+time.sleep(2)
 def count():
     b = 10
     global i
