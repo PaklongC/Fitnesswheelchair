@@ -14,10 +14,10 @@ def check(val):
     return False
 def checkd(val,timeout):
     global last_time
-    timer = last_time + timeout
-    print(timer)
+
+    print(last_time+timeout)
     print(time())
-    if  timer < time():
+    if  last_time + timeout < time():
         last_time = time()
         if check(val):
             return "good"
