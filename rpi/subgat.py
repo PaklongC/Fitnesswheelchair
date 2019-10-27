@@ -132,7 +132,7 @@ def writeto_dcd(dcdData):
 def connect_bluetooth():
     a=1
     while a:
-        print('start connecting')
+        print('start connecting to:', BLUETOOTH_DEVICE_MAC)
         snips_say("start connection")
         try:
             global left_wheel
