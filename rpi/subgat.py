@@ -13,7 +13,7 @@ from dcd.entities.thing import Thing
 from dcd.entities.property import PropertyType
 from random import random
 from dotenv import load_dotenv
-
+from snipssay import snips_say
 
 #============================= Setup =====================================
 #Run this first & declare all global variables
@@ -119,11 +119,12 @@ def writeto_dcd(dcdData):
     #print ("sending data to dcd")
     my_thing.find_or_create_property("Rotation",PropertyType.TWO_DIMENSIONS).update_values((dcdData[0],dcdData[1]))
     my_thing.find_or_create_property("Speed",PropertyType.ONE_DIMENSION).update_values((dcdData[1],))
-#try connecting to BLUETOOTH_DEVICE_MAC
+#try connecting to BLUETOOTH_DEVICE_MAC if not able to connect try again
 def connect_bluetooth():
     a=1
     while a:
         print('start connecting')
+        snips_say("start connection")
         try:
             global left_wheel
             left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
