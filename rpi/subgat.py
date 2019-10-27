@@ -14,12 +14,14 @@ from dcd.entities.property import PropertyType
 from random import random
 from dotenv import load_dotenv
 from snipssay import snips_say
+from time import time
 
 #============================= Setup =====================================
 #Run this first & declare all global variables
 def setup():
     load_dotenv()
     global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,ADDRESS_TYPE,GATT_CHARACTERISTIC_ORIENTATION,bleAdapter,my_thing,my_property,csvName
+    global start_time
     ADDRESS_TYPE = pygatt.BLEAddressType.random
     THING_ID = os.environ['THING_ID']
     THING_TOKEN = os.environ['THING_TOKEN']
@@ -38,6 +40,7 @@ def setup():
     #print(my_thing.to_json())
     my_property = my_thing.find_or_create_property("Wheelchair Speed",
                                                    PropertyType.THREE_DIMENSIONS)
+    start_time = time()
 
 #=============================== Bluetooth CLASSES=============================
 
