@@ -1,10 +1,10 @@
 import serial
 import time
 import testsub
-import snipssay
+from snipssay import snips_say
 
 for i in range(10):
-	snipssay.snips_say(str(i))
+	snips_say(str(i))
 	time.sleep(3)
 
 '''
