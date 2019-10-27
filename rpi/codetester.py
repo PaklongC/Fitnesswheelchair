@@ -5,13 +5,13 @@ from snipssay import snips_say
 import analysedata
 ad = analysedata
 
-if ad.checkd(100,10)=="slow": snips_say("Go faster")
+if ad.checkd(100,5)=="slow": snips_say("Go faster")
 time.sleep(3)
-if ad.checkd(100,10)=="slow": snips_say("Go faster")
+if ad.checkd(100,5)=="slow": snips_say("Go faster")
 time.sleep(3)
-if ad.checkd(200,10)=="good": snips_say("Nice keep going")
+if ad.checkd(200,5)=="good": snips_say("Nice keep going")
 time.sleep(3)
-if ad.checkd(200,10)=="good": snips_say("Nice keep going")
+if ad.checkd(200,5)=="good": snips_say("Nice keep going")
 '''
 print("check 50:", ad.check(50))
 print("check 300:", ad.check(300))
