@@ -22,7 +22,7 @@ from snipssay import snips_say
 def setup():
     load_dotenv()
     global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,ADDRESS_TYPE,GATT_CHARACTERISTIC_ORIENTATION,bleAdapter,my_thing,my_property,csvName
-    global start_time, ad
+    global start_time, ad, distance
     ADDRESS_TYPE = pygatt.BLEAddressType.random
     THING_ID = os.environ['THING_ID']
     THING_TOKEN = os.environ['THING_TOKEN']
@@ -43,7 +43,7 @@ def setup():
                                                    PropertyType.THREE_DIMENSIONS)
     start_time = time.time()
     ad = analysedata
-
+    distance = 0
 #=============================== Bluetooth CLASSES=============================
 
 def find_or_create(property_name, property_type):
@@ -60,11 +60,13 @@ def handle_orientation_data(handle, value_bytes):
     value_bytes -- bytearray, the data returned in the notification
     """
     try:
+        global ad, distance
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         #speed m/s to km/h
         values[1]= 3.6*values[1]
-        global ad
+        distance += values[3]
+        values.append(distance)
         if ad.checkd(values[0],5)=="slow": snips_say("Go faster")
     except:
         print("Could not convert data")
@@ -107,7 +109,7 @@ def create_csv():
     try:
         with open (csvName,'a') as csvFile:
             writer = csv.writer(csvFile)
-            writer.writerow(['theta', 'v','t'])
+            writer.writerow(['theta', 'v','dx','distance'])
             csvFile.close
             print('Created csv file: '+ csvName)
     except:
@@ -160,7 +162,7 @@ def connect_bluetooth():
 def start_connection():
     setup()
     connect_bluetooth()
-
+    snips_say("setup complete, Let's start rolling")
     #keep thread open
     while True:
         time.sleep(1)
