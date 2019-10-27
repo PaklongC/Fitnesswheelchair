@@ -1,9 +1,24 @@
 import serial
+import time
+import testsub
+import snipssay
 
-ser = serial.Serial('/dev/ttyACM0',9600)
-s = [0]
-while True:
-	read_serial=ser.readline()
-	s[0] = str(int (ser.readline(),16))
-	print s[0]
-	print read_serial
+for i in range(10):
+	snipssay.snips_say(str(i))
+	time.sleep(3)
+
+'''
+#counter in other script test
+t = testsub
+
+for i in range(6):
+	print(i)
+	t.count()
+	print(time.time())
+	time.sleep(2)
+for i in range(6):
+	print(i)
+	t.count()
+	print(time.time())
+	time.sleep(2)
+'''

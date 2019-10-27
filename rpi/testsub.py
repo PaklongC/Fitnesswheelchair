@@ -1,5 +1,15 @@
 import time
+i =10
+def count():
+    b = 10
+    global i
+    print("ic=",i)
+    print("ib=",b)
+    i += 1
+    b +=1
 
+'''
+#local global variable test
 def ftest():
     global s,a,c
     s = "global test"
@@ -15,6 +25,7 @@ print(s)
 ft2()
 print(s)
 print(a)
+'''
 '''
 ##Test counter###
 i =2
