@@ -1,5 +1,4 @@
 from time import time
-from snipssay import snips_say
 start_time = time()
 last_time = start_time
 target = 200
@@ -13,10 +12,11 @@ def check(val):
         print("true", val)
         return True
     return False
-def check_say(val,timeout,message):
+def checkd(val,timeout):
     if last_time + timeout > time():
         last_time = time()
-        if not check(val):
-            snips_say(message)
-    else
-        print("not so fast")
+        if check(val):
+            return "good"
+        return "slow"
+    print("not so fast")
+    return ("wait")
