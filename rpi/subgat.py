@@ -6,6 +6,7 @@ import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
 import time
 import csv
+import analysedata
 
 from threading import Thread
 from dotenv import load_dotenv  # To load the environment variables from the .env file
@@ -41,6 +42,7 @@ def setup():
     my_property = my_thing.find_or_create_property("Wheelchair Speed",
                                                    PropertyType.THREE_DIMENSIONS)
     start_time = time()
+    ad = analysedata
 
 #=============================== Bluetooth CLASSES=============================
 
@@ -62,6 +64,7 @@ def handle_orientation_data(handle, value_bytes):
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         #speed m/s to km/h
         values[1]= 3.6*values[1]
+        if ad.checkd(values[0],5)=="slow": snips_say("Go faster")
     except:
         print("Could not convert data")
     try:
