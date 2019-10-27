@@ -15,7 +15,7 @@ from dcd.entities.property import PropertyType
 from random import random
 from dotenv import load_dotenv
 from snipssay import snips_say
-from time import time
+
 
 #============================= Setup =====================================
 #Run this first & declare all global variables
@@ -41,7 +41,7 @@ def setup():
     #print(my_thing.to_json())
     my_property = my_thing.find_or_create_property("Wheelchair Speed",
                                                    PropertyType.THREE_DIMENSIONS)
-    start_time = time()
+    start_time = time.time()
     ad = analysedata
 
 #=============================== Bluetooth CLASSES=============================
