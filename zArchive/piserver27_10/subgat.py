@@ -6,7 +6,6 @@ import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
 import time
 import csv
-import analysedata
 
 from threading import Thread
 from dotenv import load_dotenv  # To load the environment variables from the .env file
@@ -14,7 +13,6 @@ from dcd.entities.thing import Thing
 from dcd.entities.property import PropertyType
 from random import random
 from dotenv import load_dotenv
-from snipssay import snips_say
 
 
 #============================= Setup =====================================
@@ -22,7 +20,6 @@ from snipssay import snips_say
 def setup():
     load_dotenv()
     global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,ADDRESS_TYPE,GATT_CHARACTERISTIC_ORIENTATION,bleAdapter,my_thing,my_property,csvName
-    global start_time, ad, distance
     ADDRESS_TYPE = pygatt.BLEAddressType.random
     THING_ID = os.environ['THING_ID']
     THING_TOKEN = os.environ['THING_TOKEN']
@@ -41,9 +38,7 @@ def setup():
     #print(my_thing.to_json())
     my_property = my_thing.find_or_create_property("Wheelchair Speed",
                                                    PropertyType.THREE_DIMENSIONS)
-    start_time = time.time()
-    ad = analysedata
-    distance = 0
+
 #=============================== Bluetooth CLASSES=============================
 
 def find_or_create(property_name, property_type):
@@ -60,14 +55,10 @@ def handle_orientation_data(handle, value_bytes):
     value_bytes -- bytearray, the data returned in the notification
     """
     try:
-        global ad, distance
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         #speed m/s to km/h
         values[1]= 3.6*values[1]
-        distance += values[3]
-        #values.append(distance)
-        if ad.checkd(values[0],5)=="slow": snips_say("Go faster")
     except:
         print("Could not convert data")
     try:
@@ -109,7 +100,7 @@ def create_csv():
     try:
         with open (csvName,'a') as csvFile:
             writer = csv.writer(csvFile)
-            writer.writerow(['theta', 'v','darc','distance'])
+            writer.writerow(['theta', 'v','t'])
             csvFile.close
             print('Created csv file: '+ csvName)
     except:
@@ -128,12 +119,11 @@ def writeto_dcd(dcdData):
     #print ("sending data to dcd")
     my_thing.find_or_create_property("Rotation",PropertyType.TWO_DIMENSIONS).update_values((dcdData[0],dcdData[1]))
     my_thing.find_or_create_property("Speed",PropertyType.ONE_DIMENSION).update_values((dcdData[1],))
-#try connecting to BLUETOOTH_DEVICE_MAC if not able to connect try again
+#try connecting to BLUETOOTH_DEVICE_MAC
 def connect_bluetooth():
     a=1
     while a:
-        print('start connecting to:', BLUETOOTH_DEVICE_MAC)
-        snips_say("start connection")
+        print('start connecting')
         try:
             global left_wheel
             left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
@@ -162,7 +152,7 @@ def connect_bluetooth():
 def start_connection():
     setup()
     connect_bluetooth()
-    snips_say("setup complete, Let's start rolling")
+
     #keep thread open
     while True:
         time.sleep(1)
