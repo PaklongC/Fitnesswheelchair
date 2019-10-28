@@ -14,7 +14,7 @@ baseurl: "/Fitnesswheelchair"
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: "PCP group4: Fitness weheelchair"
+title: "Prototyping Connected Products  |  Group 4"
 
 # Short description of your site
 description: Summary of the prototype made for the Fitness wheelchair concept
@@ -23,7 +23,7 @@ description: Summary of the prototype made for the Fitness wheelchair concept
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/avatar-icon.png"
+avatar: "/img/logo.png"
 
 # List of links in the navigation bar
 navbar-links:
