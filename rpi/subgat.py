@@ -68,7 +68,9 @@ def handle_orientation_data(handle, value_bytes):
         #distance += values[3]
         #values.append(distance)
         #print("just a test")
-        if ad.checkd(values[0],5)=="slow": snips_say("Go faster")
+        if ad.checkd(values[0],5)=="slow":
+            mssg = "Your current speed is " + str(values[1]) + "Go faster"
+            snips_say("Go faster")
         #print("check stuff" + str(ad.checkd(values[0],5)))
     except:
         print("Could not convert data")
