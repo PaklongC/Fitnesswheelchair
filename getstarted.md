@@ -26,21 +26,16 @@ bigimg: /img/banner2.png
   <div class="list">
 	<ul>
 	  <ul><H8><b>HOW</b></H8></ul><br>
-	    <ol><li> Testing the accelerometer and force sensor to collect meaningful data to send to the HUB.</li>
-        <ul>
-          <li>Getting insight into sensor-sensitivities and accurate measurements.</li>
-        </ul>
-      </li>
-	    <li>Using the data during exercise with voice control.</li>
-        <ul>
-          <li>Getting insight into the user-interaction, guided by sound.</li>
-        </ul>
-      </li>
-	    </ol>
+	    <ol>
+        <li> Testing the accelerometer and force sensor to collect meaningful data to send to the HUB.</li>
+          <ul><li>Getting insight into sensor-sensitivities and accurate measurements.</li></ul>
+        <li>Using the data during exercise with voice control.</li>
+          <ul><li>Getting insight into the user-interaction, guided by sound.</li></ul>
+      </ol>
+  </ul>
   </div>
   <br style="clear:both" />
 </div>
-</body>
 
 <img src="Images\IOT Architecture.png" width="" height="">
 <img src="Images\speedTime.png" width="" height="">
