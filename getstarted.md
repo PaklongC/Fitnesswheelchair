@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Fitnesswheelchair</title>
-</head>
-<h1>Fitnesswheelchair</h1>
-<h6>By Pak Long, Freek and Lorenzo</h6>
-<img src="Images/banner.png" width="" height="">
-<hr>
-<body>
-
+---
+layout: page
+title: GitHub
+subtitle: README.md file
+bigimg: /img/banner2.png
+---
 <h3>Scope:</h3>
 <H8><b>WHAT</b></H8>
 <img src="Images/fitnessChair.png" width="" height="">
@@ -31,16 +26,17 @@
   <div class="list">
 	<ul>
 	  <ul><H8><b>HOW</b></H8></ul><br>
-	  <li> Testing the accelerometer and force sensor to collect meaningful data to send to the HUB.
+	    <ol><li> Testing the accelerometer and force sensor to collect meaningful data to send to the HUB.</li>
+        <ul>
+          <li>Getting insight into sensor-sensitivities and accurate measurements.</li>
+        </ul>
       </li>
-      <ul>
-        <li>Getting insight into sensor-sensitivities and accurate measurements.<br>
-      </ul></li></li>
-	  <li>Using the data during exercise with voice control.</li>
-    <ul>
-      <li>Getting insight into the user-interaction, guided by sound.</li>
-    </ul><br></li>
-	</ol>
+	    <li>Using the data during exercise with voice control.</li>
+        <ul>
+          <li>Getting insight into the user-interaction, guided by sound.</li>
+        </ul>
+      </li>
+	    </ol>
   </div>
   <br style="clear:both" />
 </div>
@@ -127,4 +123,9 @@
     Nu moet javascript nog een httpresquest posten naar de python server. (javascript runnen door in terminal: node scriptnaam.js) server runnen met python3: rpi/piserver.py (dit kan je allemaal op je laptop doen maar dan moet je wel node.js en flask instaleren, kan ook op pi daar staat het al</li>
   <li>Http request sturen van voice control (snips) naar piserver.py vanuit index.js (die ontvangt de intents van snips) (run: sam watch, andere terminal run: rpi/voice/wheelie/index.js en dan heel hard hopen dat het t doet.</il>
 </ul>
-</html>
+
+
+---
+<div class="get-started-wrap">
+  <a class="btn btn-success btn-lg get-started-btn" href="https://github.com/daattali/beautiful-jekyll#readme">Get Started!</a>
+</div>
