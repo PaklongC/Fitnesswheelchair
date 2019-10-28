@@ -1,9 +1,3 @@
----
-layout: page
-title: Read me md-file
-subtitle: README
-bigimg: /img/start.jpg
----
 <!DOCTYPE html>
 <html>
 <head>
