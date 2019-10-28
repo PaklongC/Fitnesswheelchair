@@ -70,7 +70,7 @@ def handle_orientation_data(handle, value_bytes):
         #print("just a test")
         if ad.checkd(values[0],5)=="slow":
             mssg = "Your current speed is " + str(values[1]) + "Go faster"
-            snips_say("Go faster")
+            snips_say(mssg)
         #print("check stuff" + str(ad.checkd(values[0],5)))
     except:
         print("Could not convert data")
