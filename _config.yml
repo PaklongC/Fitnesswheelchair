@@ -40,7 +40,7 @@ navbar-links:
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Prototyping Connected Products Group 4
+  name: Freek Berden, Pak Long Cheung, Lorenzo Hoorn
   #email: "Prototyping Connected Products"
   #facebook: deanattali
   #github: daattali
@@ -66,7 +66,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "deanattali.com/beautiful-jekyll"  # eg. "deanattali.com/beautiful-jekyll"
+#url-pretty: "deanattali.com/beautiful-jekyll"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 
@@ -74,7 +74,7 @@ url-pretty: "deanattali.com/beautiful-jekyll"  # eg. "deanattali.com/beautiful-j
 #disqus: ""
 
 # Fill in your Google Analytics ID to track your website using GA
-google_analytics: "UA-59820529-1"
+#google_analytics: "UA-59820529-1"
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
