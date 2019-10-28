@@ -62,7 +62,7 @@ def handle_orientation_data(handle, value_bytes):
     try:
         global ad, distance
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
-        values = [float(x) for x in value_bytes.decode('utf-8').split(,)]
+        values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         #speed m/s to km/h
         values[1]= 3.6*values[1]
         #distance += values[3]
