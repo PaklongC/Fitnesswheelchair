@@ -51,7 +51,7 @@ bigimg: /img/banner2.png
     <th>Take-aways</th>
   </tr>
   <tr>
-    <td rowspan = 3>IMU<br><img src="Images/IMU.png" width="" height=""></td>
+    <td rowspan = 3>IMU<br><img src="Images\IMU.png" width="" height=""></td>
     <td>- Acceleration > Velocity</td>
     <td>Integral approach by calculating the sum of velocities-values between certain time-points using the acceleration.</td>
     <td><b>+ </b>Velocity is constantly being calculated<br><b>- </b>This method is very dependant on the sensitivity of the accelerometer and its (correct) calibration. Because the sum of the measured and calculated values are used, little measurement-errors will lead to bigger and bigger deviations</td>
