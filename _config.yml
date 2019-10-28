@@ -32,7 +32,7 @@ navbar-links:
     - Read me md-file: "README"
     - Featured users: "featured-users"
     - Project page: "https://github.com/paklongc/Fitnesswheelchair"
-  Project description: "test.html"
+  Project description: "featured-users"
 
 # --- Footer options --- #
 
