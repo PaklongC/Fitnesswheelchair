@@ -40,6 +40,8 @@ bigimg: /img/banner2.png
 <img src="Images\IOT Architecture.png" width="" height="">
 <img src="Images\speedTime.png" width="" height="">
 <hr>
+
+<div>
 <h3>Sensor analysis:</h3>
 
 <table style="width:100%">
@@ -118,7 +120,7 @@ bigimg: /img/banner2.png
     Nu moet javascript nog een httpresquest posten naar de python server. (javascript runnen door in terminal: node scriptnaam.js) server runnen met python3: rpi/piserver.py (dit kan je allemaal op je laptop doen maar dan moet je wel node.js en flask instaleren, kan ook op pi daar staat het al</li>
   <li>Http request sturen van voice control (snips) naar piserver.py vanuit index.js (die ontvangt de intents van snips) (run: sam watch, andere terminal run: rpi/voice/wheelie/index.js en dan heel hard hopen dat het t doet.</il>
 </ul>
-
+</div>
 
 ---
 <div class="get-started-wrap">
