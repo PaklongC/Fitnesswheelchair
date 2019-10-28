@@ -62,7 +62,7 @@ def handle_orientation_data(handle, value_bytes):
     try:
         global ad, distance
         print("Received data: %s (handle %d)" % (str(value_bytes), handle))
-        values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
+        values = [float(x) for x in value_bytes.decode('utf-8').split(,)]
         #speed m/s to km/h
         values[1]= 3.6*values[1]
         #distance += values[3]
@@ -138,7 +138,7 @@ def connect_bluetooth():
     while a:
         print('start connecting to:', BLUETOOTH_DEVICE_MAC)
         snips_say("start connection")
-        snips_say("Work it","Make it","Do it","Makes us","Harder","Better","Faster","Stronger","More than","Hour","Our","Never","Ever","After","Work","is","Over")
+        snips_say("Work it,Make it,Do it,Makes us,Harder,Better,Faster,Stronger,More than,Hour,Our,Never,Ever,After,Work,is,Over")
         try:
             global left_wheel
             left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
