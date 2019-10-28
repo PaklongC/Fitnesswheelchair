@@ -67,6 +67,7 @@ def handle_orientation_data(handle, value_bytes):
         values[1]= 3.6*values[1]
         distance += values[3]
         #values.append(distance)
+        print("just a test")
         if ad.checkd(values[0],5)=="slow": snips_say("Go faster")
         print("check stuff" + str(ad.checkd(values[0],5)))
     except:
