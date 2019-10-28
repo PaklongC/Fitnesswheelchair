@@ -5,7 +5,7 @@ subtitle: How to use Beautiful Jekyll
 bigimg: /img/start.jpg
 ---
 
-**Beautiful Jekyll** is a ready-to-use template to make help you create an awesome Jekyll or GitHub Pages website quickly. 
+**Beautiful Jekyll** is a ready-to-use template to make help you create an awesome Jekyll or GitHub Pages website quickly.
 
 To learn how you can use **Beautiful Jekyll** to create your website in minutes, go to the [Beautiful Jekyll GitHub page](https://github.com/daattali/beautiful-jekyll#readme).
 
@@ -23,7 +23,7 @@ Here is a 40-second video showing how to get started, with the specific steps be
 
 <img src="../img/install-steps.gif" style="width:100%;" alt="Installation steps" />
 
-### 1. Fork the Beautiful Jekyll repository 
+### 1. Fork the Beautiful Jekyll repository
 
 Fork the [repository](https://github.com/daattali/beautiful-jekyll) by clicking the Fork button on the top right corner in GitHub.
 
