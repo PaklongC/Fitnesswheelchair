@@ -29,11 +29,10 @@ avatar: "/img/logo.png"
 navbar-links:
   Home: ""
   Github:
-    - Getting started: "getstarted"
+    - Read me md-file: "README"
     - Featured users: "featured-users"
-    - Project page: "https://github.com/daattali/beautiful-jekyll#readme"
-  About me: "test.html"
-  Support me: "http://deanattali.com/aboutme/#feed-meeee"
+    - Project page: "https://github.com/paklongc/Fitnesswheelchair"
+  Project description: "test.html"
 
 # --- Footer options --- #
 
