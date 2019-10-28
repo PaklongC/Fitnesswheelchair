@@ -138,7 +138,6 @@ def connect_bluetooth():
     while a:
         print('start connecting to:', BLUETOOTH_DEVICE_MAC)
         snips_say("start connection")
-        
         try:
             global left_wheel
             left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
