@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from multiprocessing import Process, Value
 from threading import Thread
-
 import time
 import subgat
 #import testsub

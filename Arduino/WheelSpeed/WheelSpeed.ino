@@ -151,7 +151,7 @@ void setup(void) {
 
 void orientation() {
   t = millis()/1000.00;
-  
+
   // Get Euler angle data
   imu::Vector<3> euler_vector = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
   td = BNO055_SAMPLERATE_DELAY_MS/1000.00;
@@ -172,7 +172,7 @@ void orientation() {
   else{
      delta_a = angleX2-angleX;
   }
-  
+
 
   float arc = 2*3.14*r*(delta_a/360);
   float v = -arc/td;
@@ -185,7 +185,7 @@ void orientation() {
   ble.print( F(",") );
   ble.print(String(v));
   ble.print( F(",") );
-  ble.println(String(t));
+  ble.println(String(arc));
   //ble.print( F(",") );
   //ble.println(String(rot));
   /*
@@ -232,7 +232,7 @@ void rotation() {
 
   // if this is the first loop iteration, ignore position data (always zero)
   //if its second loop iteration set the starting position for your axis
-  // if its another iteration, just continue computing the rotation data 
+  // if its another iteration, just continue computing the rotation data
 
   float axis_value = event.orientation.x;   // replace this with whatever axis you're tracking
   not_first_loop = (not_first_loop)?compute_rotations(axis_value, &global_rotations) : true;
