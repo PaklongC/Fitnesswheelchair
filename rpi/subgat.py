@@ -65,11 +65,11 @@ def handle_orientation_data(handle, value_bytes):
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         #speed m/s to km/h
         values[1]= 3.6*values[1]
-        distance += values[3]
+        #distance += values[3]
         #values.append(distance)
-        print("just a test")
+        #print("just a test")
         if ad.checkd(values[0],5)=="slow": snips_say("Go faster")
-        print("check stuff" + str(ad.checkd(values[0],5)))
+        #print("check stuff" + str(ad.checkd(values[0],5)))
     except:
         print("Could not convert data")
     try:
