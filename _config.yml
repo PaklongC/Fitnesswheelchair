@@ -28,10 +28,10 @@ avatar: "/img/logo.png"
 # List of links in the navigation bar
 navbar-links:
   Home: ""
-  Github: "https://github.com/paklongc/Fitnesswheelchair"
   Project description:
     - Concept Idea: "getstarted"
     - Prototype: "featured-users"
+  Github: "https://github.com/paklongc/Fitnesswheelchair"
 
 # --- Footer options --- #
 
