@@ -29,8 +29,7 @@ avatar: "/img/logo.png"
 navbar-links:
   Home: ""
   Github:
-    - Read me md-file: "README"
-    - Featured users: "featured-users"
+    - Read me md-file: "README.md"
     - Project page: "https://github.com/paklongc/Fitnesswheelchair"
   Project description: "featured-users"
 
