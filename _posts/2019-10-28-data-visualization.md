@@ -22,19 +22,17 @@ def home():
     return render_template('index.html')
 ```
 ```javascript
-// Get the data
       d3.csv("{{ url_for('static', filename='text/pidata3.csv') }}", function(error, data) {
         if (error) throw error;
-        // format the data
         data.forEach(function(d) {
           d.t = d.t;
           d.v = d.v;
         });
-// Add the valueline path.
         svg.append("path")
           .data([data])
           .attr("class", "line")
           .attr("d", valueline);
+      };  
 ```
 Using the <i>"Simple Graph"</i> widget, combined with data transferred in a .csv-file, the following graph could be created
 <img src="img\hpvisual.png" alt="600">fixme graph
