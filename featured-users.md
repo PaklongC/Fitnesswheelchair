@@ -7,7 +7,7 @@ To my huge surprise, Beautiful Jekyll has been used in over 500 websites in its 
 
 Want your website featured here? [Contact me](http://deanattali.com/aboutme#contact) to let me know about your website.
 
-### Project/company websites
+### Research questions related to the prototype
 
 {: .table.table-responsive}
 | Website | Description |
@@ -25,7 +25,7 @@ Want your website featured here? [Contact me](http://deanattali.com/aboutme#cont
 | [guitarlessons.org](https://www.guitarlessons.org/) | Free online guitar lessons for all |
 | [terremotocentroitalia.info](https://www.terremotocentroitalia.info/) | Information about the 2016 Italy earthquake |
 
-### Personal websites
+### Sensors and technologies used in final design
 
 {: .table.table-responsive}
 | Website | Who | What |
