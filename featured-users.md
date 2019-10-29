@@ -3,7 +3,9 @@ layout: page
 title: The Prototype
 ---
 
-A prototype has been build to validate a couple assumptions taken during the development of the <b>wheelchair++. </b>The developed prototype will be used to validate the feasibility of the core concept.
+A prototype has been build to validate a couple assumptions taken during the development of the <b>wheelchair++. </b>
+
+The developed prototype will be used to validate the feasibility of the core concept.
 To get insights into the desirability of the idea, the ability to measure speed (one of the core functions of the concept) was added to the wheelchair.
 Since a wheelchair-user uses his/her hands relatively more often; voice recognition and voice output were also added, as an alternate way of interacting. The assumption that this is more desirable, and the aforementioned assumption, will be validated using the prototype.
 ![](\Fitnesswheelchair\img\placeholder.png "The developed prototype")
