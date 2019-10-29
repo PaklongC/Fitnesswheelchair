@@ -7,12 +7,12 @@ bigimg: /img/banner2.png
 <hr>
 ### Mision
 Providing an extensive fitness experience for athletic tech enthusiasts in wheelchairs.
-![alt text](\img\idecircle.png "IDE Design synergies")
+![](\Fitnesswheelchair\img\idecircle.png "IDE Design synergies")
 
 #### Concept brief
 <i>"Being bound does not have to be limiting."</i> <br>
 By embedding several sensors into a package/wheelchair and collecting data, rich training statistics and motivational tips can be given by analyzing the data with state-of-the-art (machine-learning) technologies.
-
+![](\Fitnesswheelchair\img\sensorsynergy.png "IDE Design synergies")
 - Collecting biometric data using a hear-sensor and a microphone.
 - Collecting relevant metadata using a force- and velocity-sensor.
 
