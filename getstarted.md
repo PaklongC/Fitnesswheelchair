@@ -2,7 +2,6 @@
 layout: page
 title: the wheelchair++
 subtitle: the first <i>step</i> into being a cyborg
-bigimg: /img/banner2.png
 ---
 <hr>
 ## Mision
