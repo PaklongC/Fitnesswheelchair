@@ -4,6 +4,7 @@ title: "Concept: the Wheelchair++"
 subtitle: a preliminary idea
 bigimg: /img/banner2.png
 ---
+
 Collecting biometric data using a hear-sensor and a microphone.
 Collecting relevant metadata using a force- and velocity-sensor.
 
