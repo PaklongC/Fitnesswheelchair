@@ -7,7 +7,7 @@ bigimg: /img/banner2.png
 <hr>
 ## Mision
 Providing an extensive fitness experience for athletic tech enthusiasts in wheelchairs.
-![](\Fitnesswheelchair\img\idecircle2.png "IDE Design synergies"){.center}
+![](\Fitnesswheelchair\img\idecircle2.png "IDE Design synergies")
 
 ## Concept brief
 <i>"Being bounded does not have to be limiting."</i> <br>
