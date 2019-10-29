@@ -56,6 +56,7 @@ data_frame = pd.DataFrame(data[:,1:], index = pd.DatetimeIndex(pd.to_datetime(da
 pd.DataFrame.describe(data_frame)
 ```
 <sup>Snippet of python code, full code can be found in \Untitled.ipynb of our GitHub (see the link in our header)</sup><br>
+
 Also, by adding analytics-libraries, different statistics can be calculated and shown.
 <img src="\Fitnesswheelchair\img\placeholder.png" alt="">fixme graph
 
