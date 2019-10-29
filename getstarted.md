@@ -5,7 +5,7 @@ subtitle: the first <i>step</i> into being a cyborg
 ---
 ## Mision
 Providing an extensive fitness experience for athletic tech enthusiasts in wheelchairs.
-![](\Fitnesswheelchair\img\idecircle2.png "IDE Design synergies")
+![](\Fitnesswheelchair\img\idecircle.png "IDE Design synergies")
 
 ## Concept brief
 <i>"Being bounded does not have to be limiting."</i> <br>
