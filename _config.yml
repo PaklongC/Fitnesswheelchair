@@ -29,8 +29,8 @@ avatar: "/img/logo.png"
 navbar-links:
   Home: ""
   Project description:
-    - Prototype: "featured-users"
     - Concept Idea: "getstarted"
+    - Prototype: "featured-users"
   Github: "https://github.com/paklongc/Fitnesswheelchair"
 
 # --- Footer options --- #
