@@ -30,9 +30,9 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
 
 <table class="" style="undefined;table-layout: fixed; width: 799px">
 <colgroup>
-<col style="width: 183px">
+<col style="width: 173px">
 <col style="width: 138px">
-<col style="width: 478px">
+<col style="width: 408px">
 </colgroup>
   <tr>
     <th>Image</th>
