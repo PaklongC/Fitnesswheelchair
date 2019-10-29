@@ -17,17 +17,6 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
   - <i>Getting insight into analytics</i>
 
 ### Sensors and technologies used in final design
-
-{: .table.table-responsive}
-| Image | Name | Role |
-| :------ |:--- | :--- |
-| ![](\Fitnesswheelchair\img\placeholder2.png "") | Arduino | Shows off her nice art |
-| ![](\Fitnesswheelchair\img\placeholder2.png "") | Raspberry Pi | Professor at Delft University of Technology |
-| ![](\Fitnesswheelchair\img\placeholder2.png "") | IMU sensor | Creator of Beautiful Jekyll |
-| ![](\Fitnesswheelchair\img\placeholder2.png "") | Snips | Data analytics |
-| ![](\Fitnesswheelchair\img\placeholder2.png "") | Jupyter notebook | Data scientist |
-| ![](\Fitnesswheelchair\img\placeholder2.png "") | DCD Hub | Professor of Mathematical Sciences and Natural Resources |
-
 <table class="" style="undefined;table-layout: fixed; width: 799px">
 <colgroup>
 <col style="width: 173px">
