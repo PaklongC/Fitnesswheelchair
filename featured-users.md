@@ -3,41 +3,25 @@ layout: page
 title: The Prototype
 ---
 
-To my huge surprise, Beautiful Jekyll has been used in over 500 websites in its first 6 months alone! Here is a hand-picked selection of some websites that use Beautiful Jekyll.
-
-Want your website featured here? [Contact me](http://deanattali.com/aboutme#contact) to let me know about your website.
+A prototype has been build to validate a couple assumptions taken during the development of the <b>wheelchair++. </b>The developed prototype will be used to validate the feasibility of the core concept.
+![](\Fitnesswheelchair\img\placeholder.png "The developed prototype")
+To get insights into the desirability of the idea, the ability to measure speed (one of the core functions of the concept) was added to the wheelchair.
+Since a wheelchair-user uses his/her hands relatively more often; voice recognition and voice output were also added, as an alternate way of interacting. The assumption that this is more desirable, and the aforementioned assumption, will be validated using the prototype.
 
 ### Research questions related to the prototype
-
-{: .table.table-responsive}
-| Website | Description |
-| :------ |:----------- |
-| [repidemicsconsortium.org/](http://www.repidemicsconsortium.org/) | R Epidemics Consortium |
-| [vaccineimpact.org](https://www.vaccineimpact.org/) | Vaccine Impact Modelling Consortium |
-| [derekogle.com/fishR](http://derekogle.com/fishR/) | Using R for Fisheries Analyses |
-| [bigdata.juju.solutions](http://bigdata.juju.solutions) | Creating Big Data solutions Juju Solutions |
-| [joecks.github.io/clipboard-actions](http://joecks.github.io/clipboard-actions/) | Clipboard Actions - an Android app |
-| [deanattali.com/shinyjs](http://deanattali.com/shinyjs/) | shinyjs - an R package |
-| [blabel.github.io](http://blabel.github.io) | Library for canonicalising blank node labels in RDF graphs |
-| [reactionic.github.io](http://reactionic.github.io) | Create iOS and Android apps with React and Ionic |
-| [ja2-stracciatella.github.io](http://ja2-stracciatella.github.io) | Jagged Alliance 2 Stracciatella |
-| [ddocent.com](http://ddocent.com/) | RADSeq Bioinformatics and Beyond |
-| [guitarlessons.org](https://www.guitarlessons.org/) | Free online guitar lessons for all |
-| [terremotocentroitalia.info](https://www.terremotocentroitalia.info/) | Information about the 2016 Italy earthquake |
+1. Is velocity a relevant measurement when it comes to collecting data from a training?  
+  - <i>Getting insight into sensor-activities and measurement accuracy</i>
+2. Is voice in and output desirable when it comes to control and output?  
+  - <i>Getting insight into analytics</i>
 
 ### Sensors and technologies used in final design
 
 {: .table.table-responsive}
-| Website | Who | What |
+| Image | Name | Role |
 | :------ |:--- | :--- |
-| [deanattali.com](http://deanattali.com) | Dean Attali | Creator of Beautiful Jekyll |
-| [ouzor.github.io](http://ouzor.github.io) | Juuso Parkkinen | Data scientist |
-| [derekogle.com](http://derekogle.com/) | Derek Ogle | Professor of Mathematical Sciences and Natural Resources |
-| [melyanna.github.io](http://melyanna.github.io/) | Melyanna | Shows off her nice art |
-| [chauff.github.io](http://chauff.github.io/) | Claudia Hauff | Professor at Delft University of Technology |
-| [kootenpv.github.io](http://kootenpv.github.io/) | Pascal van Kooten | Data analytics |
-| [sjackman.ca](http://sjackman.ca) | Shaun Jackman | PhD candidate in bioinformatics |
-| [anudit.in](http://www.anudit.in/) | Anudit Verma | Engineering student |
-| [sharepointoscar.github.io](http://sharepointoscar.github.io) | Oscar Medina | Independent Hacker |
-| [ocram85.com](https://ocram85.com) | Marco Blessing | A personal blog about PowerShell and automation |
-| [khanna.cc](https://khanna.cc/) | Harry Khanna | Law and software |
+| ![](\Fitnesswheelchair\img\placeholder2.png "") | Arduino | Shows off her nice art |
+| ![](\Fitnesswheelchair\img\placeholder2.png "") | Raspberry Pi | Professor at Delft University of Technology |
+| ![](\Fitnesswheelchair\img\placeholder2.png "") | IMU sensor | Creator of Beautiful Jekyll |
+| ![](\Fitnesswheelchair\img\placeholder2.png "") | Snips | Data analytics |
+| ![](\Fitnesswheelchair\img\placeholder2.png "") | Jupyter notebook | Data scientist |
+| ![](\Fitnesswheelchair\img\placeholder2.png "") | DCD Hub | Professor of Mathematical Sciences and Natural Resources |
