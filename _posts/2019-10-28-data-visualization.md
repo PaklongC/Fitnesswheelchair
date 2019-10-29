@@ -39,6 +39,7 @@ def home():
 ```
 <sup>Snippet of javascript code, full code can be found in web\templates\Wheelgraph.html of our GitHub (see the link in our header)</sup>
 <br>
+
 Other files and examples can be found in the web folder of our Github.
 
 Using the <i>"Simple Graph"</i> widget, combined with data transferred in a .csv-file, the following graph could be created<br>
