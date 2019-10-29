@@ -1,6 +1,6 @@
 ---
 layout: page
-title: the wheelchair++
+title: wheelchair++
 subtitle: the first <i>step</i> into being a cyborg
 ---
 ![](\Fitnesswheelchair\img\idecircle.png "IDE Design synergies")
