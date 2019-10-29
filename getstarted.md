@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Concept: the Wheelchair++"
-subtitle: a preliminary idea
+title: the wheelchair++
+subtitle: the first <i>step</i> into being a cyborg
 bigimg: /img/banner2.png
 ---
 
