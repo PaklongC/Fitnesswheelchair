@@ -29,32 +29,32 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
     <th>Role</th>
   </tr>
   <tr>
-    <td><img src="img\placeholder2.png" alt=""></td>
+    <td><img src="\Fitnesswheelchair\img\placeholder2.png" alt=""></td>
     <td>Arduino</td>
     <td>b</td>
   </tr>
   <tr>
-    <td><img src="img\placeholder2.png" alt=""></td>
+    <td><img src="\Fitnesswheelchair\img\placeholder2.png" alt=""></td>
     <td>Raspberry Pi</td>
     <td>b</td>
   </tr>
   <tr>
-    <td><img src="img\placeholder2.png" alt=""></td>
+    <td><img src="\Fitnesswheelchair\img\placeholder2.png" alt=""></td>
     <td>IMU Sensor</td>
     <td>b</td>
   </tr>
   <tr>
-    <td><img src="img\placeholder2.png" alt=""></td>
+    <td><img src="\Fitnesswheelchair\img\placeholder2.png" alt=""></td>
     <td>SNIPS</td>
     <td>b</td>
   </tr>
   <tr>
-    <td><img src="img\placeholder2.png" alt=""></td>
+    <td><img src="\Fitnesswheelchair\img\placeholder2.png" alt=""></td>
     <td>Jupyter Notebook</td>
     <td>b</td>
   </tr>
   <tr>
-    <td><img src="img\placeholder2.png" alt=""></td>
+    <td><img src="\Fitnesswheelchair\img\placeholder2.png" alt=""></td>
     <td>DCD Hub</td>
     <td>b</td>
   </tr>
