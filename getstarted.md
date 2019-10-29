@@ -4,7 +4,7 @@ title: the wheelchair++
 subtitle: the first <i>step</i> into being a cyborg
 bigimg: /img/banner2.png
 ---
-
+![alt text](img\idecircle.png "IDE Design synergies")
 Collecting biometric data using a hear-sensor and a microphone.
 Collecting relevant metadata using a force- and velocity-sensor.
 
