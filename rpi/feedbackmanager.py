@@ -15,6 +15,7 @@ ltime_slow = time() + 10
 lines_slow = ["try going faster", "You are a bit to slow", "Keep it up go faster", "GO GO GO"]
 
 def update(_values):
+    print('ehhh')
     global distance,velocity
     distance = _values[3]
     velocity = _values[1]
