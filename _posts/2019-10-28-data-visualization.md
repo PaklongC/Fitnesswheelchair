@@ -60,7 +60,8 @@ Also, by adding analytics-libraries, different statistics can be calculated and 
 Several other widgets (like a dropdown) are also available. Although visualizations are not live, several different .csv-files can be rendered when the right option is chosen from a drop-down.</b>
 
 #### 3. DCD Hub
-When connected, the DCD Hub offers easy live visualizations of data received.
+When connected, the DCD Hub offers easy live interactable visualizations of data received.
+
 <img src="\Fitnesswheelchair\img\dcdgraph.png" width="745">
 
 <b>Getting everything going might prove troublesome at the beginning. However, the returns are great since live visualizations are still (relatively) easily established.</b>
