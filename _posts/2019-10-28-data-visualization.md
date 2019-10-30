@@ -54,8 +54,7 @@ pd.DataFrame.describe(data_frame)
 <sup>Snippet of python code, full code can be found in \Untitled.ipynb of our GitHub (see the link in our header)</sup><br>
 
 Also, by adding analytics-libraries, different statistics can be calculated and shown.
-<img src="\Fitnesswheelchair\img\placeholder.png" alt="">fixme graph
-
+<img src="\Fitnesswheelchair\img\jugraph.png" alt="">
 <b>This feature offers great features for the scope of this project/prototype. Although making the visualization live is more challenging, data can be visualized cleanly of one .csv-file.
 Several other widgets (like a dropdown) are also available. Although visualizations are not live, several different .csv-files can be rendered when the right option is chosen from a drop-down.</b>
 
