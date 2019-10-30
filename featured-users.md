@@ -15,7 +15,7 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
 ### Research questions related to the prototype
 1. Is velocity a relevant measurement when it comes to collecting data from a training?  
   - <i>Getting insight into sensor-activities and measurement accuracy</i>
-2. Is voice in and output desirable when it comes to control and output?  
+2. To what extent is voice in and output desirable when it comes to control and output?  
   - <i>Getting insight into analytics</i>
 
 
