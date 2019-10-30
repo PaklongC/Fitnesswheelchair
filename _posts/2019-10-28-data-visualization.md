@@ -55,12 +55,12 @@ pd.DataFrame.describe(data_frame)
 <sup>Snippet of python code, full code can be found in \Untitled.ipynb of our GitHub (see the link in our header)</sup><br>
 
 Also, by adding analytics-libraries, different statistics can be calculated and shown.
-<img src="\Fitnesswheelchair\img\jugraph.png" width="720">
+<img src="\Fitnesswheelchair\img\jugraph.png" width="745">
 <b>This feature offers great features for the scope of this project/prototype. Although making the visualization live is more challenging, data can be visualized cleanly of one .csv-file.
 Several other widgets (like a dropdown) are also available. Although visualizations are not live, several different .csv-files can be rendered when the right option is chosen from a drop-down.</b>
 
 #### 3. DCD Hub
 When connected, the DCD Hub offers easy live visualizations of data received.
-<img src="\Fitnesswheelchair\img\dcdgraph.png" width="720">
+<img src="\Fitnesswheelchair\img\dcdgraph.png" width="745">
 
 <b>Getting everything going might prove troublesome at the beginning. However, the returns are great since live visualizations are still (relatively) easily established.</b>
