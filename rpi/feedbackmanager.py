@@ -19,7 +19,7 @@ def update(_values):
     distance = _values[3]
     velocity = _values[1]
     check_feedback()
-def check_feedback()
+def check_feedback():
 #feedback timeouts in seconds
     timeout_update=60
     timeout_slow=20
