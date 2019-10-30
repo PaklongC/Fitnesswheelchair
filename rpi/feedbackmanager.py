@@ -25,10 +25,13 @@ def check_feedback():
     timeout_slow=20
     global ltime_slow,ltime_update, start_time
     global distance,target_distance,velocity,velocity_min,velocity_max
+    print(ltime_slow + timeout_slow )
+    print(time())
     if ltime_slow + timeout_slow < time() and velocity < velocity_min:
         ltime_slow = time()
         ltime_update = time() + 5 #wait 5 more seconds before allowing feedback
         #it is time for some feedback on the slow peformance, we are going to slow
+        print("time to say something")
         snips_sayx("Your current speed is", velocity)
         snips_say(lines_slow[randrage(len(lines_slow))])
     if ltime_update + timeout_update < time():
