@@ -8,7 +8,6 @@ Data transferred through <b>FIXMEEEEE</b> can be visualized using several method
 
 #### 1. D3.js
 D3.js offers an extensive library with widgets, build up from several different .html-, .css-, .js-files etcetera.<br>
-
 ```python
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit
@@ -38,13 +37,10 @@ def home():
       };  
 ```
 <sup>Snippet of javascript code, full code can be found in web\templates\Wheelgraph.html of our GitHub (see the link in our header)</sup>
-<br>
-
 Other files and examples can be found in the web folder of our Github.
 
-Using the <i>"Simple Graph"</i> widget, combined with data transferred in a .csv-file, the following graph could be created<br>
-<img src="\Fitnesswheelchair\img\placeholder.png" alt="">fixme graph
-
+Using the <i>"Simple Graph"</i> widget, combined with data transferred in a .csv-file, the following graph could be created
+<img src="\Fitnesswheelchair\img\d3graph.png" alt="">
 <b>Although many projects have successfully implemented D3.js widgets into their projects. Due to the scope of the project, we felt that the returns of using such a complex system was not efficient enough with regards to the time we had.</b>
 
 #### 2. Jupyter Notebook
