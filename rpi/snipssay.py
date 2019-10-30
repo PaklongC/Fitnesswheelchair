@@ -4,6 +4,6 @@ def snips_say(message):
     with Hermes(mqtt_options=MqttOptions()) as h:
     	h.publish_start_session_notification(None,message,None)
 def snips_sayx(message,x):
-    with Hermes(mqtt_options=MqttOptions()) as h:
+    with Hermes(mqtt_options=MqttOptions()) as h2:
         message += str(x)
-    	h.publish_start_session_notification(None,message,None)
+        h2.publish_start_session_notification(None,message,None)
