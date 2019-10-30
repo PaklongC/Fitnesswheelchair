@@ -67,7 +67,6 @@ def handle_orientation_data(handle, value_bytes):
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         #speed m/s to km/h
         values[1]= 3.6*values[1]
-        fbm.update(values)
         #distance += values[3]
         #values.append(distance)
         #print("just a test")
@@ -77,6 +76,9 @@ def handle_orientation_data(handle, value_bytes):
         #print("check stuff" + str(ad.checkd(values[0],5)))
     except:
         print("Could not convert data")
+    try:
+        fbm.update(values)
+    except: print("feedback manager not working")
     try:
         write_csv(values)
     except:
