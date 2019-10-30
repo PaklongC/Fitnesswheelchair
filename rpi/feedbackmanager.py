@@ -2,7 +2,7 @@ from snipssay import snips_say, snips_sayx
 from time import time
 from random import randrange
 distance=0
-target_distance=
+target_distance=1000
 velocity=0
 target_velocity= 200
 deviation_velocity=20
@@ -13,19 +13,13 @@ ltime_update = time()
 ltime_positive = time()
 ltime_slow = time() + 10
 lines_slow = ["try going faster", "You are a bit to slow", "Keep it up go faster", "GO GO GO"]
-class session:
-  def __init__(self, duration, target,deviation,velocity,distance,time):
-    self.duration = 60
-    self.target = 200
-    self.deviation = 20
-    self.velocity
 
-def update_values(_values):
+def update(_values):
     global distance,velocity
     distance = _values[3]
     velocity = _values[1]
-    check_actions()
-def check_actions()
+    check_feedback()
+def check_feedback()
 #feedback timeouts in seconds
     timeout_update=60
     timeout_slow=20
@@ -39,7 +33,7 @@ def check_actions()
         snips_say(lines_slow[randrage(len(lines_slow))])
     if ltime_update + timeout_update < time():
         progress = 100*distance/target_distance
-        mssg= "you are on" + progress + "precent"
+        mssg= "you are on " + str(progress) + " precent"
         snips_say(mssg)
         avg_velocity = distance/(time()-start_time)
-        snips_sayx("your average speed is", avg_velocity)
+        snips_sayx("your average speed is ", avg_velocity)
