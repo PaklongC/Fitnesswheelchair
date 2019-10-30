@@ -36,10 +36,11 @@ def home():
           .attr("d", valueline);
       };  
 ```
-<sup>Snippet of javascript code, full code can be found in web\templates\Wheelgraph.html of our GitHub (see the link in our header)</sup>
+<sup>Snippet of javascript code, full code can be found in web\templates\Wheelgraph.html of our GitHub (see the link in our header)</sup><br>
 Other files and examples can be found in the web folder of our Github.
 
-Using the <i>"Simple Graph"</i> widget, combined with data transferred in a .csv-file, the following graph could be created
+Using the <i>"Simple Graph"</i> widget, combined with data transferred in a .csv-file, the following graph could be created:
+
 <img src="\Fitnesswheelchair\img\d3graph.png" alt="">
 <b>Although many projects have successfully implemented D3.js widgets into their projects. Due to the scope of the project, we felt that the returns of using such a complex system was not efficient enough with regards to the time we had.</b>
 
@@ -54,12 +55,12 @@ pd.DataFrame.describe(data_frame)
 <sup>Snippet of python code, full code can be found in \Untitled.ipynb of our GitHub (see the link in our header)</sup><br>
 
 Also, by adding analytics-libraries, different statistics can be calculated and shown.
-<img src="\Fitnesswheelchair\img\jugraph.png" alt="">
+<img src="\Fitnesswheelchair\img\jugraph.png" width="760">
 <b>This feature offers great features for the scope of this project/prototype. Although making the visualization live is more challenging, data can be visualized cleanly of one .csv-file.
 Several other widgets (like a dropdown) are also available. Although visualizations are not live, several different .csv-files can be rendered when the right option is chosen from a drop-down.</b>
 
 #### 3. DCD Hub
 When connected, the DCD Hub offers easy live visualizations of data received.
-<img src="\Fitnesswheelchair\img\placeholder.png" alt="">fixme graph
+<img src="\Fitnesswheelchair\img\dcdgraph.png" alt="">fixme graph
 
 <b>Getting everything going might prove troublesome at the beginning. However, the returns are great since live visualizations are still (relatively) easily established.</b>
