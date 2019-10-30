@@ -13,7 +13,7 @@ Three distinct product directions were found after brainstorming:
 For the scope of this project, the first direction was taken. The concept was fleshed out more to fit the market and target-group. The following assumption was taken and should be validated (using a prototype).
 
 ## 2. Assumption and validation
-- Interaction with the concept is done using voice. Hands-free control is desirable for this target-group.
+- Interaction with the concept is done using voice. Hands-free control is desirable for this target-group.<br>
 To get more insights, voice recognition and control will be build into the prototype for testing.
 
 ## 3. (Initial) setup and build iterations
