@@ -76,9 +76,8 @@ def handle_orientation_data(handle, value_bytes):
         #print("check stuff" + str(ad.checkd(values[0],5)))
     except:
         print("Could not convert data")
-    try:
-        fbm.update(values)
-    except: print("feedback manager not working")
+
+    fbm.update(values)
     try:
         write_csv(values)
     except:
