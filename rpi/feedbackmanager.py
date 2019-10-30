@@ -25,6 +25,7 @@ def check_feedback():
     timeout_update=60
     timeout_slow=20
     global ltime_slow,ltime_update, start_time
+    global lines_slow
     global distance,target_distance,velocity,velocity_min,velocity_max
     print(ltime_slow + timeout_slow )
     print(time())
