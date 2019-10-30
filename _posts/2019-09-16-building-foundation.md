@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building the foundation
+subtitle: Preliminary Idea and Prototype
 ---
 
 1. Brainstorming --> Preliminary idea
