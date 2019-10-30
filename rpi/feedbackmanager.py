@@ -12,7 +12,7 @@ start_time = time()
 ltime_update = time()
 ltime_positive = time()
 ltime_slow = time() + 10
-lines_slow = ["try going faster", "You are a bit to slow", "Keep it up go faster", "GO GO GO"]
+lines_slow = ["try going faster", "You are a bit to slow", "go faster", "go go go"]
 
 def update(_values):
     print('ehhh')
