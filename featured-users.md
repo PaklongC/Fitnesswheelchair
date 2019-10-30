@@ -32,17 +32,17 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
     <th>Role</th>
   </tr>
   <tr>
-    <td><img src="\Fitnesswheelchair\img\placeholder2.png" alt=""></td>
-    <td>Arduino</td>
+    <td><img src="\Fitnesswheelchair\img\feather.png" alt=""></td>
+    <td>Feather</td>
     <td>b</td>
   </tr>
   <tr>
-    <td><img src="\Fitnesswheelchair\img\placeholder2.png" alt=""></td>
+    <td><img src="\Fitnesswheelchair\img\raspi.png" alt=""></td>
     <td>Raspberry Pi</td>
     <td>b</td>
   </tr>
   <tr>
-    <td><img src="\Fitnesswheelchair\img\placeholder2.png" alt=""></td>
+    <td><img src="\Fitnesswheelchair\img\imu.png" alt=""></td>
     <td>IMU Sensor</td>
     <td>b</td>
   </tr>
