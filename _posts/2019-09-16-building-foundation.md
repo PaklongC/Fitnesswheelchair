@@ -18,3 +18,4 @@ To get more insights, voice recognition and control will be build into the proto
 
 ## 3. (Initial) setup and build iterations
 The prototype will be build using a Feather (with sensors attached) and a Raspberry Pi (intersection of incoming and outgoing data). Communication between the Feather and Raspberry Pi will be done using bluetooth. The Raspberry Pi will use WiFi to get/put data onto a server.
+To get everything ready, the Raspberry Pi needs to be initialized correctly and the feather also. The next post will be about the sensor used.
