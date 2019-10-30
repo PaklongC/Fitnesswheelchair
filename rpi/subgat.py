@@ -6,7 +6,7 @@ import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
 import time
 import csv
-import analysedata
+import analysedata, feedbackmanager
 
 from threading import Thread
 from dotenv import load_dotenv  # To load the environment variables from the .env file
@@ -21,8 +21,9 @@ from snipssay import snips_say
 #Run this first & declare all global variables
 def setup():
     load_dotenv()
-    global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,ADDRESS_TYPE,GATT_CHARACTERISTIC_ORIENTATION,bleAdapter,my_thing,my_property,csvName
-    global start_time, ad, distance
+    global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,ADDRESS_TYPE,GATT_CHARACTERISTIC_ORIENTATION,bleAdapter
+    global my_thing,my_property,csvName
+    global start_time, ad, distance, fbm
     ADDRESS_TYPE = pygatt.BLEAddressType.random
     THING_ID = os.environ['THING_ID']
     THING_TOKEN = os.environ['THING_TOKEN']
@@ -44,6 +45,7 @@ def setup():
     start_time = time.time()
     ad = analysedata
     distance = 0
+    fbm = feedbackmanager
 #=============================== Bluetooth CLASSES=============================
 
 def find_or_create(property_name, property_type):
@@ -68,12 +70,14 @@ def handle_orientation_data(handle, value_bytes):
         #distance += values[3]
         #values.append(distance)
         #print("just a test")
-        if ad.checkd(values[0],5)=="slow":
-            mssg = "Your current speed is " + str(values[1]) + "Go faster"
-            snips_say(mssg)
+        #if ad.checkd(values[0],5)=="slow":
+        #    mssg = "Your current speed is " + str(values[1]) + "Go faster"
+        #    snips_say(mssg)
         #print("check stuff" + str(ad.checkd(values[0],5)))
     except:
         print("Could not convert data")
+
+    fbm.update(values)
     try:
         write_csv(values)
     except:
