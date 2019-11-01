@@ -14,7 +14,7 @@ baseurl: "/Fitnesswheelchair"
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: "Prototyping Connected Products  |  Group 4"
+title: "PCP  |  Group 4"
 
 # Short description of your site
 description: Summary of the prototype made for the Fitness wheelchair concept
@@ -103,7 +103,6 @@ defaults:
 # Exclude these files from production site
 exclude:
   - CNAME
-  - LICENSE
   - README.md
 
 theme: jekyll-theme-architect

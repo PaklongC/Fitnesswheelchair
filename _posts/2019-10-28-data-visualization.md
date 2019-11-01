@@ -4,10 +4,10 @@ title: Data visualization
 subtitle: D3.js, DCD Hub and Jupyter Notebook
 ---
 
-Data transferred through <b>FIXMEEEEE</b> can be visualized using several methods.
+Data transferred can be visualized using several methods.
 
 #### 1. D3.js
-D3.js offers an extensive library with widgets, build up from several different .html-, .css-, .js-files etcetera.<br>
+D3.js offers an extensive library with widgets, build up from several different .html-, .css-, .js- and other files.<br>
 ```python
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit
@@ -21,7 +21,7 @@ socketio = SocketIO(app)
 def home():
     return render_template('index.html')
 ```
-<sup>Snippet of python code, full code can be found in web\server4.py of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/web/server4.py">GitHub</a> (see the link in our header)</sup>
+<sup>Snippet of our Python code, full code can be found in web\server4.py of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/web/server4.py">GitHub</a> (see the link in our header)</sup>
 
 ```javascript
       d3.csv("{{ url_for('static', filename='text/pidata3.csv') }}", function(error, data) {
@@ -36,7 +36,7 @@ def home():
           .attr("d", valueline);
       };  
 ```
-<sup>Snippet of javascript code, full code can be found in web\templates\Wheelgraph.html of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/web/templates/Wheelgraph.html">GitHub</a> (see the link in our header)</sup><br>
+<sup>Snippet of our Javascript code, full code can be found in web\templates\Wheelgraph.html of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/web/templates/Wheelgraph.html">GitHub</a> (see the link in our header)</sup><br>
 Other files and examples can be found in the web folder of our Github.<br>
 Using the <i>"Simple Graph"</i> widget, combined with data transferred in a .csv-file, the following graph could be created:
 
@@ -51,8 +51,8 @@ plt.plot(t,data_frame.y)
 data_frame = pd.DataFrame(data[:,1:], index = pd.DatetimeIndex(pd.to_datetime(data[:,0], unit='ms')))
 pd.DataFrame.describe(data_frame)
 ```
-<sup>Snippet of python code, full code can be found in \Untitled.ipynb of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/Untitled.ipynb">GitHub</a> (see the link in our header)</sup><br>
-Also, by adding analytics-libraries, different statistics can be calculated and shown.
+<sup>Snippet of our Python code, full code can be found in \Untitled.ipynb of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/Untitled.ipynb">GitHub</a> (see the link in our header)</sup><br>
+Also, by adding analytics-libraries, different statistics can be calculated. By making use of these widgets and data, the following dashboard could be created:
 <img src="\Fitnesswheelchair\img\jugraph.png" width="745">
 <b>This feature offers great features for the scope of this project/prototype. Although making the visualization live is more challenging, data can be visualized cleanly of one .csv-file.
 Several other widgets (like a dropdown) are also available. Although visualizations are not live, several different .csv-files can be rendered when the right option is chosen from a drop-down.</b>
