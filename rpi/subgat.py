@@ -147,7 +147,7 @@ def connect_bluetooth():
         try:
             global left_wheel
             left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
-            print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC) )
+            print("Connection succesfull:" +str(BLUETOOTH_DEVICE_MAC))
             create_csv()
             a = 0
 
@@ -177,7 +177,6 @@ def start_connection():
     while True:
         time.sleep(1)
         #print('sleeping')
-
 def start_data_collection():
     try:
         print('started connection & data collection thread')
@@ -185,7 +184,5 @@ def start_data_collection():
         thread.start()
     except:
         print('could not start thread')
-
-
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
