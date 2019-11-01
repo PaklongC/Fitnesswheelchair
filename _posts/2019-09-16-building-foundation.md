@@ -15,6 +15,7 @@ For the scope of this project, the first direction was taken. The concept was fl
 ## 2. Assumption and validation
 - Interaction with the concept is done using voice. Hands-free control is desirable for this target-group.<br>
 To get more insights, voice recognition and control will be build into the prototype for testing.
+- Collecting the velocity data will be sufficient to give relevant information/motivation.
 
 ## 3. (Initial) setup and build iterations
 The prototype will be build using a Feather (with sensors attached) and a Raspberry Pi (intersection of incoming and outgoing data). Communication between the Feather and Raspberry Pi will be done using bluetooth. The Raspberry Pi will use WiFi to get/put data onto a server.
