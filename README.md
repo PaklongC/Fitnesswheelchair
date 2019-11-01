@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <h1>Fitnesswheelchair</h1>
-<h2>An extensive documentation about the <b>process, product and prototype</b> can be found at the website of the
-<a href="https://paklongc.github.io/Fitnesswheelchair"><b>Wheelchair++</b></a></h2>
+<h2><i>An extensive documentation about the <b>process, product and prototype</b> can be found at the website of the
+<a href="https://paklongc.github.io/Fitnesswheelchair"><b>Wheelchair++</b></a></i></h2><br>
 <h6>By Pak Long, Freek and Lorenzo</h6><br>
 <a href="https://paklongc.github.io/Fitnesswheelchair"><img src="img/banner.png" width="" height=""><br></a>
 <h3><li><i><u>Project description</u></i> describes the mission and vision of the <b>concept</b> and the technologies and sensors used in the <b>prototype</b>.</li><br>
