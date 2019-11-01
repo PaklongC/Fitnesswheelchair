@@ -24,6 +24,8 @@ with open("properties.conf") as properties:
         target_distance = p['target_distance']
         target_velocity = p['target_velocity']
         deviation_velocity = p['deviation_velocity']
+        velocity_min = target_velocity - deviation_velocity
+        velocity_max = target_velocity + deviation_velocity
         pr = "porperties set: " + "TD:"+ target_distance + "TV:" + target_velocity + "DV:" + deviation_velocity
         print(pr)
     except:
@@ -35,13 +37,14 @@ def update(_values):
     check_feedback()
 def check_feedback():
 #feedback timeouts in seconds
+
     timeout_update=60
     timeout_slow=20
     global ltime_slow,ltime_update, start_time
     global lines_slow
     global distance,target_distance,velocity,velocity_min,velocity_max
-    print(ltime_slow + timeout_slow )
-    print(time())
+    pr = "porperties set: " + "TD:"+ target_distance + "TV:" + velocity_min
+    print(pr)
     if ltime_slow + timeout_slow < time() and velocity < velocity_min:
         ltime_slow = time()
         #wait 5 more seconds before allowing feedback
