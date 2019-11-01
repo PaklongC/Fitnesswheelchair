@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Fitnesswheelchair</title>
-</head>
 <h1>Fitnesswheelchair</h1>
 <h6>By Pak Long, Freek and Lorenzo</h6>
 <img src="img/banner.png" width="" height=""><br>
