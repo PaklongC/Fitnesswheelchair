@@ -9,7 +9,7 @@ The developed prototype will be used to validate the feasibility of the core con
 To get insights into the desirability of the idea, the ability to measure speed (one of the core functions of the concept) was added to the wheelchair.
 Since a wheelchair-user uses his/her hands relatively more often; voice recognition and voice output were also added, as an alternate way of interacting. The assumption that this is more desirable, and the aforementioned assumption, will be validated using the prototype.
 
-<img src="\Fitnesswheelchair\img\rolstoel.jpg width="745">
+<img src="\Fitnesswheelchair\img\rolstoel.jpg" width="745">
 
 
 ### Research questions related to the prototype
@@ -64,4 +64,4 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
 </table>
 
 ### Architecture of Prototype
-<img src="\Fitnesswheelchair\Images\IOT Architecture.png width="745">
+<img src="\Fitnesswheelchair\Images\IOT Architecture.png" width="745">
