@@ -1,0 +1,3 @@
+target_distance=1000
+target_velocity=3
+deviation_velocity=0.5
