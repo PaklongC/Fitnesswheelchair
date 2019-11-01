@@ -14,7 +14,6 @@ For the scope of this project, the first direction was taken. The concept was fl
 
 ## 2. Assumption and validation
 - Interaction with the concept is done using voice. Hands-free control is desirable for this target-group.<br>
-To get more insights, voice recognition and control will be build into the prototype for testing.
 - Collecting the velocity data will be sufficient to give relevant information/motivation.
 
 ## 3. (Initial) setup and build iterations
