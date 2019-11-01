@@ -6,16 +6,18 @@ subtitle: Preliminary Idea and Prototype
 
 ## 1. Brainstorming and Preliminary idea
 Three distinct product directions were found after brainstorming:
-- A fitness wheel chair made for the athletic tech enthusiasts,
-- a 'party' wheelchair made for entertainment/entertaining a crowd and
-- a wheelchair that could tell when and which parts of it needs to be replaced or repaired.
+- A fitness wheelchair made for the athletic tech enthusiasts,
+- a 'party' wheelchair made for entertainment/entertaining a crowd, and
+- a wheelchair that could tell when and which parts of the wheelchair needs to be replaced or repaired.
 
-For the scope of this project, the first direction was taken. The concept was fleshed out more to fit the market and target-group. The following assumption was taken and should be validated (using a prototype).
+For this project, the first design-direction was taken. The concept was then fleshed out more to fit the market and target-group. A few assumptions were taken along the way, which should be validated (using a prototype).
 
-## 2. Assumption and validation
-- Interaction with the concept is done using voice. Hands-free control is desirable for this target-group.<br>
-- Collecting the velocity data will be sufficient to give relevant information/motivation.
+## 2. Assumptions and validation
+- Collecting the velocity data will be sufficient to give relevant information/motivation.<br>
+- Interaction with the concept is done using voice. Hands-free control is desirable for this target-group.
 
-## 3. (Initial) setup and build iterations
-The prototype will be build using a Feather (with sensors attached) and a Raspberry Pi (intersection of incoming and outgoing data). Communication between the Feather and Raspberry Pi will be done using bluetooth. The Raspberry Pi will use WiFi to get/put data onto a server.
-To get everything ready, the Raspberry Pi needs to be initialized correctly and the feather also. The next post will be about the sensor used.
+## 3. (Initial) setup and architecture
+The prototype will be build using a Feather (with an IMU sensor attached) and a Raspberry Pi (with a microphone and speaker attached). The first sensor will be used to validate the first assumption mentioned. The sensor (and actuator) attached to the Raspberry Pi will be used to validate the latter.<br>
+Communication between the Feather and Raspberry Pi will be done using Bluetooth. The Raspberry Pi will use WiFi to get/put data onto a server. More elaborate explanation of the architecture can be seen in the visual below.<br>
+To get everything ready, the Raspberry Pi needs to be initialized correctly and the feather also. The next post will be about the sensor used. 
+<img src="\Fitnesswheelchair\img\IOT Architecture.png" width="775">
