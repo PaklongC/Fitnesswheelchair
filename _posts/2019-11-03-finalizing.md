@@ -2,7 +2,7 @@
 layout: post
 title: Fake it till you make it
 subtitle: The Final Result
-bigimg: /img/path.jpg
+bigimg: /img/banner2.png
 ---
 <html>
 <div class="row get-started-wrap">
