@@ -12,13 +12,6 @@ The results from the (brief) testing and first impressions, regarding the assump
 <img src="\Fitnesswheelchair\img\rolstoel.jpg" width="745">
 
 
-### Research questions related to the prototype
-1. Is velocity a relevant measurement when it comes to collecting data from a training?  
-  - <i>Getting insight into sensor-activities and measurement accuracy</i>
-2. To what extent is voice in and output desirable when it comes to control and output?  
-  - <i>Getting insight into analytics</i>
-
-
 ### Sensors and technologies used in final design
 <table class="" style="undefined;table-layout: fixed; width: 799px">
 <colgroup>
