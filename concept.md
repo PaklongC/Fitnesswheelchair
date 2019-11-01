@@ -12,3 +12,5 @@ Providing an extensive fitness experience for athletic tech enthusiasts in wheel
 By embedding several sensors into a package/wheelchair and collecting data, rich training statistics and motivational tips can be given by analyzing the data with state-of-the-art (machine-learning) technologies.
 
 <img src="\Fitnesswheelchair\img\sensorresults.png" width="745">
+
+<img src="\Fitnesswheelchair\img\homepagebanner.png" width="745">
