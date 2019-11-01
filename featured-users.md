@@ -62,3 +62,6 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
     <td>The hub is used to visualize live the data the is collected and calculated.</td>
   </tr>
 </table>
+
+### Architecture of Prototype
+<img src="\Fitnesswheelchair\Images\IOT Architecture.png width="745">
