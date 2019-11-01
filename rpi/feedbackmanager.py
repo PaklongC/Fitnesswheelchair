@@ -43,7 +43,7 @@ def check_feedback():
     global ltime_slow,ltime_update, start_time
     global lines_slow
     global distance,target_distance,velocity,velocity_min,velocity_max
-    pr = "porperties set: " + target_distance
+    pr = "porperties set: " + velocity_min
     print(pr)
     if ltime_slow + timeout_slow < time() and velocity < velocity_min:
         ltime_slow = time()
