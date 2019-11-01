@@ -24,8 +24,8 @@ try:
         target_distance = int(p['target_distance'])
         target_velocity= int(p['target_velocity'])
         deviation_velocity = int(p['deviation_velocity'])
-        velocity_min = target_velocity - deviation_velocity
-        velocity_max = target_velocity + deviation_velocity
+        #velocity_min = target_velocity - deviation_velocity
+        #velocity_max = target_velocity + deviation_velocity
         properties.close()
 except:
     print("config werkt niet")
