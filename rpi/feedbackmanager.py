@@ -21,6 +21,7 @@ try:
         p = {key.strip(): value.strip() for key, value in l}
         #global target_distance,target_velocity,deviation_velocity
         print(p['target_distance'])
+        global target_distance,target_velocity,velocity_min,velocity_max
         target_distance = p['target_distance']
         target_velocity= p['target_velocity']
         deviation_velocity = p['deviation_velocity']
