@@ -22,7 +22,7 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
 ### Sensors and technologies used in final design
 <table class="" style="undefined;table-layout: fixed; width: 799px">
 <colgroup>
-<col style="width: 173px">
+<col style="width: 172px">
 <col style="width: 138px">
 <col style="width: 408px">
 </colgroup>
@@ -62,6 +62,7 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
     <td>The hub is used to visualize live the data the is collected and calculated.</td>
   </tr>
 </table>
+
 
 ### Architecture of Prototype
 <img src="\Fitnesswheelchair\Images\IOT Architecture.png" width="745">
