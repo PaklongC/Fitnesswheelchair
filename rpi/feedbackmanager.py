@@ -40,6 +40,7 @@ def check_feedback():
     global ltime_slow,ltime_update, start_time
     global lines_slow
     global distance,target_distance,velocity,velocity_min,velocity_max
+    print(velocity_min)
     if ltime_slow + timeout_slow < time() and velocity < velocity_min:
         ltime_slow = time()
         #wait 5 more seconds before allowing feedback
