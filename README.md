@@ -5,7 +5,7 @@
 </head>
 <h1>Fitnesswheelchair</h1>
 <h6>By Pak Long, Freek and Lorenzo</h6>
-<img src="img/banner.png" width="" height=""><br><br>
+<img src="img/banner.png" width="" height=""><br>
 An extensive documentation about the <b>process, product and prototype</b> can be found at the website of the
 <a href="https://paklongc.github.io/Fitnesswheelchair"><b>Wheelchair++</b></a><br><br>
 <li><i><u>Project description</u></i> describes the mission and vision of the <b>concept</b> and the technologies and sensors used in the <b>prototype</b>.</li><br>
