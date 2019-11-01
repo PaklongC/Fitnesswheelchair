@@ -21,7 +21,7 @@ socketio = SocketIO(app)
 def home():
     return render_template('index.html')
 ```
-<sup>Snippet of python code, full code can be found in web\server4.py of our GitHub (see the link in our header)</sup>
+<sup>Snippet of python code, full code can be found in web\server4.py of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/web/server4.py">GitHub</a> (see the link in our header)</sup>
 
 ```javascript
       d3.csv("{{ url_for('static', filename='text/pidata3.csv') }}", function(error, data) {
@@ -36,7 +36,7 @@ def home():
           .attr("d", valueline);
       };  
 ```
-<sup>Snippet of javascript code, full code can be found in web\templates\Wheelgraph.html of our GitHub (see the link in our header)</sup><br>
+<sup>Snippet of javascript code, full code can be found in web\templates\Wheelgraph.html of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/web/templates/Wheelgraph.html">GitHub</a (see the link in our header)</sup><br>
 Other files and examples can be found in the web folder of our Github.<br>
 Using the <i>"Simple Graph"</i> widget, combined with data transferred in a .csv-file, the following graph could be created:
 
@@ -51,7 +51,7 @@ plt.plot(t,data_frame.y)
 data_frame = pd.DataFrame(data[:,1:], index = pd.DatetimeIndex(pd.to_datetime(data[:,0], unit='ms')))
 pd.DataFrame.describe(data_frame)
 ```
-<sup>Snippet of python code, full code can be found in \Untitled.ipynb of our GitHub (see the link in our header)</sup><br>
+<sup>Snippet of python code, full code can be found in \Untitled.ipynb of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/Untitled.ipynb">GitHub</a (see the link in our header)</sup><br>
 Also, by adding analytics-libraries, different statistics can be calculated and shown.
 <img src="\Fitnesswheelchair\img\jugraph.png" width="745">
 <b>This feature offers great features for the scope of this project/prototype. Although making the visualization live is more challenging, data can be visualized cleanly of one .csv-file.
