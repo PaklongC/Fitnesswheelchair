@@ -1,6 +1,6 @@
 ---
 layout: post
-title: finalizing the prototype
+title: Finalizing the prototype
 subtitle: The Final Result
 bigimg: /img/banner2.png
 ---
