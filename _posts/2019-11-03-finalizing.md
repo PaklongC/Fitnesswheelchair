@@ -2,7 +2,7 @@
 layout: post
 title: Fake it till you make it
 subtitle: The Final Result
-bigimg: \Fitnesswheelchair\Images\banner.png
+bigimg: /img/banner2.png
 ---
 <html>
 <div class="row get-started-wrap">
