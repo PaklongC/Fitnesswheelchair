@@ -14,7 +14,6 @@ def check(val):
     return False
 def checkd(val,timeout):
     global last_time
-
     print(last_time+timeout)
     print(time())
     if  last_time + timeout < time():
