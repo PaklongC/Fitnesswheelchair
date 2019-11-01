@@ -22,9 +22,9 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
 ### Sensors and technologies used in final design
 <table class="" style="undefined;table-layout: fixed; width: 799px">
 <colgroup>
-<col style="width: 172px">
-<col style="width: 138px">
-<col style="width: 408px">
+<col style="width: 165px">
+<col style="width: 125px">
+<col style="width: 390px">
 </colgroup>
   <tr>
     <th>Image</th>
