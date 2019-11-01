@@ -22,8 +22,8 @@ try:
         #global target_distance,target_velocity,deviation_velocity
         print(p['target_distance'])
         target_distance = p['target_distance']
-        print(p['target_velocity'])
-        print(p['deviation_velocity'])
+        target_velocity= p['target_velocity']
+        deviation_velocity = p['deviation_velocity']
         properties.close()
 except:
     print("config werkt niet")
