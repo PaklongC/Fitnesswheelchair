@@ -26,8 +26,8 @@ with open("properties.conf") as properties:
         deviation_velocity = p['deviation_velocity']
         velocity_min = target_velocity - deviation_velocity
         velocity_max = target_velocity + deviation_velocity
-        pr = "porperties set: " + "TD:"+ target_distance + "TV:" + target_velocity + "DV:" + deviation_velocity
-        print(pr)
+        #pr = "porperties set: " + "TD:"+ target_distance + "TV:" + target_velocity + "DV:" + deviation_velocity
+        #print(pr)
     except:
         print("could not read properties")
 def update(_values):
@@ -43,7 +43,7 @@ def check_feedback():
     global ltime_slow,ltime_update, start_time
     global lines_slow
     global distance,target_distance,velocity,velocity_min,velocity_max
-    pr = "porperties set: " + "TD:"+ target_distance + "TV:" + velocity_min
+    pr = "porperties set: " + target_distance
     print(pr)
     if ltime_slow + timeout_slow < time() and velocity < velocity_min:
         ltime_slow = time()
