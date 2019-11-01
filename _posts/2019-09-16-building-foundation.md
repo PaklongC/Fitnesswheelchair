@@ -15,9 +15,10 @@ For this project, the first design-direction was taken. The concept was then fle
 ## 2. Assumptions and validation
 - Collecting the velocity data will be sufficient to give relevant information/motivation.<br>
 - Interaction with the concept is done using voice. Hands-free control is desirable for this target-group.<br>
-1. Is velocity a relevant measurement when it comes to collecting data from a training?  
-  - <i>Getting insight into sensor-activities and measurement accuracy</i>
-2. To what extent is voice in and output desirable when it comes to control and output?  
+
+1. Is velocity a relevant measurement when it comes to collecting data from a training?<br>
+  - <i>Getting insight into sensor-activities and measurement accuracy</i><br>
+2. To what extent is voice in and output desirable when it comes to control and output?<br>  
   - <i>Getting insight into analytics</i>
 
 ## 3. (Initial) setup and architecture
