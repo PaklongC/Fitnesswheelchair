@@ -34,12 +34,12 @@ The results from the (brief) testing and first impressions, regarding the assump
   <tr>
     <td><img src="\Fitnesswheelchair\img\feather.png" alt=""></td>
     <td>Feather</td>
-    <td>The Feather is connected with the Raspberry Pi through bluetooth. Sensors are attached to the Feather and Pi. Data collected can be transmitted to the Raspberry Pi and the cloud. </td>
+    <td>The Feather is connected with the Raspberry Pi through bluetooth. the IMU is attached to the Feather. </td>
   </tr>
   <tr>
     <td><img src="\Fitnesswheelchair\img\raspi.png" alt=""></td>
     <td>Raspberry Pi</td>
-    <td>The Raspberry Pi is connected to a server using Wifi. Data can be transmitted using this.</td>
+    <td>The Raspberry Pi is connected to a microphone (webcam), speaker and a server through serial and WiFi. Data collected can be transmitted through Raspberry Pi to the Cloud.</td>
   </tr>
   <tr>
     <td><img src="\Fitnesswheelchair\img\imu.png" alt=""></td>
