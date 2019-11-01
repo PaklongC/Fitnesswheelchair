@@ -14,7 +14,7 @@ start_time = time()
 ltime_update = time()
 ltime_positive = time()
 ltime_slow = time() + 10
-lines_slow = ["try going faster", "You are a bit to slow", "go faster", "go go go","Atleast you are not standing still, but try harder though your too slow","are you even moving"."are you even trying","I dont think you are trying","you are not a good roll model",""]
+lines_slow = ["try going faster", "You are a bit to slow", "go faster", "go go go","Atleast you are not standing still but try harder though your too slow","are you even moving","are you even trying","I dont think you are trying","you are not a good roll model"]
 
 with open("properties.conf") as properties:
     l = [line.split("=") for line in properties.readlines()]
