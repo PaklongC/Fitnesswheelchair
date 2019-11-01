@@ -16,7 +16,7 @@ ltime_positive = time()
 ltime_slow = time() + 10
 lines_slow = ["try going faster", "You are a bit to slow", "go faster", "go go go","Atleast you are not standing still but try harder though your too slow","are you even moving","are you even trying","I dont think you are trying","you are not a good roll model"]
 
-with open("properties.conf") as properties:
+with open("config.txt") as properties:
     l = [line.split("=") for line in properties.readlines()]
     p = {key.strip(): value.strip() for key, value in l}
     #global target_distance,target_velocity,deviation_velocity
@@ -30,6 +30,7 @@ with open("properties.conf") as properties:
         #print(pr)
     except:
         print("could not read properties")
+    properties.close()
 def update(_values):
     global distance,velocity
     distance = _values[3]
