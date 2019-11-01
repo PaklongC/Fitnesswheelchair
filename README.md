@@ -10,52 +10,52 @@ The following files and folders belongs to the items stated in the header:
   </tr>
 	<tr>
     <td></td>
-    <td></td>
+    <td>_includes - <i>Folder</i></td>
     <td></td>
   </tr>
 	<tr>
 		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
+		<td>_layouts - <i>Folder</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
+		<td>_posts - <i>Folder</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
+		<td>css - <i>Folder</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
+		<td>js - <i>Folder</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td></td>
+		<td>_config.yml - <i>File</td>
 		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>concept.md - <i>File</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>feed.xml - <i>File</i></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>index.html - <i>File</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>prototype.md - <i>File</td>
 		<td></td>
 	</tr>
 	<tr>
