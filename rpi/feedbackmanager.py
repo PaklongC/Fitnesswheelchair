@@ -20,11 +20,10 @@ try:
         l = [line.split("=") for line in properties.readlines()]
         p = {key.strip(): value.strip() for key, value in l}
         #global target_distance,target_velocity,deviation_velocity
+        print(p['target_distance'])
         target_distance = p['target_distance']
-        target_velocity = p['target_velocity']
-        deviation_velocity = p['deviation_velocity']
-        velocity_min = target_velocity - deviation_velocity
-        velocity_max = target_velocity + deviation_velocity
+        print(p['target_velocity'])
+        print(p['deviation_velocity'])
         properties.close()
 except:
     print("config werkt niet")
