@@ -65,4 +65,4 @@ Since a wheelchair-user uses his/her hands relatively more often; voice recognit
 <br>
 
 ### Architecture of Prototype
-<img src="\Fitnesswheelchair\Images\IOT Architecture.png" width="775">
+<img src="\Fitnesswheelchair\img\IOT Architecture.png" width="775">
