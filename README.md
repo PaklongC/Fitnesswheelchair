@@ -8,7 +8,7 @@
 <h3><li><i><u>Project description</u></i> describes the mission and vision of the <b>concept</b> and the technologies and sensors used in the <b>prototype</b>.</li><br>
 <li><i><u>GitHub</u></i> is a link to the GitHub of our entire project.</li><br>
 <li><i><u>Home</u></i> contains the decision-making moments (in blog-posts form) regarding sensors and technologies used in the final prototype. The last blog-post aims to answer the research questions stated in the 'prototype page' </li></h3>
-<hr><hr>
+<hr>
 <body>
 
 <h3>Scope:</h3>
