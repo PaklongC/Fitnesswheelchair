@@ -4,7 +4,7 @@ title: Fake it till you make it
 subtitle: The Final Result
 bigimg: /img/path.jpg
 ---
-<img src="\Fitnesswheelchair\img\rolstoel.jpg" width="376"><img src="\Fitnesswheelchair\img\arduinonono.jpg" width="376">
+<img src="\Fitnesswheelchair\img\rolstoel.jpg" width="376"> <img src="\Fitnesswheelchair\img\arduinonono.jpg" width="376">
 
 ### Research questions related to the prototype
 1. Is velocity a relevant measurement when it comes to collecting data from a training?  
