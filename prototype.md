@@ -13,6 +13,7 @@ The results from the (brief) testing and first impressions, regarding the assump
 
 
 ### Sensors and technologies used in final design
+<br>
 <table class="" style="undefined;table-layout: fixed; width: 799px">
 <colgroup>
 <col style="width: 165px">
