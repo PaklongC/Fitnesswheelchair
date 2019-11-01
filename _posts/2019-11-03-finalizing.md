@@ -5,7 +5,7 @@ subtitle: The Final Result
 bigimg: /img/path.jpg
 ---
 <html>
-<div class="row">
+<div class="row get-started-wrap">
 <img src="\Fitnesswheelchair\img\rolstoel.jpg" width="376"> <img src="\Fitnesswheelchair\img\arduinonono.jpg" width="376">
 </div>
 </html>
