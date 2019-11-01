@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fake it till you make it
+title: finalizing the prototype
 subtitle: The Final Result
 bigimg: /img/banner2.png
 ---
