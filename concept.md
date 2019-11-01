@@ -4,7 +4,7 @@ title: wheelchair++
 subtitle: the first <i>step</i> into being a cyborg
 ---
 ![](\Fitnesswheelchair\img\idecircle.png "IDE Design synergies")
-## Mision
+## Mission
 Providing an extensive fitness experience for athletic tech enthusiasts in wheelchairs.<br>
 <i>"Being bounded does not have to be limiting."</i> <br>
 
