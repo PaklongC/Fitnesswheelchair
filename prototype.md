@@ -59,6 +59,6 @@ The results from the (brief) testing and first impressions, regarding the assump
   <tr>
     <td><img src="\Fitnesswheelchair\img\dcd.png" alt=""></td>
     <td>DCD Hub</td>
-    <td>The hub is used to visualize live the data the is collected and calculated.</td>
+    <td>The hub is used to visualize the data live, that is collected and calculated.</td>
   </tr>
 </table>
