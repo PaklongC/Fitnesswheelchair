@@ -24,6 +24,8 @@ with open("properties.conf") as properties:
         target_distance = p['target_distance']
         target_velocity = p['target_velocity']
         deviation_velocity = p['deviation_velocity']
+    pr = "porperties set: " + "TD:"+ target_distance+ "TV:" + target_velocity + "DV:" + deviation_velocity
+        print(pr)
     except:
         print("could not read properties")
 def update(_values):
