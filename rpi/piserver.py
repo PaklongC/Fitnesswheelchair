@@ -8,7 +8,7 @@ import subgat
 import threading
 
 thread = None
-
+wheelie = subgat
 app = Flask(__name__)
 
 @app.route('/wheelie', methods = ['POST'])
@@ -17,12 +17,12 @@ def start_dataanalysis():
     #testsub.main()
     recording_on = Value('b', True)
     #p = Process(target=record_loop, args=(recording_on,))
-    global thread
+    global thread, wheelie
     #thread = Thread(target=testsub)
     #thread = Thread(target=subgat.start_connection)
     #thread.start()
 
-    subgat.start_data_collection()
+    wheelie.start_data_collection()
     return 'Started sub process data collection'
 
 @app.route('/stop', methods = ['GET'])

@@ -1,6 +1,8 @@
 from snipssay import snips_say, snips_sayx
 from time import time
 from random import randrange
+
+
 distance=0
 target_distance=1000
 velocity=0
@@ -12,28 +14,43 @@ start_time = time()
 ltime_update = time()
 ltime_positive = time()
 ltime_slow = time() + 10
-lines_slow = ["try going faster", "You are a bit to slow", "go faster", "go go go"]
+lines_slow = ["try going faster", "You are a bit to slow", "go faster", "go go go","Atleast you are not standing still but try harder though your too slow","are you even moving","are you even trying","I dont think you are trying","you are not a good roll model"]
 
+with open("config.txt") as properties:
+    l = [line.split("=") for line in properties.readlines()]
+    p = {key.strip(): value.strip() for key, value in l}
+    #global target_distance,target_velocity,deviation_velocity
+    try:
+        target_distance = p['target_distance']
+        target_velocity = p['target_velocity']
+        deviation_velocity = p['deviation_velocity']
+        velocity_min = target_velocity - deviation_velocity
+        velocity_max = target_velocity + deviation_velocity
+        #pr = "porperties set: " + "TD:"+ target_distance + "TV:" + target_velocity + "DV:" + deviation_velocity
+        #print(pr)
+    except:
+        print("could not read properties")
+    properties.close()
 def update(_values):
-    print('ehhh')
     global distance,velocity
     distance = _values[3]
     velocity = _values[1]
     check_feedback()
 def check_feedback():
 #feedback timeouts in seconds
+
     timeout_update=60
     timeout_slow=20
     global ltime_slow,ltime_update, start_time
     global lines_slow
     global distance,target_distance,velocity,velocity_min,velocity_max
-    print(ltime_slow + timeout_slow )
-    print(time())
+    pr = "porperties set: " + velocity_min
+    print(pr)
     if ltime_slow + timeout_slow < time() and velocity < velocity_min:
         ltime_slow = time()
         #wait 5 more seconds before allowing feedback
         #it is time for some feedback on the slow peformance, we are going to slow
-        print("time to say something")
+        print("snips feedback: go faster")
         snips_sayx("Your current speed is", round(velocity))
         snips_say(lines_slow[randrange(len(lines_slow))])
     if ltime_update + timeout_update < time():

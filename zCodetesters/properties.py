@@ -3,5 +3,6 @@ with open("t.properties") as properties:
     d = {key.strip(): value.strip() for key, value in l}
     print(d)
     print(l)
-    properties.close()
+
     print(d['a'])
+    properties.close()
