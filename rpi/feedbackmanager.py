@@ -19,7 +19,7 @@ lines_slow = ["try going faster", "You are a bit to slow", "go faster", "go go g
 with open("properties.conf") as properties:
     l = [line.split("=") for line in properties.readlines()]
     p = {key.strip(): value.strip() for key, value in l}
-    global target_distance,target_velocity,deviation_velocity
+    #global target_distance,target_velocity,deviation_velocity
     try:
         target_distance = p['target_distance']
         target_velocity = p['target_velocity']
