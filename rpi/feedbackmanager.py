@@ -27,9 +27,9 @@ def getConfig():
         deviation_velocity = float(p['deviation_velocity'])
         velocity_min = target_velocity - deviation_velocity
         velocity_max = target_velocity + deviation_velocity
-
-        return p
-    properties.close()
+        properties.close()
+    return p
+    
 #except:
 #    print("config werkt niet")
 def update(_values):
