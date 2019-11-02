@@ -16,19 +16,19 @@ ltime_positive = time()
 ltime_slow = time() + 10
 lines_slow = ["try going faster", "You are a bit to slow", "go faster", "go go go","Atleast you are not standing still but try harder","are you even moving","are you even trying","I dont think you are trying","you are not a good roll model"]
 #try:
-#def getConfig():
-with open("config.txt") as properties:
-    l = [line.split("=") for line in properties.readlines()]
-    p = {key.strip(): value.strip() for key, value in l}
-    #global target_distance,target_velocity,deviation_velocity
-    #print(p['target_distance'])
-    target_distance = int(p['target_distance'])
-    target_velocity= int(p['target_velocity'])
-    deviation_velocity = float(p['deviation_velocity'])
-    velocity_min = target_velocity - deviation_velocity
-    velocity_max = target_velocity + deviation_velocity
-    properties.close()
-    #return p
+def getConfig():
+    with open("config.txt") as properties:
+        l = [line.split("=") for line in properties.readlines()]
+        p = {key.strip(): value.strip() for key, value in l}
+        #global target_distance,target_velocity,deviation_velocity
+        #print(p['target_distance'])
+        target_distance = int(p['target_distance'])
+        target_velocity= int(p['target_velocity'])
+        deviation_velocity = float(p['deviation_velocity'])
+        velocity_min = target_velocity - deviation_velocity
+        velocity_max = target_velocity + deviation_velocity
+        properties.close()
+    return p
 
 #except:
 #    print("config werkt niet")
