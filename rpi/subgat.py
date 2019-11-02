@@ -46,6 +46,7 @@ def setup():
     ad = analysedata
     distance = 0
     fbm = feedbackmanager
+    print(fbm.getConfig())
 #=============================== Bluetooth CLASSES=============================
 
 def find_or_create(property_name, property_type):
@@ -67,7 +68,7 @@ def handle_orientation_data(handle, value_bytes):
         values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
         #speed m/s to km/h
         values[1]= 3.6*values[1]
-        distance += -values[2] #FIXME arduino code distance is nu negatief
+        distance += abs(values[2]) #FIXME arduino code distance is nu negatief
         values.append(distance)
         print(values)
     except:
