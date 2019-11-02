@@ -46,7 +46,7 @@ def setup():
     ad = analysedata
     distance = 0
     fbm = feedbackmanager
-    #print(fbm.getConfig())
+    print(fbm.getConfig())
 #=============================== Bluetooth CLASSES=============================
 
 def find_or_create(property_name, property_type):
