@@ -203,7 +203,7 @@ def stop_session():
         writer = csv.writer(_csvFile)
         writer.writerow(session_info)
         _csvFile.close
-        print('saved session data: '+ session_info)
+        #print('saved session data: '+ session_info)
 #except:
     print('failed to save session data')
 # Register our Keyboard handler to exit
