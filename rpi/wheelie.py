@@ -199,14 +199,14 @@ def stop_session():
     session_name = "workout_"+str(time.strftime("%d_%m_%H%M%S", time.gmtime()))+'.csv'
     avg_velocity = round(distance/(end_time-start_time),1)
     session_info=[session_name,avg_velocity,fbm.target_velocity,start_time,end_time,distance,fbm.target_distance]
-
+    print(session_info)
     time.sleep(2)
     try:
-        with open ('session_index.csv','a') as _csvFile:
+        with open ('session_index.csv','a') as s_csvFile:
 
             writer2 = csv.writer(_csvFile)
             writer2.writerow(session_info)
-            _csvFile.close
+            s_csvFile.close
             print("wrote session info:",str(session_info))
             #print('saved session data: '+ session_info)
     except:
