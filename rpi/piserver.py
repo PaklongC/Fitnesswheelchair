@@ -31,11 +31,6 @@ def stop():
     Wheelie.stop_session()
     return 'stopped'
 
-@app.route('/wheelie', methods = ['GET'])
-def getstuff():
-    print('super hacker maar net niet')
-    return 'learn js'
-
 @app.route('/home')
 def home():
     return render_template('index.html')
