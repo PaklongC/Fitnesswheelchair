@@ -86,9 +86,8 @@
 		</tr>
 	</table>
 	<h4><i>An extensive documentation about the <b>process, product and prototype</b> can be found at the website of the
-	<a href="https://paklongc.github.io/Fitnesswheelchair"><b>Wheelchair++</b></a></i><br><br></h4>
+	<a href="https://paklongc.github.io/Fitnesswheelchair"><b>Wheelchair++</b></a></i></h4>
+	<h5><li><i><u><a href="https://paklongc.github.io/Fitnesswheelchair/concept/">Project description</a></</u></i> describes the mission and vision of the <b>concept</b> and the technologies and sensors used in the <b><a href="https://paklongc.github.io/Fitnesswheelchair/prototype/">prototype</a></b>.</li><br>
+	<li><i><u><a href="https://github.com/PaklongC/Fitnesswheelchair">Github</a></u></i> is a link to the GitHub of our entire project.</li><br>
+	<li><i><u><a href="https://paklongc.github.io/Fitnesswheelchair/">Home</a></u></i> contains the decision-making moments (in blog-posts form) regarding sensors and technologies used in the final prototype. The last blog-post aims to answer the research questions stated in the 'prototype page' </li></h5>
 	<h6>By Pak Long, Freek and Lorenzo</h6><br>
-	<h4><li><i><u>Project description</u></i> describes the mission and vision of the <b>concept</b> and the technologies and sensors used in the <b>prototype</b>.</li><br>
-	<li><i><u>GitHub</u></i> is a link to the GitHub of our entire project.</li><br>
-	<li><i><u>Home</u></i> contains the decision-making moments (in blog-posts form) regarding sensors and technologies used in the final prototype. The last blog-post aims to answer the research questions stated in the 'prototype page' </li></h4>
-
