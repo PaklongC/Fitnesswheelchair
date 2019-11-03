@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<h1>wheelchair++</h1>
-	<a href="https://paklongc.github.io/Fitnesswheelchair"><img src="img/banner.png" width="" height=""><br></a>
+	<a href="https://paklongc.github.io/Fitnesswheelchair"><img src="img/banner.png" width="" height=""><br></a><br>
 	The following files and folders belongs to the items stated in the header:
 	<table>
  		<tr>
