@@ -15,6 +15,8 @@ ltime_update = time()
 ltime_positive = time()
 ltime_slow = time() + 10
 lines_slow = ["try going faster", "You are a bit to slow", "go faster", "go go go","Atleast you are not standing still but try harder","are you even moving","are you even trying","I dont think you are trying","you are not a good roll model"]
+timeout_update=60
+timeout_slow=20
 #try:
 
 with open("config.txt") as properties:
@@ -24,6 +26,8 @@ with open("config.txt") as properties:
     #print(p['target_distance'])
     target_distance = int(p['target_distance'])
     target_velocity = int(p['target_velocity'])
+    timeout_slow = int(p['timeout_slow'])
+    timeout_update= int(p['timeout_update'])
     deviation_velocity = float(p['deviation_velocity'])
     velocity_min = target_velocity - deviation_velocity
     velocity_max = target_velocity + deviation_velocity
@@ -40,10 +44,9 @@ def update(_values):
 def check_feedback():
 #feedback timeouts in seconds
 
-    timeout_update=60
-    timeout_slow=20
+
     global ltime_slow,ltime_update, start_time
-    global lines_slow
+    global lines_slow, timeout_update,timeout_slow
     global distance,target_distance,velocity,velocity_min,velocity_max
     print(velocity_min)
     if ltime_slow + timeout_slow < time() and velocity < velocity_min:

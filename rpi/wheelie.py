@@ -179,13 +179,16 @@ def start_connection():
 def start_data_collection():
     try:
         print('started connection & data collection thread')
+        global thread
         thread = Thread(target=start_connection)
         thread.start()
     except:
         print('could not start thread')
 def stop_session():
-    global left_wheel
+
+    global left_wheel, thread
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
+    thread.stop()
     print("stop session")
     print("Analysing data")
 # Register our Keyboard handler to exit
