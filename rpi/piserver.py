@@ -35,7 +35,7 @@ def stop():
 
 @app.route('/getIndex', methods = ['GET'])
 def get_session_index():
-    sessionPath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"session_index.csv")
+    sessionPath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"rpi","session_index.csv")
     with open(sessionPath, 'r') as f:
         reader = csv.reader(f)
         session_index = list(reader)

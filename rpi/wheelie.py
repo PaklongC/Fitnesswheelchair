@@ -206,7 +206,6 @@ def stop_session():
     avg_velocity = round(distance/(end_time-start_time),1)
     session_info=[session_name,avg_velocity,fbm.target_velocity,start_time,end_time,distance,fbm.target_distance,datetime.strftime(dcd_start_time,"%Y-%m-%d %H:%M:%S"),datetime.strftime(dcd_end_time,"%Y-%m-%d %H:%M:%S")]
     print(session_info)
-    time.sleep(2)
     try:
         sessionPath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"session_index.csv")
         with open (sessionPath,'a') as s_csvFile:
