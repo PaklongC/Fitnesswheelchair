@@ -45,8 +45,7 @@ def get_session_index():
 
 @app.route('/getSessionData', methods = ['GET'])
 def get_session_data():
-
-    print("HTTP send from",sessionPath,":",session_index)
+    #print("HTTP send from",sessionPath,":",session_index)
     strreturn = "yup" + request.args.get('csvName', default="defaultdata.csv", type=str)
     return strreturn
 
