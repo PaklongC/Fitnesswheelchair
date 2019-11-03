@@ -187,7 +187,7 @@ def start_data_collection():
 def stop_session():
 
     global left_wheel
-    left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
+    left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION,wait_for_response=False)
     print("stop session")
     print("Analysing data")
 # Register our Keyboard handler to exit

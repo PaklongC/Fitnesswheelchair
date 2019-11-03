@@ -1,5 +1,5 @@
-from threading import thread
-def cbf():
-    print(var)
 
-print('test')
+i = 1
+def t():
+    print(i)
+t()
