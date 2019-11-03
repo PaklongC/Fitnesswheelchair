@@ -1,3 +1,5 @@
 target_distance=1000
 target_velocity=3
 deviation_velocity=0.5
+timeout_update=60
+timeout_slow=50
