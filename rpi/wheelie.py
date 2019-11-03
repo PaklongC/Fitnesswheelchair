@@ -3,7 +3,7 @@
 # Import required library
 import pygatt  # To access BLE GATT support
 import signal  # To catch the Ctrl+C and end the program properly
-import os  # To access environment variables
+import os,shutil  # To access environment variables
 import time
 import csv
 import analysedata, feedbackmanager
@@ -216,5 +216,13 @@ def stop_session():
             #print('saved session data: '+ session_info)
     except:
         print('failed to save session data')
+    #copy our session data to another csv
+    try:
+        new_dataPath =os.path.join(os.path.dirname(os.path.abspath(__file__)),"data",session_name)
+        print("copy data to:",new_dataPath)
+        shutil.copyfile(dataPath,new_dataPath)
+    except:
+        print("could not copy data: ",dataPath," to: ",new_dataPath)
+
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
