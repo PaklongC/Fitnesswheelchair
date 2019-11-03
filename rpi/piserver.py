@@ -28,7 +28,9 @@ def start_dataanalysis():
 @app.route('/stop', methods = ['POST'])
 def stop():
     global Wheelie
-    Wheelie.stop_session()
+    thread = Thread(target=wheelie.stop_session)
+    thread.start()
+    #Wheelie.stop_session()
     return 'stopped'
 
 @app.route('/home')

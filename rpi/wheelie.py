@@ -105,7 +105,8 @@ def keyboard_interrupt_handler(signal_num, frame):
     print("Exiting...".format(signal_num))
     #global left_wheel
     #left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
-    stop_session()
+    if(collecting):
+        stop_session()
     exit(0)
 
 #=============================== CSV CLASSES=============================
