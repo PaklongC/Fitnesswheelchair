@@ -23,7 +23,8 @@ def setup():
     load_dotenv()
     global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,ADDRESS_TYPE,GATT_CHARACTERISTIC_ORIENTATION,bleAdapter
     global my_thing,my_property,csvName
-    global start_time, ad, distance, fbm
+    global start_time, ad, distance, fbm, collecting
+    collecting = True
     ADDRESS_TYPE = pygatt.BLEAddressType.random
     THING_ID = os.environ['THING_ID']
     THING_TOKEN = os.environ['THING_TOKEN']
@@ -63,27 +64,23 @@ def handle_orientation_data(handle, value_bytes):
     handle -- integer, characteristic read handle the data was received on
     value_bytes -- bytearray, the data returned in the notification
     """
-    try:
-        global ad, distance
-        #print("Received data: %s (handle %d)" % (str(value_bytes), handle))
-        values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-        #speed m/s to km/h
-        values[1]= 3.6*values[1]
-        distance += abs(values[2]) #FIXME arduino code distance is nu negatief
-        values.append(distance)
-        print(values)
-    except:
-        print("Could not convert data")
-    try: fbm.update(values)
-    except: print("feedbackmanager failed")
-    try:
-        write_csv(values)
-    except:
-        print("Could not write csv")
-    try:
-        writeto_dcd(values)
-    except:
-        print('Could not send data to dcdhub')
+    if(collecting):
+        try:
+            global ad, distance, values
+            #print("Received data: %s (handle %d)" % (str(value_bytes), handle))
+            values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
+            #speed m/s to km/h
+            values[1]= 3.6*values[1]
+            distance += abs(values[2]) #FIXME arduino code distance is nu negatief
+            values.append(distance)
+            print(values)
+        except: print("Could not convert data")
+        try: fbm.update(values)
+        except: print("feedbackmanager failed")
+        try: write_csv(values)
+        except: print("Could not write csv")
+        try: writeto_dcd(values)
+        except: print('Could not send data to dcdhub')
 
     #find_or_create("Left Wheel Orientation",
                 #   PropertyType.THREE_DIMENSIONS).update_values(values)
@@ -106,8 +103,9 @@ def read_characteristic(device, characteristic_id):
 def keyboard_interrupt_handler(signal_num, frame):
     """Make sure we close our program properly"""
     print("Exiting...".format(signal_num))
-    global left_wheel
-    left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
+    #global left_wheel
+    #left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
+    stop_session()
     exit(0)
 
 #=============================== CSV CLASSES=============================
@@ -163,7 +161,7 @@ def connect_bluetooth():
     except:
         print("could not subscribe to gatt service")
         time.sleep(5)
-        left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
+        left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION,wait_for_response=False)
         bleAdapter.stop()
         bleAdapter.start()
         connect_bluetooth() #try to connect again
@@ -172,6 +170,9 @@ def start_connection():
     setup()
     connect_bluetooth()
     snips_say("setup complete, Let's start rolling")
+    global start_time
+    start_time = time.time()
+    fbm.set_start_time(start_time)
     #keep thread open
     #while True:
     #    time.sleep(1)
@@ -179,9 +180,32 @@ def start_connection():
 def start_data_collection():
     try:
         print('started connection & data collection thread')
+        global thread
         thread = Thread(target=start_connection)
         thread.start()
     except:
         print('could not start thread')
+def stop_session():
+
+    #global left_wheel, collecting,  distance, start_time
+    global collecting
+    end_time = time.time()
+    left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION,wait_for_response=False)
+    collecting = False
+    print("stop session")
+    print("Analysing data")
+    #save session   name,avg_velocity,target_velocity,start_time,end_time,distance,target_distance
+    session_name = "workout_"+str(time.strftime("%d_%m_%H%M%S", time.gmtime()))+'.csv'
+    avg_velocity = round(distance/(end_time-start_time),1)
+    session_info=[session_name,avg_velocity,fbm.target_velocity,start_time,end_time,distance,fbm.target_distance]
+    print(str(session_info))
+    try:
+        with open ('session_index.csv','a') as _csvFile:
+            writer2 = csv.writer(_csvFile)
+            writer2.writerow(session_info)
+            _csvFile.close
+            #print('saved session data: '+ session_info)
+    except:
+        print('failed to save session data')
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
