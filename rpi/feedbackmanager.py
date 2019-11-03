@@ -19,7 +19,7 @@ timeout_update=60
 timeout_slow=20
 #try:
 
-with open("config.txt") as properties:
+with open("config.txt","r") as properties:
     l = [line.split("=") for line in properties.readlines()]
     p = {key.strip(): value.strip() for key, value in l}
     #global target_distance,target_velocity,deviation_velocity, velocity_min, velocity_max
@@ -41,10 +41,11 @@ def update(_values):
     distance = _values[3]
     velocity = _values[1]
     check_feedback()
+def set_start_time(_t)
+    global start_time
+    start_time = _t
 def check_feedback():
 #feedback timeouts in seconds
-
-
     global ltime_slow,ltime_update, start_time
     global lines_slow, timeout_update,timeout_slow
     global distance,target_distance,velocity,velocity_min,velocity_max
@@ -63,3 +64,5 @@ def check_feedback():
         snips_say(mssg)
         avg_velocity = round(distance/(time()-start_time),1)
         snips_sayx("your average speed is ", avg_velocity)
+def get_properties():
+    return p

@@ -66,7 +66,7 @@ def handle_orientation_data(handle, value_bytes):
     """
     if(collecting):
         try:
-            global ad, distance
+            global ad, distance, values
             #print("Received data: %s (handle %d)" % (str(value_bytes), handle))
             values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
             #speed m/s to km/h
@@ -103,8 +103,9 @@ def read_characteristic(device, characteristic_id):
 def keyboard_interrupt_handler(signal_num, frame):
     """Make sure we close our program properly"""
     print("Exiting...".format(signal_num))
-    global left_wheel
-    left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
+    #global left_wheel
+    #left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
+    stop_session()
     exit(0)
 
 #=============================== CSV CLASSES=============================
@@ -160,7 +161,7 @@ def connect_bluetooth():
     except:
         print("could not subscribe to gatt service")
         time.sleep(5)
-        left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
+        left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION,wait_for_response=False)
         bleAdapter.stop()
         bleAdapter.start()
         connect_bluetooth() #try to connect again
@@ -169,6 +170,9 @@ def start_connection():
     setup()
     connect_bluetooth()
     snips_say("setup complete, Let's start rolling")
+    global start_time
+    start_time = time.time()
+    fbm.set_start_time(start_time)
     #keep thread open
     #while True:
     #    time.sleep(1)
@@ -183,10 +187,24 @@ def start_data_collection():
         print('could not start thread')
 def stop_session():
 
-    global left_wheel, collecting
-    #left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION,wait_for_response=False)
+    #global left_wheel, collecting,  distance, start_time
+    global collecting
+    end_time = time()
+    left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION,wait_for_response=False)
     collecting = False
     print("stop session")
     print("Analysing data")
+    #save session   name,avg_velocity,target_velocity,start_time,end_time,distance,target_distance
+    session_name = "workout_"str(time.strftime("%d_%m_%H%M%S", time.gmtime()))+'.csv'
+    avg_velocity = round(distance/(end_time-start_time),1)
+    session_info=[session_name,avg_velocity,fbm.target_velocity,start_time,end_time,distance,target_distance]
+    try:
+        with open ('session_index.csv','a') as _csvFile:
+            writer = csv.writer(_csvFile)
+            writer.writerow(session_info)
+            _csvFile.close
+            print('saved session data: '+ session_info)
+    except:
+        print('failed to save session data')
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
