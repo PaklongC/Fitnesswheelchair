@@ -35,19 +35,27 @@ def stop():
 
 @app.route('/getIndex', methods = ['GET'])
 def get_session_index():
-    sessionPath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"rpi","session_index.csv")
-    with open(sessionPath, 'r') as f:
-        reader = csv.reader(f)
-        session_index = list(reader)
-        f.close()
-    print("HTTP send from",sessionPath,":",session_index)
+    indexPath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"rpi","session_index.csv")
+    try:
+        with open(indexPath, 'r') as f:
+            reader = csv.reader(f)
+            session_index = list(reader)
+            f.close()
+        print("HTTP send from",indexPath,":",session_index)
+    except: print("could not get session index from:",indexPath)
     return json.dumps(session_index)
 
 @app.route('/getSessionData', methods = ['GET'])
 def get_session_data():
     #print("HTTP send from",sessionPath,":",session_index)
-    strreturn = "yup" + request.args.get('csvName', default="defaultdata.csv", type=str)
-    return strreturn
+    sessionFileName = request.args.get('csvName', default="defaultdata.csv", type=str)
+    sessionPath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"rpi","data",sessionFileName)
+
+    with open(indexPath, 'r') as sf:
+        reader = csv.reader(sf)
+        session_Data = list(reader)
+        sf.close()
+    return json.dumps(session_Data)
 
 @app.route('/home')
 def home():
