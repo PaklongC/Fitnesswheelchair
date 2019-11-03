@@ -43,6 +43,13 @@ def get_session_index():
     print("HTTP send from",sessionPath,":",session_index)
     return json.dumps(session_index)
 
+@app.route('/getSessionData', methods = ['GET'])
+def get_session_data():
+
+    print("HTTP send from",sessionPath,":",session_index)
+    strreturn = "yup" + request.args.get('csvName', default="defaultdata.csv", type=str)
+    return strreturn
+
 @app.route('/home')
 def home():
     return render_template('index.html')
