@@ -41,7 +41,7 @@ def update(_values):
     distance = _values[3]
     velocity = _values[1]
     check_feedback()
-def set_start_time(_t)
+def set_start_time(_t):
     global start_time
     start_time = _t
 def check_feedback():
