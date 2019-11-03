@@ -27,7 +27,7 @@ def start_dataanalysis():
 
 @app.route('/stop', methods = ['GET'])
 def stop():
-    thread.cancel()
+    wheelie.stop_session()
     return 'stopped'
 
 @app.route('/wheelie', methods = ['GET'])

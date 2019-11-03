@@ -183,5 +183,8 @@ def start_data_collection():
         thread.start()
     except:
         print('could not start thread')
+def stop_session():
+    print("stop session")
+    print("Analysing data")
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
