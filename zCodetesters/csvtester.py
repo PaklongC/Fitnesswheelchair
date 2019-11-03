@@ -4,7 +4,7 @@ from pathlib import Path
 csvpath = Path(__file__).parent.absolute().joinpath('testFolder').joinpath('tesp.csv')
 print(csvpath)
 
-with open(csvpath, 'a') as csvFile:
+with open(str(csvpath), 'a') as csvFile:
     writer = csv.writer(csvFile)
     writer.writerow([3,2,1,0])
     csvFile.close()
