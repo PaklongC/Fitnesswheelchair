@@ -184,6 +184,8 @@ def start_data_collection():
     except:
         print('could not start thread')
 def stop_session():
+    global left_wheel
+    left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     print("stop session")
     print("Analysing data")
 # Register our Keyboard handler to exit
