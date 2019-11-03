@@ -4,7 +4,7 @@
 import pygatt  # To access BLE GATT support
 import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
-import time
+import time, datetime
 import csv
 import analysedata, feedbackmanager
 
@@ -24,7 +24,8 @@ def setup():
     load_dotenv()
     global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,ADDRESS_TYPE,GATT_CHARACTERISTIC_ORIENTATION,bleAdapter
     global my_thing,my_property,csvName, dataPath
-    global start_time, ad, distance, fbm, collecting
+    global start_time, dcd_start_time
+    global ad, distance, fbm, collecting
     collecting = True
     ADDRESS_TYPE = pygatt.BLEAddressType.random
     THING_ID = os.environ['THING_ID']
@@ -45,6 +46,8 @@ def setup():
     my_property = my_thing.find_or_create_property("Wheelchair Speed",
                                                    PropertyType.THREE_DIMENSIONS)
     start_time = time.time()
+    dcd_start_time = datetime.datetime.now()
+
     ad = analysedata
     distance = 0
     fbm = feedbackmanager
@@ -172,8 +175,9 @@ def start_connection():
     setup()
     connect_bluetooth()
     snips_say("setup complete, Let's start rolling")
-    global start_time
+    global start_time, dcd_start_time
     start_time = time.time()
+    dcd_start_time = datetime.datetime.now()
     fbm.set_start_time(start_time)
     #keep thread open
     #while True:
@@ -192,6 +196,7 @@ def stop_session():
     #global left_wheel, collecting,  distance, start_time
     global collecting
     end_time = time.time()
+    dcd_end_time = datetime.datetime.now()
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION,wait_for_response=False)
     collecting = False
     print("stop session")
@@ -199,7 +204,7 @@ def stop_session():
     #save session   name,avg_velocity,target_velocity,start_time,end_time,distance,target_distance
     session_name = "workout_"+str(time.strftime("%d_%m_%H%M%S", time.gmtime()))+'.csv'
     avg_velocity = round(distance/(end_time-start_time),1)
-    session_info=[session_name,avg_velocity,fbm.target_velocity,start_time,end_time,distance,fbm.target_distance]
+    session_info=[session_name,avg_velocity,fbm.target_velocity,start_time,end_time,distance,fbm.target_distance,dcd_start_time,dcd_end_time]
     print(session_info)
     time.sleep(2)
     try:

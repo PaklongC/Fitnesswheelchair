@@ -47,4 +47,3 @@ def home():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',use_reloader=False)
-sessionPath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"session_index.csv")
