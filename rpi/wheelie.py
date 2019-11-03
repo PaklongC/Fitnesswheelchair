@@ -203,11 +203,12 @@ def stop_session():
     print(session_info)
     time.sleep(2)
     try:
-        with open (Path(__file__).parent.absolute().joinpath('sessionindex.csv'),'a') as s_csvFile:
+        sessionPath = Path(__file__).parent.absolute().joinpath('sessionindex.csv')
+        with open (sessionPath,'a') as s_csvFile:
             writer2 = csv.writer(s_csvFile)
             writer2.writerow(session_info)
             s_csvFile.close
-            print("wrote session info:",str(session_info))
+            print("wrote session info:",sessionPath, "to:",session_info)
             #print('saved session data: '+ session_info)
     except:
         print('failed to save session data')
