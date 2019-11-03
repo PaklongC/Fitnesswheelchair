@@ -15,6 +15,7 @@ from dcd.entities.property import PropertyType
 from random import random
 from dotenv import load_dotenv
 from snipssay import snips_say
+from pathlib import Path
 
 
 #============================= Setup =====================================
@@ -22,7 +23,7 @@ from snipssay import snips_say
 def setup():
     load_dotenv()
     global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,ADDRESS_TYPE,GATT_CHARACTERISTIC_ORIENTATION,bleAdapter
-    global my_thing,my_property,csvName
+    global my_thing,my_property,csvName, dataPath
     global start_time, ad, distance, fbm, collecting
     collecting = True
     ADDRESS_TYPE = pygatt.BLEAddressType.random
@@ -30,7 +31,7 @@ def setup():
     THING_TOKEN = os.environ['THING_TOKEN']
 
     csvName ='defaultdata.csv'
-
+    dataPath = Path(__file__).parent.absolute().joinpath('data')
     #bluetooth max & UUID of gatt service
     BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
     GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
@@ -112,7 +113,7 @@ def keyboard_interrupt_handler(signal_num, frame):
 #=============================== CSV CLASSES=============================
 def create_csv():
     try:
-        with open (csvName,'a') as csvFile:
+        with open (dataPath.joinpath(csvName),'a') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(['theta', 'v','darc','distance'])
             csvFile.close
@@ -123,7 +124,7 @@ def create_csv():
 
 def write_csv(csvData):
     try:
-        with open(csvName, 'a') as csvFile:
+        with open(dataPath.joinpath(csvName), 'a') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(csvData)
             csvFile.close()
@@ -202,7 +203,7 @@ def stop_session():
     print(session_info)
     time.sleep(2)
     try:
-        with open ('session_index.csv','a') as s_csvFile:
+        with open (Path(__file__).parent.absolute().joinpath('sessionindex.csv'),'a') as s_csvFile:
             writer2 = csv.writer(s_csvFile)
             writer2.writerow(session_info)
             s_csvFile.close
