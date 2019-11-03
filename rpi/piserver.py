@@ -3,12 +3,12 @@ from multiprocessing import Process, Value
 from threading import Thread
 
 import time
-import subgat
+import wheelie
 #import testsub
 import threading
 
 thread = None
-wheelie = subgat
+Wheelie = wheelie
 app = Flask(__name__)
 
 @app.route('/wheelie', methods = ['POST'])
@@ -22,12 +22,12 @@ def start_dataanalysis():
     #thread = Thread(target=subgat.start_connection)
     #thread.start()
 
-    wheelie.start_data_collection()
+    Wheelie.start_data_collection()
     return 'Started sub process data collection'
 
 @app.route('/stop', methods = ['GET'])
 def stop():
-    wheelie.stop_session()
+    Wheelie.stop_session()
     return 'stopped'
 
 @app.route('/wheelie', methods = ['GET'])
