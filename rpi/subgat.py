@@ -173,8 +173,8 @@ def start_connection():
     connect_bluetooth()
     snips_say("setup complete, Let's start rolling")
     #keep thread open
-    while True:
-        time.sleep(1)
+    #while True:
+    #    time.sleep(1)
         #print('sleeping')
 def start_data_collection():
     try:
