@@ -51,7 +51,7 @@ def get_session_data():
     sessionFileName = request.args.get('csvName', default="defaultdata.csv", type=str)
     sessionPath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"rpi","data",sessionFileName)
 
-    with open(indexPath, 'r') as sf:
+    with open(sessionPath, 'r') as sf:
         reader = csv.reader(sf)
         session_Data = list(reader)
         sf.close()
