@@ -25,7 +25,7 @@ def start_dataanalysis():
     Wheelie.start_data_collection()
     return 'Started sub process data collection'
 
-@app.route('/stop', methods = ['GET'])
+@app.route('/stop', methods = ['POST'])
 def stop():
     global Wheelie
     Wheelie.stop_session()
