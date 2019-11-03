@@ -1,0 +1,3 @@
+import callback
+
+cb = callback
