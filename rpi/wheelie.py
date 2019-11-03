@@ -200,6 +200,7 @@ def stop_session():
     avg_velocity = round(distance/(end_time-start_time),1)
     session_info=[session_name,avg_velocity,fbm.target_velocity,start_time,end_time,distance,fbm.target_distance]
     print(str(session_info))
+    time.sleep(2)
     try:
         with open ('session_index.csv','a') as _csvFile:
             writer2 = csv.writer(_csvFile)
