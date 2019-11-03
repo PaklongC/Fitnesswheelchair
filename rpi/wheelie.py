@@ -203,8 +203,7 @@ def stop_session():
     time.sleep(2)
     try:
         with open ('session_index.csv','a') as s_csvFile:
-
-            writer2 = csv.writer(_csvFile)
+            writer2 = csv.writer(s_csvFile)
             writer2.writerow(session_info)
             s_csvFile.close
             print("wrote session info:",str(session_info))
