@@ -195,7 +195,7 @@ def stop_session():
     print("stop session")
     print("Analysing data")
     #save session   name,avg_velocity,target_velocity,start_time,end_time,distance,target_distance
-    session_name = "workout_"str(time.strftime("%d_%m_%H%M%S", time.gmtime()))+'.csv'
+    session_name = "workout_"+str(time.strftime("%d_%m_%H%M%S", time.gmtime()))+'.csv'
     avg_velocity = round(distance/(end_time-start_time),1)
     session_info=[session_name,avg_velocity,fbm.target_velocity,start_time,end_time,distance,target_distance]
     try:
