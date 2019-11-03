@@ -207,7 +207,7 @@ def stop_session():
             writer2 = csv.writer(_csvFile)
             writer2.writerow(session_info)
             _csvFile.close
-            print("wrote session info:"str(session_info))
+            print("wrote session info:",str(session_info))
             #print('saved session data: '+ session_info)
     except:
         print('failed to save session data')
