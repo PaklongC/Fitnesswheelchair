@@ -11,7 +11,7 @@ thread = None
 Wheelie = wheelie
 app = Flask(__name__)
 
-@app.route('/wheelie', methods = ['POST'])
+@app.route('/wheelie', methods = ['GET'])
 def start_dataanalysis():
     print('super hacker')
     #testsub.main()
@@ -25,7 +25,7 @@ def start_dataanalysis():
     Wheelie.start_data_collection()
     return 'Started sub process data collection'
 
-@app.route('/stop', methods = ['POST'])
+@app.route('/stop', methods = ['GET'])
 def stop():
     global Wheelie
     thread = Thread(target=wheelie.stop_session)

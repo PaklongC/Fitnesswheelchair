@@ -25,7 +25,7 @@ const{ withHermes} = require ('hermes-javascript')
 
     //axios.post('http://145.94.227.95:5000/wheelie')
     //axios.post('http://145.94.228.80:5000/wheelie')
-    axios.post(_adress)
+    axios.get(_adress)
       .then(response => {
         console.log(response);
         console.log(response.data.url);
