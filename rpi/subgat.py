@@ -155,15 +155,18 @@ def connect_bluetooth():
     b = 1
     d = 0
     time.sleep(2)
-    for i in range(6): #try this a few times
-        try:
-            print("try data subscribe")
-            left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
-                             callback=handle_orientation_data)
-            break
-        except:
-            print("Trying to figure stuff out" + str(d))
-            time.sleep(5)
+    #subscribe gatt service
+    try:
+        print("subscribing to service")
+        left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+                         callback=handle_orientation_data)
+    except:
+        print("could not subscribe to gatt service")
+        time.sleep(5)
+        left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
+        bleAdapter.stop()
+        bleAdapter.start()
+        connect_bluetooth() #try to connect again
 #Connect bluetooth device
 def start_connection():
     setup()
