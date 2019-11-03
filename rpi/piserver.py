@@ -39,7 +39,7 @@ def get_session_index():
     with open(sessionPath, 'r') as f:
         reader = csv.reader(f)
         session_index = list(reader)
-    return session_index
+    return json.dumps(session_index)
 
 @app.route('/home')
 def home():
