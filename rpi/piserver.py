@@ -17,7 +17,7 @@ def start_dataanalysis():
     #testsub.main()
     recording_on = Value('b', True)
     #p = Process(target=record_loop, args=(recording_on,))
-    global thread, wheelie
+    global thread, Wheelie
     #thread = Thread(target=testsub)
     #thread = Thread(target=subgat.start_connection)
     #thread.start()
@@ -27,6 +27,7 @@ def start_dataanalysis():
 
 @app.route('/stop', methods = ['GET'])
 def stop():
+    global Wheelie
     Wheelie.stop_session()
     return 'stopped'
 
