@@ -31,7 +31,7 @@ def setup():
     THING_TOKEN = os.environ['THING_TOKEN']
 
     csvName ='defaultdata.csv'
-    dataPath = Path(__file__).parent.absolute().joinpath('data')
+    dataPath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"data","defaultdata.csv")
     #bluetooth max & UUID of gatt service
     BLUETOOTH_DEVICE_MAC ="F4:36:23:1E:9E:54"
     GATT_CHARACTERISTIC_ORIENTATION ="02118833-4455-6677-8899-AABBCCDDEEFF"
@@ -113,7 +113,7 @@ def keyboard_interrupt_handler(signal_num, frame):
 #=============================== CSV CLASSES=============================
 def create_csv():
     try:
-        with open (dataPath.joinpath(csvName),'a') as csvFile:
+        with open (dataPath,'w') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(['theta', 'v','darc','distance'])
             csvFile.close
@@ -124,7 +124,7 @@ def create_csv():
 
 def write_csv(csvData):
     try:
-        with open(dataPath.joinpath(csvName), 'a') as csvFile:
+        with open(dataPath, 'a') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(csvData)
             csvFile.close()
@@ -203,7 +203,7 @@ def stop_session():
     print(session_info)
     time.sleep(2)
     try:
-        sessionPath = Path(__file__).parent.absolute().joinpath('sessionindex.csv')
+        sessionPath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"session_index.csv")
         with open (sessionPath,'a') as s_csvFile:
             writer2 = csv.writer(s_csvFile)
             writer2.writerow(session_info)

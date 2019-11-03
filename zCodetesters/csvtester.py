@@ -2,7 +2,7 @@ import csv
 from pathlib import Path
 import os
 csvpath=os.path.dirname(os.path.abspath(__file__))
-csvpath =os.path.join(csvpath,"testFolder","test2.csv")
+csvpath =os.path.join(os.path.dirname(os.path.abspath(__file__)),"testFolder","test2.csv")
 #csvpath = Path(__file__).parent.absolute().joinpath('testFolder').joinpath('tesp.csv')
 print(csvpath)
 
