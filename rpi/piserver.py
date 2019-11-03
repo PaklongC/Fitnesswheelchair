@@ -40,7 +40,7 @@ def get_session_index():
         reader = csv.reader(f)
         session_index = list(reader)
         f.close()
-    print("HTTP send",session_index)
+    print("HTTP send from",sessionPath,":",session_index)
     return json.dumps(session_index)
 
 @app.route('/home')
