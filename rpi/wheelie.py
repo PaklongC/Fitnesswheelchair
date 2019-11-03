@@ -23,7 +23,8 @@ def setup():
     load_dotenv()
     global THING_ID,THING_TOKEN,BLUETOOTH_DEVICE_MAC,ADDRESS_TYPE,GATT_CHARACTERISTIC_ORIENTATION,bleAdapter
     global my_thing,my_property,csvName
-    global start_time, ad, distance, fbm
+    global start_time, ad, distance, fbm, collecting
+    collecting = True
     ADDRESS_TYPE = pygatt.BLEAddressType.random
     THING_ID = os.environ['THING_ID']
     THING_TOKEN = os.environ['THING_TOKEN']
@@ -63,27 +64,23 @@ def handle_orientation_data(handle, value_bytes):
     handle -- integer, characteristic read handle the data was received on
     value_bytes -- bytearray, the data returned in the notification
     """
-    try:
-        global ad, distance
-        #print("Received data: %s (handle %d)" % (str(value_bytes), handle))
-        values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-        #speed m/s to km/h
-        values[1]= 3.6*values[1]
-        distance += abs(values[2]) #FIXME arduino code distance is nu negatief
-        values.append(distance)
-        print(values)
-    except:
-        print("Could not convert data")
-    try: fbm.update(values)
-    except: print("feedbackmanager failed")
-    try:
-        write_csv(values)
-    except:
-        print("Could not write csv")
-    try:
-        writeto_dcd(values)
-    except:
-        print('Could not send data to dcdhub')
+    if(collecting):
+        try:
+            global ad, distance
+            #print("Received data: %s (handle %d)" % (str(value_bytes), handle))
+            values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
+            #speed m/s to km/h
+            values[1]= 3.6*values[1]
+            distance += abs(values[2]) #FIXME arduino code distance is nu negatief
+            values.append(distance)
+            print(values)
+        except: print("Could not convert data")
+        try: fbm.update(values)
+        except: print("feedbackmanager failed")
+        try: write_csv(values)
+        except: print("Could not write csv")
+        try: writeto_dcd(values)
+        except: print('Could not send data to dcdhub')
 
     #find_or_create("Left Wheel Orientation",
                 #   PropertyType.THREE_DIMENSIONS).update_values(values)
@@ -186,8 +183,9 @@ def start_data_collection():
         print('could not start thread')
 def stop_session():
 
-    global left_wheel
-    left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION,wait_for_response=False)
+    global left_wheel, collecting
+    #left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION,wait_for_response=False)
+    collecting = False
     print("stop session")
     print("Analysing data")
 # Register our Keyboard handler to exit
