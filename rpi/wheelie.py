@@ -189,7 +189,7 @@ def stop_session():
 
     #global left_wheel, collecting,  distance, start_time
     global collecting
-    end_time = time()
+    end_time = time.time()
     left_wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION,wait_for_response=False)
     collecting = False
     print("stop session")
