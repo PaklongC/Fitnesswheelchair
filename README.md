@@ -10,72 +10,72 @@
     			<th>Rest</b></th>
   		</tr>
 		<tr>
-    			<td></td>
+    			<td>Arduino - <i>Folder</i></td>
     			<td>_includes - <i>Folder</i></td>
-    			<td></td>
+    			<td>img - <i>Folder</i></td>
   		</tr>
 		<tr>
-			<td></td>
+			<td>rpi - <i>Folder</i></td>
 			<td>_layouts - <i>Folder</td>
-			<td></td>
+			<td>README.md - <i>File</i></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>web - <i>Folder</i></td>
 			<td>_posts - <i>Folder</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>.env - <i>File</i></td>
 			<td>css - <i>Folder</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>.gitignore - <i>File</i></td>
 			<td>js - <i>Folder</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>DigiCertCA.crt</td>
 			<td>_config.yml - <i>File</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>SERIAL_DCD.py - <i>File</i></td>
 			<td>concept.md - <i>File</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>Token.txt - <i>File</i></td>
 			<td>feed.xml - <i>File</i></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>random-data.py - <i>File</i></td>
 			<td>index.html - <i>File</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>requirements.txt - <i>File</i></td>
 			<td>prototype.md - <i>File</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
+			<td>SUBGAT_DCDHUB.py - <i>File</i></td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>FINAL.ipynb - <i>Jupyter file</i></td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
+			<td>multi csv.ipynb - <i>Jupyter file</i></td>
 			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>xxx.csv - <i>Jupyter file</i></td>
 			<td></td>
 			<td></td>
 		</tr>
