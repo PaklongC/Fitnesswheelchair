@@ -225,6 +225,14 @@ def stop_session():
         print("could not copy data: ",dataPath," to: ",new_dataPath)
     try:
         print("just a test")
+        if avg_velocity >= fbm.target_velocity :
+            print("Good job")
+            mssg="Good job"
+            snips_say(mssg)
+            mssg="Your average speed over" + distance + " meters"
+            snips_say(mssg)
+            mssg="was" + avg_velocity
+            snips_say(mssg)
     except:
         print("plz")
 # Register our Keyboard handler to exit
