@@ -223,5 +223,9 @@ def stop_session():
         shutil.copyfile(dataPath,new_dataPath)
     except:
         print("could not copy data: ",dataPath," to: ",new_dataPath)
+    try:
+        print("just a test")
+    except:
+        print("plz")
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
