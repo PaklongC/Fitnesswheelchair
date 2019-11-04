@@ -224,7 +224,7 @@ def stop_session():
     except:
         print("could not copy data: ",dataPath," to: ",new_dataPath)
     try:
-        if(avg_velocity>=target_velocity):
+        if avg_velocity>=target_velocity:
             mssg="Good job"
             snips_say(mssg)
             mssg="Your average speed over" + distance + " meters"
