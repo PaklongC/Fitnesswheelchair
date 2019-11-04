@@ -232,6 +232,7 @@ def stop_session():
             snips_say(mssg)
             mssg="was" + avg_velocity
             snips_say(mssg)
+            '''
         else:
             mssg="You tried well better luck next time"
             snips_say(mssg)
@@ -241,6 +242,7 @@ def stop_session():
             snips_say(mssg)
             mssg="Unfortunately you did not reach the target speed of" + fbm.target_velocity + " kilometers per hour"
             snips_say(mssg)
-            
+            '''
+
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
