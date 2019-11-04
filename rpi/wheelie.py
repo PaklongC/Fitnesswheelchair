@@ -223,6 +223,22 @@ def stop_session():
         shutil.copyfile(dataPath,new_dataPath)
     except:
         print("could not copy data: ",dataPath," to: ",new_dataPath)
-
+    try:
+        if(avg_velocity>=target_velocity):
+            mssg="Good job"
+            snips_say(mssg)
+            mssg="Your average speed over" + distance + " meters"
+            snips_say(mssg)
+            mssg="was" + avg_velocity
+            snips_say(mssg)
+        else:
+            mssg="You tried well better luck next time"
+            snips_say(mssg)
+            mssg="Your average speed over" + distance + " meters"
+            snips_say(mssg)
+            mssg="was" + avg_velocity + "kilometers per hour"
+            snips_say(mssg)
+            mssg="Unfortunately you did not reach the target speed of" + fbm.target_velocity + " kilometers per hour"
+            snips_say(mssg)
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
