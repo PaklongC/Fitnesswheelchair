@@ -229,16 +229,21 @@ def stop_session():
             print("Good job")
             mssg="Good job"
             snips_say(mssg)
+            time.sleep(1)
             mssg="Your average speed over" + distance + " meters"
             snips_say(mssg)
+            time.sleep(1)
             mssg="was" + avg_velocity
             snips_say(mssg)
         else:
             snips_say("You tried well better luck next time")
-            mssg="Your average speed over" + distance + " meters"
+            time.sleep(1)
+            mssg="Your average speed over" + str(distance) + " meters"
             snips_say(mssg)
-            mssg="was" + avg_velocity + "kilometers per hour"
+            time.sleep(1)
+            mssg="was" + str(avg_velocity) + "kilometers per hour"
             snips_say(mssg)
+            time.sleep(1)
             mssg="Unfortunately you did not reach the target speed of" + fbm.target_velocity + " kilometers per hour"
             snips_say(mssg)
 
