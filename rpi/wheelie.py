@@ -223,9 +223,10 @@ def stop_session():
         shutil.copyfile(dataPath,new_dataPath)
     except:
         print("could not copy data: ",dataPath," to: ",new_dataPath)
+            '''
     try:
         print("good job")
-        '''
+
         if avg_velocity >= fbm.target_velocity :
             print("Good job")
             mssg="Good job"
