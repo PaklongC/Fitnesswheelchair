@@ -44,16 +44,45 @@ Using the <i>"Simple Graph"</i> widget, combined with data transferred in a .csv
 <b>Although many projects have successfully implemented D3.js widgets into their projects. Due to the scope of the project, we felt that the returns of using such a complex system was not efficient enough with regards to the time we had.</b>
 
 #### 2. Jupyter Notebook
-Jupyter Notebook offers a plugin where widgets can be viewed in the same 'page' it has been coded. This can be done relatively easily and quickly when the right (versions of) packages are installed.<br>
+Jupyter Notebook offers a plugin where widgets can be quickly implemented and viewed in the same 'page' it has been coded. This can be done relatively easily and quickly with the right (versions of) packages installed. Different widgets can complement each other, creating an dashboard where all datasets can be shown.<br>
 
 ```python
-plt.plot(t,data_frame.y)
-data_frame = pd.DataFrame(data[:,1:], index = pd.DatetimeIndex(pd.to_datetime(data[:,0], unit='ms')))
-pd.DataFrame.describe(data_frame)
+import ipywidgets as widgets
+from ipywidgets import interactive, interact, interact_manual
+import plotly.express as px
+
+df_root = pd.read_csv('Rootfolder.csv')
+
+def selected_workout(array):
+    unique = array.unique().tolist()
+    unique.sort()
+    unique.insert(0, "Workout")
+    return unique
+
+dropdown_file = widgets.Dropdown(options = selected_workout(df_root.filename))
+
+output_file = widgets.Output()
+
+def dropdown_file_eventhandler(change):
+    output_file.clear_output()
+    with output_file:
+        if (change.new=="Workout"):
+            print('select your workout')
+        else:
+            global df_plot
+            df_plot=pd.read_csv(change.new)
+            fig1 = px.line(df_plot, x = 'time', y = 'velocity', title='Workout ')
+            fig1.show()
+
+dropdown_file.observe(dropdown_file_eventhandler, names='value')
+
+display(dropdown_file)
 ```
-<sup>Snippet of our Python code, full code can be found in \Untitled.ipynb of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/Untitled.ipynb">GitHub</a> (see the link in our header)</sup><br>
-Also, by adding analytics-libraries, different statistics can be calculated. By making use of these widgets and data, the following dashboard could be created:
-<img src="\Fitnesswheelchair\img\jugraph.png" width="745">
+<sup>Snippet of our Python code, full code can be found in \FINAL 1.1.ipynb of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/Untitled.ipynb">GitHub</a> (see the link in our header)</sup><br>
+
+This part of the code will create a dropdown with all the 'workout' files that are stored. By selecting one, the data from the .csv file is visualized in a plot. The visualization is shown in the following dashboard: 
+
+<img src="\Fitnesswheelchair\img\Jupyter_Dashboard.png" width="745">
 <b>This feature offers great features for the scope of this project/prototype. Although making the visualization live is more challenging, data can be visualized cleanly of one .csv-file.
 Several other widgets (like a dropdown) are also available. Although visualizations are not live, several different .csv-files can be rendered when the right option is chosen from a drop-down.</b>
 
