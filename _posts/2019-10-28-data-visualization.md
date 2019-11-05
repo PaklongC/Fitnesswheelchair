@@ -80,7 +80,7 @@ display(dropdown_file)
 ```
 <sup>Snippet of our Python code, full code can be found in \FINAL 1.1.ipynb of our <a href="https://github.com/PaklongC/Fitnesswheelchair/blob/master/Untitled.ipynb">GitHub</a> (see the link in our header)</sup><br>
 
-This part of the code will create a dropdown with all the 'workout' files that are stored. By selecting one, the data from the .csv file is visualized in a plot. The visualization is shown in the following dashboard: 
+This part of the code will create a dropdown with all the 'workout' files that are stored. By selecting one, the data from the .csv file is visualized in a plot. The visualization is shown in the following dashboard:
 
 <img src="\Fitnesswheelchair\img\Jupyter_Dashboard.png" width="745">
 <b>This feature offers great features for the scope of this project/prototype. Although making the visualization live is more challenging, data can be visualized cleanly of one .csv-file.
