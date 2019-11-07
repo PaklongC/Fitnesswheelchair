@@ -10,8 +10,30 @@ bigimg: /img/banner2.png
 </div>
 </html>
 
-### Research questions related to the prototype
-1. Is velocity a relevant measurement when it comes to collecting data from a training?  
-  - <b>The velocity is relevant, but needs to be measured accurately. differentiating the angle displacement over time seems (at least with the IMU-sensor used) to be the most dependant way of achieving this. </b><br>
-2. To what extent is voice in- and output desirable when it comes to control and output?  
-  - <b>Although voice input is preferable over using hands, background noise can make the input and output difficult to understand. Using haptics instead of sound might be even more preferable, but this has not been tested/validated.</b>
+### Explanation of our code
+The following diagram shows a basic data flow of our prototype
+<br>
+<img src="\Fitnesswheelchair\img\data_flow.svg" width="750">
+<ul>
+  <li>
+    To activate the data collection a HTTPrequest has to be send to the piserver.py running  a flask server.
+    In turn the server will activate wheelie.py
+    <br>
+    Wheelie.py is the main program responsible for collecting data, saving data, session indexing, sending data to the cloud and sending feedback to the user.
+    <br>
+    <sup>All local internet devices can start or stop wheelie with http request, we did this to enable support for other platforms and also have a backup when the voice recognition is not working.</sup>
+  </li>
+  <li>
+    Snips communicates through the MQTT broker Hermes, by subscribing or publishing we can get user input or send feedback to the user.
+    MQTTsubscribe.js is subscribed to the snips dialog and will forward the intent with HTTPrequests to the local server.
+  </li>
+  <li>
+    Data is collected over Bluetooth from the Adafruit feather that reads the data from the imu sensor
+  </li>
+  <li>
+    Data is saved locally and then send to the cloud
+  </li>
+  <li>
+    Data is visualized on the dcdhub and on jupyter notebook
+  </li>
+</ul>

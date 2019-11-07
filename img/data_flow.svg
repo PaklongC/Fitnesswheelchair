@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.28 323.49" style="enable-background:new 0 0 595.28 323.49;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#00AEEF;}
+	.st1{fill:#FFFFFF;}
+	.st2{font-family:'ArialRoundedMTBold';}
+	.st3{font-size:12px;}
+	.st4{fill:#00A651;}
+	.st5{font-size:9px;}
+	.st6{font-family:'ArialMT';}
+	.st7{font-size:7px;}
+	.st8{font-size:10.7319px;}
+	.st9{fill:#1B75BC;}
+	.st10{fill:#E9E9EA;}
+	.st11{fill:none;}
+	.st12{font-family:'ArialNarrow';}
+	.st13{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st14{fill:#939598;}
+	.st15{font-size:8px;}
+	.st16{font-size:19.0729px;}
+	.st17{font-size:5.9502px;}
+	.st18{font-size:4.3193px;}
+	.st19{font-size:6.6966px;}
+</style>
+<g id="Layer_1">
+	<g>
+		<rect x="35.91" y="73.07" class="st0" width="70" height="22"/>
+		<text transform="matrix(1 0 0 1 38.3391 87.5901)" class="st1 st2 st3">SNIPS ASR</text>
+	</g>
+	<g>
+		<rect x="35.91" y="237.55" class="st0" width="70" height="22"/>
+		<text transform="matrix(1 0 0 1 39.218 252.075)" class="st1 st2 st3">SNIPS TSS</text>
+	</g>
+	<g>
+		<rect x="35.9" y="290.8" class="st0" width="86.06" height="22"/>
+		<text transform="matrix(1 0 0 1 42.8486 305.3228)" class="st1 st2 st3">Raspberrypi</text>
+	</g>
+	<g>
+		<rect x="35.91" y="259.8" class="st4" width="70" height="22"/>
+		<text transform="matrix(1 0 0 1 46.3993 274.3245)" class="st1 st2 st3">Speaker</text>
+	</g>
+	<g>
+		<rect x="131.4" y="290.8" class="st4" width="70" height="22"/>
+		<text transform="matrix(1 0 0 1 145.709 305.323)" class="st1 st2 st3">Sensor</text>
+	</g>
+	<g>
+		<rect x="140.29" y="211.9" class="st4" width="114.17" height="22"/>
+		<text transform="matrix(1.631 0 0 1 183.3882 226.4209)" class="st1 st2 st5">IMU</text>
+	</g>
+	<g>
+		<rect x="35.91" y="51.16" class="st4" width="70" height="22"/>
+		<text transform="matrix(1 0 0 1 36.286 65.6824)" class="st1 st2 st3">Microphone</text>
+	</g>
+	<g>
+		<rect x="35.91" y="115.27" class="st0" width="70" height="22"/>
+		<text transform="matrix(1 0 0 1 45.0364 127.793)" class="st1 st2 st3">HERMES</text>
+		<text transform="matrix(1 0 0 1 50.1076 136.2711)" class="st1 st6 st7">MQTT broker</text>
+	</g>
+	<g>
+		<rect x="140.29" y="116.31" class="st0" width="114.17" height="19.68"/>
+		<text transform="matrix(1 0 0 1 149.9585 129.3018)" class="st1 st2 st8">MQTTsubscribe.js</text>
+	</g>
+	<g>
+		<rect x="308.47" y="51.16" class="st9" width="114.17" height="22"/>
+		<text transform="matrix(1 0 0 1 324.2413 65.6823)" class="st1 st2 st3">phone / laptop</text>
+	</g>
+	<g>
+		<rect x="308.13" y="115.27" class="st0" width="114.17" height="22"/>
+		<text transform="matrix(1 0 0 1 332.0723 129.793)" class="st1 st2 st3">piserver.py</text>
+	</g>
+	<g>
+		<rect x="308.13" y="156.63" class="st0" width="114.17" height="22"/>
+		<text transform="matrix(1 0 0 1 333.8887 171.1546)" class="st1 st2 st3">wheelie.py</text>
+	</g>
+	<g>
+		<rect x="462.7" y="115.27" class="st9" width="114.17" height="22"/>
+		<text transform="matrix(1 0 0 1 468.5289 129.793)" class="st1 st2 st3">Jupyter notebook</text>
+	</g>
+	<g>
+		<rect x="210.11" y="290.41" class="st9" width="114.17" height="22"/>
+		<text transform="matrix(1 0 0 1 222.105 304.9347)" class="st1 st2 st3">External device</text>
+	</g>
+	<g>
+		<rect x="462.7" y="210.51" class="st9" width="61.02" height="22"/>
+		<text transform="matrix(1 0 0 1 468.8912 225.0324)" class="st1 st2 st3">DCDhub</text>
+	</g>
+	<g>
+		<rect x="308.13" y="178.63" class="st10" width="114.17" height="94.05"/>
+		<rect x="316.28" y="186.02" class="st11" width="98.55" height="87.23"/>
+		<text transform="matrix(1 0 0 1 316.2769 194.6132)"><tspan x="0" y="0" class="st12 st3">&gt; connect bluetooth</tspan><tspan x="0" y="14.4" class="st12 st3">&gt; collect data</tspan><tspan x="0" y="28.8" class="st12 st3">&gt; send data to hub</tspan><tspan x="0" y="43.2" class="st12 st3">&gt; save local data</tspan><tspan x="0" y="57.6" class="st12 st3">&gt; give feedback</tspan><tspan x="0" y="72" class="st12 st3">&gt; append index</tspan></text>
+	</g>
+	<g>
+		<g>
+			<rect x="140.29" y="156.63" class="st0" width="114.17" height="22"/>
+			<text transform="matrix(1 0 0 1 151.1734 171.1546)" class="st1 st2 st3">Adafruit feather</text>
+		</g>
+		<g>
+			<rect x="140.29" y="178.38" class="st10" width="114.17" height="33.52"/>
+			<rect x="148.43" y="183.77" class="st11" width="98.55" height="29.34"/>
+			<text transform="matrix(1 0 0 1 148.4327 192.3579)"><tspan x="0" y="0" class="st12 st3">&gt; get data</tspan><tspan x="0" y="14.4" class="st12 st3">&gt; send data</tspan></text>
+		</g>
+	</g>
+</g>
+<g id="Layer_2">
+	<g>
+		<g>
+			<line class="st13" x1="70.91" y1="95.07" x2="70.91" y2="114.13"/>
+			<g>
+				<polygon points="69.22,112.14 70.91,113.83 72.61,112.14 72.61,113.58 70.91,115.27 69.22,113.58 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="254.46" y1="126.27" x2="307.33" y2="126.27"/>
+			<g>
+				<polygon points="305.33,127.97 307.03,126.27 305.33,124.58 306.77,124.58 308.47,126.27 306.77,127.97 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="105.91" y1="126.27" x2="139.15" y2="126.27"/>
+			<g>
+				<polygon points="137.16,127.97 138.85,126.27 137.16,124.58 138.59,124.58 140.29,126.27 138.59,127.97 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="365.22" y1="137.27" x2="365.22" y2="155.49"/>
+			<g>
+				<polygon points="363.52,153.5 365.22,155.19 366.91,153.5 366.91,154.94 365.22,156.63 363.52,154.94 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="312.96" y1="190.36" x2="254.28" y2="168.04"/>
+			<g>
+				<polygon points="256.75,167.16 254.56,168.14 255.54,170.33 254.19,169.82 253.21,167.63 255.4,166.65 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="254.46" y1="205.15" x2="313.35" y2="205.15"/>
+			<g>
+				<polygon points="311.35,206.84 313.05,205.15 311.35,203.45 312.79,203.45 314.49,205.15 312.79,206.84 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="419.17" y1="220.12" x2="461.56" y2="220.12"/>
+			<g>
+				<polygon points="459.57,221.82 461.26,220.12 459.57,218.43 461.01,218.43 462.7,220.12 461.01,221.82 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="69.13" y1="137.27" x2="69.13" y2="236.41"/>
+			<g>
+				<polygon points="67.43,234.42 69.13,236.11 70.82,234.42 70.82,235.86 69.13,237.55 67.43,235.86 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<polyline class="st13" points="314.49,248.55 122.74,248.55 83.83,138.35 			"/>
+			<g>
+				<polygon points="86.09,139.66 83.93,138.63 82.89,140.79 82.41,139.43 83.45,137.27 85.61,138.31 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="346.31" y1="73.16" x2="346.31" y2="114.13"/>
+			<g>
+				<polygon points="344.62,112.14 346.31,113.83 348.01,112.14 348.01,113.58 346.31,115.27 344.62,113.58 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="384.12" y1="74.3" x2="384.12" y2="115.27"/>
+			<g>
+				<polygon points="382.43,76.3 384.12,74.6 385.82,76.3 385.82,74.86 384.12,73.16 382.43,74.86 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="422.3" y1="126.27" x2="461.56" y2="126.27"/>
+			<g>
+				<polygon points="459.57,127.97 461.26,126.27 459.57,124.58 461.01,124.58 462.7,126.27 461.01,127.97 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st13" x1="519.25" y1="210.51" x2="519.26" y2="138.41"/>
+			<g>
+				<polygon points="520.95,140.41 519.26,138.71 517.56,140.41 517.56,138.97 519.26,137.27 520.95,138.97 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<polyline class="st13" points="519.79,115.27 519.79,62.16 423.78,62.16 			"/>
+			<g>
+				<polygon points="425.77,60.47 424.08,62.16 425.77,63.86 424.33,63.86 422.64,62.16 424.33,60.47 				"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 370.7874 148.8721)" class="st14 st12 st15">start</text>
+	<g>
+		<text transform="matrix(1 0 0 1 267.1903 202.2858)" class="st14 st12 st15">imu data</text>
+		<text transform="matrix(1 0 0 1 264.2098 215.5624)" class="st12 st15">BLE GATT</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 434.5515 215.8724)" class="st14 st12 st15">data</text>
+		<text transform="matrix(1 0 0 1 429.9948 229.149)" class="st12 st15">internet</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 199.3665 245.4368)" class="st14 st12 st15">feedback</text>
+		<text transform="matrix(1 0 0 1 192.0812 258.7133)" class="st12 st15">publish MQTT</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 39.4136 180.7737)" class="st14 st12 st15">feedback</text>
+		<text transform="matrix(1 0 0 1 18.5754 194.0504)" class="st12 st15">subscribe MQTT</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 32.3969 28.8818)" class="st14 st2 st16">C++ communication diagram</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 274.1421 124.29)" class="st14 st12 st17">intent</text>
+		<text transform="matrix(1 0 0 1 264.9258 134.165)" class="st12 st17">HTTP request</text>
+	</g>
+	<g>
+		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 343.2607 100.0459)" class="st14 st12 st17">intent</text>
+		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 353.1357 109.2622)" class="st12 st17">HTTP request</text>
+	</g>
+	<g>
+		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 380.4097 104.5214)" class="st14 st12 st17">local data</text>
+		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 390.2847 109.2622)" class="st12 st17">HTTP request</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 426.1528 124.29)" class="st14 st12 st17">session index</text>
+		<text transform="matrix(1 0 0 1 425.7509 134.165)" class="st12 st17">HTTP request</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 121.0542 125.1943)" class="st14 st12 st18">intent</text>
+		<text transform="matrix(1 0 0 1 112.2974 132.3623)" class="st12 st18">subscribe MQTT</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 75.916 102.6701)" class="st14 st12 st19">intent detected</text>
+		<text transform="matrix(1 0 0 1 75.916 110.738)" class="st12 st19">publish MQTT</text>
+	</g>
+	<g>
+		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 514.6157 177.539)" class="st14 st12 st15">data</text>
+		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 527.8923 182.0957)" class="st12 st15">internet</text>
+	</g>
+	<g>
+		<text transform="matrix(0.9342 0.3568 -0.3568 0.9342 266.9962 167.8292)" class="st14 st12 st15">subscribe</text>
+		<text transform="matrix(0.9342 0.3568 -0.3568 0.9342 262.7648 180.4253)" class="st12 st15">bluetooth</text>
+	</g>
+</g>
+</svg>
