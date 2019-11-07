@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prototype in depth
+title: Code in dept
 subtitle: Code explained
 bigimg: /img/banner2.png
 ---
@@ -34,6 +34,6 @@ The following diagram shows a basic data flow of our prototype
     Data is saved locally and then send to the cloud
   </li>
   <li>
-    Data is visualized on the dcdhub and on jupyter notebook
+    Data is visualized on the dcdhub and on jupyter notebook.
   </li>
 </ul>

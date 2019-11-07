@@ -19,6 +19,7 @@ def start_dataanalysis():
     print('Starting workout session')
     recording_on = Value('b', True)
     global Wheelie
+    #call the start function on our wheelie.py script
     Wheelie.start_data_collection()
     return 'Started sub process data collection'
 
@@ -31,7 +32,7 @@ def stop():
     thread = Thread(target=wheelie.stop_session)
     thread.start()
     return 'stopped'
-    
+
 #HTTP request listener that returns the saved index of all the workout sessions from session_index.csv
 @app.route('/getIndex', methods = ['GET'])
 def get_session_index():
