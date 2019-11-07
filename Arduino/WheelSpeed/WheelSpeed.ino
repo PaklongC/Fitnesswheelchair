@@ -160,9 +160,10 @@ void orientation() {
   float angleZ = euler_vector.z();
   delay(BNO055_SAMPLERATE_DELAY_MS);
 
-
+  //calculate the delataRotation
   imu::Vector<3> euler_vector2 = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
   float angleX2 = euler_vector2.x();
+  //check if we did a whole rotation and adjust our delta_a accordingly
   if(angleX+delta_a > 360&&angleX2<180){ //we did a whole rotation
     rot++;
     delta_a = angleX2 + (360-angleX);
@@ -173,7 +174,7 @@ void orientation() {
      delta_a = angleX2-angleX;
   }
 
-
+  //calculate wheel speed from arc
   float arc = 2*3.14*r*(delta_a/360);
   float v = -arc/td;
   // Command is sent when \n (\r) or println is called
@@ -181,23 +182,11 @@ void orientation() {
   ble.print( F("AT+GATTCHAR=") );
   ble.print( orientationCharId );
   ble.print( F(",") );
-  ble.print(String(angleX));
+  ble.print(String(angleX)); //print dAngle
   ble.print( F(",") );
-  ble.print(String(v));
+  ble.print(String(v));   //print dVelocity
   ble.print( F(",") );
-  ble.println(String(arc));
-  //ble.print( F(",") );
-  //ble.println(String(rot));
-  /*
-  ble.print( F("AT+GATTCHAR=") );
-  ble.print( orientationCharId );
-  ble.print( F(",") );
-  ble.print(String(angleX));
-  ble.print( F(",") );
-  ble.print(String(angleY));
-  ble.print( F(",") );
-  ble.println(String(angleZ));
-  */
+  ble.println(String(arc)); //print dArc
 }
 
 bool compute_rotations(float axis, Rotations * rotations) {
