@@ -16,6 +16,7 @@ bigimg: /img/banner2.png
 2. To what extent is voice in- and output desirable when it comes to control and output?  
   - <b>Although voice input is preferable over using hands, background noise can make the input and output difficult to understand. Using haptics instead of sound might be even more preferable, but this has not been tested/validated.</b>
 <img src=“Fitnesswheelchar\img\Flowchart PCP Jupyter.png”>
+<br>
 
 ### Cloud Application
 
