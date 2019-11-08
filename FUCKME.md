@@ -45,43 +45,18 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>xxx.csv - <i>Jupyter file</i></td>
 			<td>feed.xml - <i>File</i></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td>FINAL 1.1.ipynb - <i>Jupyter file</i></td>
 			<td>index.html - <i>File</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>requirements.txt - <i>File</i></td>
 			<td>prototype.md - <i>File</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>FINAL 1.1.ipynb - <i>Jupyter file</i></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>xxx.csv - <i>Jupyter file</i></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
 			<td></td>
 		</tr>
 	</table>
