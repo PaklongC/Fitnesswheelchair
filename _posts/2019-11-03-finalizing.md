@@ -10,5 +10,5 @@ bigimg: /img/banner2.png
 </div>
 </html>
 
-<img src=“Fitnesswheelchair\img\IOT stack.png”>
+<img src=“Fitnesswheelchair\img\IOTstack.png”>
 This is a final overview of the IOT stack for our wheelchair++
