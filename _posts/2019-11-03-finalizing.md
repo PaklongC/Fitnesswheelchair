@@ -14,7 +14,8 @@ bigimg: /img/banner2.png
 1. Is velocity a relevant measurement when it comes to collecting data from a training?  
   - <b>The velocity is relevant, but needs to be measured accurately. differentiating the angle displacement over time seems (at least with the IMU-sensor used) to be the most dependant way of achieving this. </b><br>
 2. To what extent is voice in- and output desirable when it comes to control and output?  
-  - <b>Although voice input is preferable over using hands, background noise can make the input and output difficult to understand. Using haptics instead of sound might be even more preferable, but this has not been tested/validated.</b>
+  - <b>Although voice input is preferable over using hands, background noise can make the input and output difficult to understand. Using haptics instead of sound might be even more preferable, but this has not been tested/validated.</b><br>
+
 ### Improvements
 <ul>
   <li><b> Add more in depth voice control </b><br>Currently we have only limited voice control implementation and to better test this feature we need to implement more options like snips connect, disconnect, status ,set workout</li>
