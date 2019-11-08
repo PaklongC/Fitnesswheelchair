@@ -2,7 +2,6 @@
 layout: post
 title: Prototype in depth
 subtitle: Code explained
-bigimg: /img/banner2.png
 ---
 <html>
 <div class="row get-started-wrap">
