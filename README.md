@@ -39,38 +39,19 @@
 			<td>_config.yml - <i>File</td>
 			<td></td>
 		</tr>
-		<tr>
-			<td>SERIAL_DCD.py - <i>File</i></td>
-			<td>concept.md - <i>File</td>
-			<td></td>
-		</tr>
+
 		<tr>
 			<td>Token.txt - <i>File</i></td>
 			<td>feed.xml - <i>File</i></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>random-data.py - <i>File</i></td>
-			<td>index.html - <i>File</td>
-			<td></td>
-		</tr>
-		<tr>
 			<td>requirements.txt - <i>File</i></td>
 			<td>prototype.md - <i>File</td>
 			<td></td>
-		</tr>
+
 		<tr>
-			<td>SUBGAT_DCDHUB.py - <i>File</i></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>FINAL.ipynb - <i>Jupyter file</i></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>multi csv.ipynb - <i>Jupyter file</i></td>
+			<td>FINAL1.1.ipynb - <i>Jupyter file</i></td>
 			<td></td>
 			<td></td>
 		</tr>
