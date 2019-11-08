@@ -61,11 +61,6 @@
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
 	</table>
 
 	<h4><i>An extensive documentation about the <b>process, product and prototype</b> can be found at the website of the
