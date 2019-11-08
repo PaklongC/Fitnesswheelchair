@@ -8,7 +8,7 @@ bigimg: /img/banner2.png
 <div class="row get-started-wrap">
 <img src="\Fitnesswheelchair\img\rolstoel.jpg" width="376"> <img src="\Fitnesswheelchair\img\arduinonono.jpg" width="376">
 </div>
-</html>
+
 
 ### Research questions related to the prototype
 1. Is velocity a relevant measurement when it comes to collecting data from a training?  
@@ -24,4 +24,5 @@ bigimg: /img/banner2.png
   <il><b>Add extra control</b><br>Currently we have basic mobile functionality. (we can start stop and retrieve data on your phone) but an mobile app should be added to make data visualisation easy and improve user interaction because it is nice to have two ways of interacting with your fitness assistant, either by voice or by phone </il>
 </ul>
  <img src="\Fitnesswheelchair\img\IOTstack.png" width="745">
+ </html>
 >>>>>>> 2188a79c635701caced3b816f7cd8b7a74fafec5
