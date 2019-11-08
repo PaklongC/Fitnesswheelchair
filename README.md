@@ -8,7 +8,7 @@
     			<th><b>Project</th>
     			<th>Website</th>
     			<th>Rest</b></th>
-  		</tr>
+  	</tr>
 		<tr>
     			<td>Arduino - <i>Folder</i></td>
     			<td>_includes - <i>Folder</i></td>
@@ -66,6 +66,7 @@
 			<td></td>
 		</tr>
 	</table>
+	
 	<h4><i>An extensive documentation about the <b>process, product and prototype</b> can be found at the website of the
 	<a href="https://paklongc.github.io/Fitnesswheelchair"><b>Wheelchair++</b></a></i></h4>
 	<h5><li><i><u>Project description</</u></i> describes the mission and vision of the <a href="https://paklongc.github.io/Fitnesswheelchair/concept/"><b>concept</b></a> and the technologies and sensors used in the <b><a href="https://paklongc.github.io/Fitnesswheelchair/prototype/">prototype</a></b>.</li><br>
