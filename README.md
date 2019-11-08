@@ -3,7 +3,8 @@
 	<h1>wheelchair++</h1>
 	<a href="https://paklongc.github.io/Fitnesswheelchair"><img src="img/banner.png" width="" height=""><br></a><br>
 	The following files and folders belongs to the items stated in the header:<br>
-	<table>
+
+<table>
  		<tr>
     			<th><b>Project</th>
     			<th>Website</th>
@@ -66,7 +67,7 @@
 			<td></td>
 		</tr>
 	</table>
-	
+
 	<h4><i>An extensive documentation about the <b>process, product and prototype</b> can be found at the website of the
 	<a href="https://paklongc.github.io/Fitnesswheelchair"><b>Wheelchair++</b></a></i></h4>
 	<h5><li><i><u>Project description</</u></i> describes the mission and vision of the <a href="https://paklongc.github.io/Fitnesswheelchair/concept/"><b>concept</b></a> and the technologies and sensors used in the <b><a href="https://paklongc.github.io/Fitnesswheelchair/prototype/">prototype</a></b>.</li><br>
