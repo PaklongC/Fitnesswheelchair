@@ -5,7 +5,7 @@ subtitle: Code explained
 ---
 <html>
   <div class="row get-started-wrap">
-    <img src="\Fitnesswheelchair\img\Flowchart_PCP_Jupyter.png" width="">
+    <img src="\Fitnesswheelchair\img\Flowchart_PCP_Jupyter.png" width="750">
   </div>
 </html>
 
