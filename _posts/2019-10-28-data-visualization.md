@@ -92,3 +92,4 @@ When connected, the DCD Hub offers easy live interactable visualizations of data
 <img src="\Fitnesswheelchair\img\dcdgraph.png" width="745">
 
 <b>Getting everything going might prove troublesome at the beginning. However, the returns are great since live visualizations are still (relatively) easily established.</b>
+ 
