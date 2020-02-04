@@ -28,4 +28,4 @@ bigimg: /img/banner2.png
 ### Final IoT-stack
 <html>
   <img src="\Fitnesswheelchair\img\IOTstack.png" width="745">
-</html>
+</html> 
