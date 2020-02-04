@@ -26,3 +26,4 @@ The prototype will be build using a Feather (with an IMU sensor attached) and a 
 Communication between the Feather and Raspberry Pi will be done using Bluetooth. The Raspberry Pi will use WiFi to get/put data onto a server. More elaborate explanation of the architecture can be seen in the visual below.<br>
 To get everything ready, the Raspberry Pi needs to be initialized correctly and the feather also. The next post will be about the sensor used.
 <img src="\Fitnesswheelchair\img\IOT Architecture.png" width="775">
+ 
