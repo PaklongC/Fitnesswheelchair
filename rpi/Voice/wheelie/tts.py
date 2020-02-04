@@ -7,4 +7,4 @@ print("connecting to broker")
 client.connect(broker_address) #connect to broker
 print("Subscribing to topic","house/bulbs/bulb1")
 client.subscribe("hermes/tts/say")
-client.publish("hermes/tts/say","{\"text\": \"Super hacker jwz\"}")
+client.publish("hermes/tts/say","{\"text\": \"Super hacker jwz\"}") 
